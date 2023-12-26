@@ -1,0 +1,891 @@
+<!DOCTYPE html><html><head>
+      <title>01-scratch入门</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      @import url("https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css");
+code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  /*重头戏开始*/
+  /*初始化格式*/
+  /* 一级标题 */
+  /*三个小点点*/
+  /*二级标题*/
+  /* 三级标题 */
+  /* 四级标题 */
+  /* 引用
+* 左边缘颜色 border-left-color:black;
+* 背景色 background:gray; */
+  /* 引用文字 */
+  /* 链接 */
+  /* 加粗 */
+  /* 斜体 */
+  /* 加粗斜体 */
+  /* 删除线 */
+  /* 分割线 */
+  /* 图片 */
+  /*音频*/
+  /*视频*/
+  /* 图片描述文字 */
+  /* 列表内容 */
+  /* ol+p strong {
+margin-left: -16px;
+}*/
+  /* 序号 */
+  /*设置条纹*/
+  /*设置首列不同*/
+  /* 脚注文字 */
+  /* 脚注上标 */
+  /* 脚注超链接样式 */
+  /* "参考资料"四个字 
+* 内容 content: "参考资料";
+*/
+  /* 参考资料编号 */
+  /* 参考资料文字 */
+  /* 参考资料超链接 */
+  /* 参考资料解释 */
+  /* 行间公式*/
+  /* 行内公式*/
+  /* 滑动图片*/
+  /*打印时强制下一页*/
+  /*容器和媒体*/
+  /*代码块*/
+  /* 行内代码 */
+  /* 非微信代码块
+* 代码块不换行 display:-webkit-box !important;
+* 代码块换行 display:block;
+*/
+  /* 表格内的单元格
+* 字体大小 font-size: 16px;
+* 边框 border: 1px solid #ccc;
+* 内边距 padding: 5px 10px;
+*/
+  /*mpe的代码样式*/
+  /*数学相关*/
+}
+.markdown-preview.markdown-preview * {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  box-sizing: border-box;
+  font-family: "Inconsolata", "Lucida Console", 'LXGW WenKai Screen R', 'LXGW WenKai Mono', Consolas, "KaTeX_Main", "Monaco", " Lucida Console", " Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", " Courier New", "monospace", 'SimHei', 'Times New Roman', serif;
+}
+.markdown-preview.markdown-preview body {
+  line-height: 1.5em;
+  letter-spacing: 0.034em;
+  font-size: 16px;
+  word-break: all;
+  background-color: #ffffff;
+  max-width: 1000px;
+  /*设置最大宽度*/
+  margin: 0 auto;
+  /*设置内容居中*/
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3,
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5,
+.markdown-preview.markdown-preview h6 {
+  margin-bottom: 0.25em;
+  margin-top: 0.5em;
+}
+.markdown-preview.markdown-preview h1::before {
+  max-width: 1000px;
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fc625d;
+  width: 12px;
+  height: 12px;
+  left: 10px;
+  top: 10px;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  z-index: 2;
+}
+.markdown-preview.markdown-preview h1 {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  line-height: 70px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-bottom: 0em;
+  border: 0px;
+  /* 一级标题内容 */
+  font-size: 24px;
+  color: #0f59a4;
+}
+.markdown-preview.markdown-preview h2 {
+  display: inline-block;
+  background: #2dc878;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: #666666 2px 3px 1.5px 1.5px;
+  /* 二级标题内容 */
+  color: #fffef9;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: #666666 1px 1px 1px;
+}
+.markdown-preview.markdown-preview h2::after {
+  display: block;
+}
+.markdown-preview.markdown-preview h3:before {
+  content: "";
+  background: size 1.5em;
+  display: inline-block;
+  margin-top: 0.5em;
+  padding-left: 8px;
+}
+.markdown-preview.markdown-preview h3 {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  color: #0f59a4;
+  line-height: 1.5em;
+}
+.markdown-preview.markdown-preview h4:before {
+  content: "";
+  background: size 1.5em;
+  display: inline-block;
+  text-indent: 0.75em;
+}
+.markdown-preview.markdown-preview h4 {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1661ab;
+  text-indent: 0.75em;
+  line-height: 1.5em;
+}
+.markdown-preview.markdown-preview h5 {
+  font-weight: bold;
+  text-indent: 1em;
+  color: #158bb8;
+  font-size: 17px;
+}
+.markdown-preview.markdown-preview h6 {
+  font-size: 16px;
+  color: #eb085f;
+  line-height: 1.5em;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview p {
+  padding-top: 0px;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #4a4a4a;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+.markdown-preview.markdown-preview blockquote {
+  padding: 15px 15px 10px 10px;
+  line-height: 27px;
+  border-radius: 10px;
+  display: block;
+  border-color: #bababa;
+  color: #656565;
+  background-color: #f3f0ea;
+  font-style: italic;
+  border-left: 5px solid;
+  padding-left: 1em;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+.markdown-preview.markdown-preview blockquote p {
+  padding: 0px;
+  font-size: 15px;
+  color: #126b15;
+}
+.markdown-preview.markdown-preview a:hover,
+.markdown-preview.markdown-preview a:active {
+  font-size: larger;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .markdown-preview.markdown-preview a:hover,
+  .markdown-preview.markdown-preview a:active {
+    background: linear-gradient(to right, red, #01d6c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.markdown-preview.markdown-preview a {
+  color: #143974;
+  text-decoration: underline;
+}
+.markdown-preview.markdown-preview strong {
+  line-height: 1.75em;
+  color: #ff1818;
+}
+.markdown-preview.markdown-preview em {
+  color: #126b15;
+  /*字符间距*/
+}
+.markdown-preview.markdown-preview em strong {
+  color: #126b15;
+  /*字符间距*/
+}
+.markdown-preview.markdown-preview del,
+.markdown-preview.markdown-preview s {
+  font-style: italic;
+  text-decoration: line-through;
+  font-weight: bolder;
+  color: #fc625d;
+}
+.markdown-preview.markdown-preview sub {
+  color: #0b941b;
+}
+.markdown-preview.markdown-preview hr {
+  height: 2px;
+  padding: 0;
+  border: none;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(60, 122, 198, 0), #063a7a, rgba(60, 122, 198, 0));
+}
+.markdown-preview.markdown-preview .container img {
+  max-width: 100%;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  border-radius: 10px;
+  max-width: 99%;
+  max-height: 1024px;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview img:active {
+  transform: scale(2);
+}
+.markdown-preview.markdown-preview audio {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview video {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  max-height: 700px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 480px) {
+  .markdown-preview.markdown-preview {
+    /*此适配不同手机型号下文字，图片的大小*/
+  }
+}
+@media only screen and (max-width: 375px) {
+  .markdown-preview.markdown-preview {
+    /*此适配不同手机型号下文字，图片的大小*/
+  }
+}
+.markdown-preview.markdown-preview figcaption {
+  display: block;
+  font-size: 12px;
+  font-family: PingFangSC-Light;
+}
+.markdown-preview.markdown-preview ul,
+.markdown-preview.markdown-preview ol {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+.markdown-preview.markdown-preview p + ul,
+.markdown-preview.markdown-preview p + ol {
+  margin-top: -1em;
+  margin-left: 2em;
+}
+.markdown-preview.markdown-preview li ul {
+  margin-top: 0em;
+}
+.markdown-preview.markdown-preview li::marker {
+  color: #6116ac;
+  font-weight: bolder;
+  font-style: italic;
+}
+.markdown-preview.markdown-preview ul li::marker {
+  font-style: normal;
+  font-weight: 800;
+}
+.markdown-preview.markdown-preview li {
+  list-style-type: decimal;
+  list-style-position: outside;
+  color: #01474e;
+  size: 14px;
+}
+.markdown-preview.markdown-preview ol li {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview ul li {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview li li {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview li ol {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+  margin-top: 0px;
+}
+.markdown-preview.markdown-preview li p {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.markdown-preview.markdown-preview table {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 1em;
+  border: 0px;
+  border-spacing: 0;
+  display: table;
+  /*去掉单元格间隙*/
+  border-collapse: collapse;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.markdown-preview.markdown-preview thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+  margin: 0 auto;
+  width: 100%;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+.markdown-preview.markdown-preview thead.md-table-edit {
+  background-color: transparent;
+}
+.markdown-preview.markdown-preview thead th,
+.markdown-preview.markdown-preview tfoot th {
+  padding: 0.25em 0.25em 0.25em 0.4em;
+  text-transform: uppercase;
+}
+.markdown-preview.markdown-preview th {
+  text-align: center;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #353535;
+}
+.markdown-preview.markdown-preview td {
+  vertical-align: middle;
+  padding: 0.25em 0.5em 0.25em 0.4em;
+  color: #237465;
+}
+.markdown-preview.markdown-preview tr:nth-of-type(even) {
+  background: #eee;
+}
+.markdown-preview.markdown-preview td:nth-child(1) {
+  font-weight: bolder;
+  font-style: italic;
+  color: #064d8c;
+  word-break: keep-all;
+}
+.markdown-preview.markdown-preview caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+.markdown-preview.markdown-preview .md-fences {
+  margin-left: 2em;
+  margin-bottom: 3em;
+}
+.markdown-preview.markdown-preview .md-fences .CodeMirror.CodeMirror-wrap {
+  top: -0.8em;
+}
+.markdown-preview.markdown-preview tt {
+  font-size: 0.875em;
+  line-height: 1.714285em;
+}
+.markdown-preview.markdown-preview body .task-list {
+  padding-left: 1rem;
+}
+.markdown-preview.markdown-preview body .task-list-item {
+  list-style-type: none;
+  margin-left: -1.8em;
+}
+.markdown-preview.markdown-preview body .task-list-item .task-list-item-checkbox {
+  margin-right: 0.8em;
+}
+.markdown-preview.markdown-preview body .task-list-item input:before {
+  content: '\221A';
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #ddd;
+  background-color: #F3F2EE;
+}
+.markdown-preview.markdown-preview body .task-list-item input:checked:before,
+.markdown-preview.markdown-preview body .task-list-item input[checked]:before {
+  color: inherit;
+}
+.markdown-preview.markdown-preview body kbd {
+  color: #1f0909;
+}
+.markdown-preview.markdown-preview body li > p {
+  left: 0;
+}
+.markdown-preview.markdown-preview body .md-meta,
+.markdown-preview.markdown-preview body .md-before,
+.markdown-preview.markdown-preview body .md-after {
+  color: #999;
+}
+.markdown-preview.markdown-preview .footnotes {
+  padding-top: 8px;
+}
+.markdown-preview.markdown-preview .footnote-word {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-ref {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item em {
+  color: #3c70c6;
+  font-size: 13px;
+  font-style: normal;
+  border-bottom-color: 1px dashed #3c70c6;
+}
+.markdown-preview.markdown-preview .footnotes-sep:before {
+  background-image: none;
+  background-size: none;
+  display: block;
+  width: auto;
+  height: auto;
+}
+.markdown-preview.markdown-preview .footnote-num {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item p {
+  color: #3c70c6;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview .footnote-item a {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item p em {
+  font-size: 14px;
+  font-weight: normal;
+  border-bottom: 1px dashed #3c70c6;
+}
+.markdown-preview.markdown-preview .block-equation svg {
+  max-width: 300% !important;
+}
+.markdown-preview.markdown-preview .inline-equation svg {
+  max-width: 300% !important;
+}
+.markdown-preview.markdown-preview .imageflow-img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+}
+.markdown-preview.markdown-preview .nextpage {
+  page-break-after: always;
+  border: 0px;
+  background-image: none;
+  background: none;
+}
+.markdown-preview.markdown-preview .container {
+  width: 1100px;
+  max-width: 100%;
+}
+.markdown-preview.markdown-preview input {
+  text-align: center;
+  vertical-align: middle;
+}
+.markdown-preview.markdown-preview code {
+  display: inline-block;
+  color: #ef632b;
+  background-color: #f2fffe;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 0em;
+  margin: 0;
+  text-indent: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em !important;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: rgba(153, 122, 102, 0.08);
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight:before,
+.markdown-preview.markdown-preview pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+.markdown-preview.markdown-preview pre {
+  background: #f0f1f1;
+  border: 0px solid #b66a07;
+  border-radius: 10px;
+  font: 16px/22px, "Microsoft YaHei", Arial, Sans-Serif;
+  line-height: 1.35em;
+  max-width: 90%;
+  text-shadow: none;
+  color: #000;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4);
+  margin: auto;
+  margin-bottom: 1em;
+  margin-top: 0em;
+  padding-top: 0.13em;
+  padding-bottom: 0em;
+  padding-left: 0em;
+  font-weight: bolder;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.markdown-preview.markdown-preview pre:after {
+  color: #ccc;
+  content: attr(data-lang);
+  font-size: 16px;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px 10px 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+.markdown-preview.markdown-preview .language- {
+  padding: 2px;
+}
+.markdown-preview.markdown-preview pre code {
+  width: 100%;
+  background-color: #eee;
+  margin: 0px;
+  border: 0px;
+  padding-left: 4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.markdown-preview.markdown-preview .token {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview .token.comment {
+  font-style: italic;
+  color: #075811;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview .token.function {
+  color: #ff6600;
+}
+.markdown-preview.markdown-preview .token.string {
+  color: blue;
+}
+.markdown-preview.markdown-preview .token.number {
+  color: #237465;
+}
+.markdown-preview.markdown-preview .token.directive-hash {
+  color: #06615e;
+}
+.markdown-preview.markdown-preview .token.class-name {
+  color: teal;
+}
+.markdown-preview.markdown-preview .token.keyword {
+  font-style: italic;
+  font-weight: 1100;
+}
+.markdown-preview.markdown-preview .MathJax,
+.markdown-preview.markdown-preview .katex,
+.markdown-preview.markdown-preview .mstyle,
+.markdown-preview.markdown-preview .mrow,
+.markdown-preview.markdown-preview .mfrac,
+.markdown-preview.markdown-preview .math,
+.markdown-preview.markdown-preview .mord,
+.markdown-preview.markdown-preview .mo,
+.markdown-preview.markdown-preview .mi,
+.markdown-preview.markdown-preview .mn {
+  line-height: 1.5em;
+  color: #bf39b4;
+  font-style: normal;
+}
+.markdown-preview.markdown-preview .root {
+  vertical-align: middle;
+  min-width: 100px;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview details {
+  border-bottom: #06615e solid 1px;
+}
+.markdown-preview.markdown-preview summary {
+  text-align: center;
+  list-style: inside inherit;
+  color: #237465;
+  font-size: larger;
+  font-weight: bolder;
+  border-bottom: #06615e solid 1px;
+}
+.markdown-preview.markdown-preview summary:hover,
+.markdown-preview.markdown-preview summary:active {
+  font-size: xx-large;
+  color: #fc625d;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="scratch-入门">Scratch 入门 </h1>
+<h2 id="一-scratch界面简介">一、Scratch界面简介 </h2>
+<p>首先要从Scratch的原理说起。Scratch的基本原理是“<strong>精灵挂脚本</strong>”。精灵在中文版的翻译中是“<strong>角色</strong>”。<br>
+Scratch打开时默认的那只猫就是一个角色，一切程序都围绕着角色来进行。<br>
+在具体学习之前我们先看看界面的一些内容。</p>
+<ol>
+<li>角色<strong>演出</strong>的地方称为<strong>舞台</strong></li>
+<li>角色身上拿着的<strong>演出剧本</strong>称为<strong>脚本</strong></li>
+<li>角色还自带各种演出的衣服称为<strong>造形</strong></li>
+<li>角色甚至还拿着一个音乐播放器，可以播放已有音乐，或者录音之后播放</li>
+</ol>
+<p><strong>导演一般都站在舞台上</strong>，所以舞台上也是可以放置脚本的，用来指挥角色活动。<br>
+角色身上也会自己携带<strong>自己的脚本</strong>，严格按照剧本内容执行。</p>
+<p>这里要请初学者注意的是，随时关注你选中了哪个角色，<strong>防止把脚本放到了错误的角色身上</strong>。</p>
+<p><img src="imgs/img.png" alt=""></p>
+<h6 id="舞台区角色区和积木脚本区">舞台区角色区和积木脚本区 </h6>
+<h2 id="二-角色基本操作">二、角色基本操作 </h2>
+<h3 id="21-新建角色">2.1 新建角色 </h3>
+<p>角色区的猫脸用于添加角色，我们直接点击就会进入角色选择界面，然后从预置的角色库中选择你想要的角色。<br>
+<img src="imgs/img.png" alt=""><br>
+<img src="imgs/img-2.png" alt=""><br>
+如果不点击他，仅仅将鼠标放在角色区的猫脸上，就会出现四个功能按键：<br>
+<img src="imgs/img-3.png" alt=""></p>
+<ol>
+<li>上传一个<code>.sb3</code>格式角色文件或图片文件作为角色</li>
+<li>随机从角色库中选一个角色</li>
+<li>绘制一个空白角色</li>
+<li>用搜索角色</li>
+</ol>
+<h3 id="22-上传图片作为造型">2.2 上传图片作为造型 </h3>
+<p>作为高端玩家，我们果断选择新建空白角色<img src="imgs/img-1.png" style="display:inline;width:30px">：<br>
+<img src="imgs/img-4.png" alt=""><br>
+<img src="imgs/img-15.png" alt=""><br>
+这时候我们就可以使用自己定制的角色来做后面的开发了。<br>
+需要注意的一点是，导入的图片最好是PNG格式，这样可以保存透明的背景色。如果上传了jpg图片，你将会看到一个人物带着一个背景方框在舞台上走来走去。<br>
+当然，你也可以直接使用上传角色功能，这个功能不光支持<code>.sb3</code>格式精灵文件，还支持图片格式。</p>
+<h3 id="23-透明背景">2.3 透明背景 </h3>
+<p>如果你是一名新手，如何区别背景色呢？只需要选中造型，在右侧的<strong>绘图区</strong>中观察图片的周围是否是<strong>由方格组成的背景</strong>即可，和photoshop等工具一样，方格代表了透明色。<br>
+<img src="imgs/img-7.png" alt=""><br>
+<img src="imgs/img-6.png" alt=""></p>
+<p>我们要如此强调透明颜色的原因是，Scratch对于角色之间的碰撞的检测是要考虑透明色的。换句话说如果两个角色都是透明的，那么他们永远不会相撞，就像一只幽灵一样。只有不透明的部分会产生碰撞。</p>
+<h3 id="24-导出">2.4 导出 </h3>
+<p>另外角色身上的造型是可以被右键选中导出为图片的。如果我们发现了别人的造型十分喜欢，只要对方是<strong>开源</strong>的作品，我们就可以用右键保存到电脑使用它的造型。<br>
+<img src="imgs/img-8.png" alt=""><br>
+更进一步的，我们还可以在<strong>角色区中右键导出角色</strong>，导出的角色可以方便我们使用在另外的脚本之中。这个功能在本书后会详细介绍。<br>
+<img src="imgs/img-9.png" alt=""></p>
+<h3 id="25-剪辑和录音">2.5 剪辑和录音 </h3>
+<p>在角色身上还可以携带不同的声音。我们也可以在右面的声音波形剪辑区，使用鼠标左键选中一段音乐，用backspace键删除它，用来截断我们不想要的音乐。当然下方还有功能更为强大的效果按钮供我们剪辑使用。<br>
+<img src="imgs/img-14.png" alt=""><br>
+和造型一样，除了可以选择Scratch自带的声音库中的音乐，还也可以从计算机中上传一音乐，可以是mp3或者wav格式。<br>
+当然，也可以录制自己喜欢的声音来作为配音使用。<br>
+<img src="imgs/img-11.png" alt=""></p>
+<h3 id="26-角色属性盘">2.6 角色属性盘 </h3>
+<p>在角色区的上方是角色属性盘，角色运动的时候这里的数据会发生变化。<br>
+同时我们也可以<strong>改变角色属性</strong>达到控制角色变化，注意<strong>除角色名以外不要用调整角色属性代替角色初始化的代码</strong>，因为这里的数据是调试环境临时改变用的，不是生产环境使用的。<br>
+<img src="imgs/img-12.png" alt=""></p>
+<ol>
+<li>角色名</li>
+<li>角色的坐标</li>
+<li>面向方向</li>
+<li>是否显示</li>
+<li>大小</li>
+</ol>
+<h2 id="三-角色位置和方向">三、角色位置和方向 </h2>
+<h3 id="31-角色坐标和中心点">3.1 角色坐标和中心点 </h3>
+<p>角色的坐标的确定有些隐晦。相当于用一个钉子把一张剪影画（角色造型）钉在了舞台上，这个钉子钉下的位置就是角色的坐标。<br>
+那么如何观察这个钉子钉在了什么地方呢？<br>
+<img src="imgs/img-13.png" alt=""><br>
+<img src="imgs/img-16.png" alt=""><br>
+如果我们再在角色中心画一个十字架，不难观察到的是角色在舞台上面的坐标，就是角色中心的十字星的坐标，他也是和角色的中心一一对应的。<br>
+<img src="imgs/img-17.png" alt=""><br>
+<img src="imgs/img-18.png" alt=""></p>
+<h3 id="32-方向">3.2 方向 </h3>
+<p>在角色属性盘中，可以看到右上侧方向边上有一个方向控制器，用鼠标左键点击，就会弹出来蓝底白色箭头操纵杆，可以拖动旋转他达到直接更改角色面对方向的目的。<br>
+<img src="imgs/img-19.png" alt=""></p>
+<h3 id="33-在播放时是否可以拖拽">3.3 在播放时是否可以拖拽 </h3>
+<p>首先要介绍Scratch的播放功能，在Scratch之中运行程序可以有两种模式</p>
+<ol>
+<li>编辑器模式</li>
+<li>播放器模式</li>
+</ol>
+<p>点击右上角的全屏按钮，即可打开和结束播放器模式，如下图：<br>
+<img src="imgs/img-20.png" alt=""><br>
+<img src="imgs/img-21.png" alt=""><br>
+<strong>编辑器模式</strong>之中，如果想使用鼠标去点击角色，Scratch会默认角色<strong>拖拽为第一优先级</strong>。<br>
+换句话说，<strong>本来想点一下舞台上的角色，结果却会把角色拖动起来</strong>。这样的设置意义在于可以<strong>方便我们在舞台上面使用鼠标拖拽排布角色</strong>。</p>
+<p>而全屏播放器模式之中，角色是<strong>默认不可以被鼠标随便拖动</strong>的。这样就避免了执行程序时候的各种错误。当然也可以把播放时可拖拽的开关打开，这样在播放时我们也可以随意拖拽角色实现一些功能。</p>
+<h2 id="三-积木介绍">三、积木介绍 </h2>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#scratch-入门" class="md-toc-link"><p>Scratch 入门</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#一-scratch界面简介" class="md-toc-link">
+            <p>一、Scratch界面简介</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#二-角色基本操作" class="md-toc-link"><p>二、角色基本操作</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#21-新建角色" class="md-toc-link">
+            <p>2.1 新建角色</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#22-上传图片作为造型" class="md-toc-link">
+            <p>2.2 上传图片作为造型</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#23-透明背景" class="md-toc-link">
+            <p>2.3 透明背景</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#24-导出" class="md-toc-link">
+            <p>2.4 导出</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#25-剪辑和录音" class="md-toc-link">
+            <p>2.5 剪辑和录音</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#26-角色属性盘" class="md-toc-link">
+            <p>2.6 角色属性盘</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三-角色位置和方向" class="md-toc-link"><p>三、角色位置和方向</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#31-角色坐标和中心点" class="md-toc-link">
+            <p>3.1 角色坐标和中心点</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#32-方向" class="md-toc-link">
+            <p>3.2 方向</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#33-在播放时是否可以拖拽" class="md-toc-link">
+            <p>3.3 在播放时是否可以拖拽</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#三-积木介绍" class="md-toc-link">
+            <p>三、积木介绍</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

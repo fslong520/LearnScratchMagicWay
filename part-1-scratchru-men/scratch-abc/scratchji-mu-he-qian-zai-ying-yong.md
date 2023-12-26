@@ -3,7 +3,9 @@ Scratch是积木式的语言（[Blockly](https://github.com/google/blockly)）�
 ###### 注意：本章建议在看完全书之后再次阅读，或已经学习过Scratch一段时间的读者阅读。你将获得对Scratch更加系统和深化的理解。
 
 # 动作
+
 ![](/assets/P1/P1 动作积木.png)
+
 ###### 动作积木总览
 
 Scratch的动作积木可以实现的功能归根结底只有两类：
