@@ -1,6 +1,6 @@
 # ![](imgs/Logo.png)Scratch魔法学习
 
-本书是对开源项目`Learn Scratch Magic Way`的二次整理和续写，希望能够帮助到更多朋友，主要将包含四个部分：
+本书是对开源项目[Learn Scratch Magic Way](https://github.com/gx1989mao/LearnScratchMagicWay)的二次整理和续写，希望能够帮助到更多朋友，主要将包含四个部分：
 
 1. Scratch入门
 2. 程序逻辑及Scratch高级技能
@@ -53,7 +53,7 @@ Scratch的编辑器十分类似于Unity等主流游戏编辑器，sprites & scri
 ## 六、声明
 
 本书不涉及任何对Scratch原有代码底层的更改，使用版本为Scratch3.0。
-本书中涉及的代码均为作者原创或引用自`Learn Scratch Magic Way`，如遗漏了引用，请及时联系作者更改。
+本书中涉及的代码均为作者原创或引用自[Learn Scratch Magic Way](https://github.com/gx1989mao/LearnScratchMagicWay)项目，如遗漏了引用，请及时联系作者更改。
 
 ---
 
