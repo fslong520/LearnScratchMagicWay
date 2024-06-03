@@ -1,0 +1,1305 @@
+<!DOCTYPE html><html><head>
+      <title>03-数学和物理概念可视化应用</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      @import url("https://fastly.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css");
+code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  /*重头戏开始*/
+  /*初始化格式*/
+  /* 一级标题 */
+  /*三个小点点*/
+  /*二级标题*/
+  /* 三级标题 */
+  /* 四级标题 */
+  /* 引用
+* 左边缘颜色 border-left-color:black;
+* 背景色 background:gray; */
+  /* 引用文字 */
+  /* 链接 */
+  /* 加粗 */
+  /* 斜体 */
+  /* 加粗斜体 */
+  /* 删除线 */
+  /* 分割线 */
+  /* 图片 */
+  /*音频*/
+  /*视频*/
+  /* 图片描述文字 */
+  /* 列表内容 */
+  /* ol+p strong {
+margin-left: -16px;
+}*/
+  /* 序号 */
+  /*设置条纹*/
+  /*设置首列不同*/
+  /* 脚注文字 */
+  /* 脚注上标 */
+  /* 脚注超链接样式 */
+  /* "参考资料"四个字 
+* 内容 content: "参考资料";
+*/
+  /* 参考资料编号 */
+  /* 参考资料文字 */
+  /* 参考资料超链接 */
+  /* 参考资料解释 */
+  /* 行间公式*/
+  /* 行内公式*/
+  /* 滑动图片*/
+  /*打印时强制下一页*/
+  /*容器和媒体*/
+  /*代码块*/
+  /* 行内代码 */
+  /* 非微信代码块
+* 代码块不换行 display:-webkit-box !important;
+* 代码块换行 display:block;
+*/
+  /* 表格内的单元格
+* 字体大小 font-size: 16px;
+* 边框 border: 1px solid #ccc;
+* 内边距 padding: 5px 10px;
+*/
+  /*mpe的代码样式*/
+  /*数学相关*/
+}
+.markdown-preview.markdown-preview * {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  box-sizing: border-box;
+}
+.markdown-preview.markdown-preview body {
+  line-height: 1.5em;
+  letter-spacing: 0.034em;
+  font-size: 16px;
+  word-break: all;
+  background-color: #ffffff;
+  max-width: 1000px;
+  /*设置最大宽度*/
+  margin: 0 auto;
+  /*设置内容居中*/
+  font-family: "LXGW WenKai Mono Screen", "LXGW WenKai Screen", "monospace", "KaTeX_Main", "DejaVu Sans Mono", "SimHei", "Times New Roman", "serif", "Lucida Console", Consolas, "Monaco", " Lucida Console", " Liberation Mono", "Bitstream Vera Sans Mono", " Courier New";
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3,
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5,
+.markdown-preview.markdown-preview h6 {
+  margin-bottom: 0.25em;
+  margin-top: 0.5em;
+}
+.markdown-preview.markdown-preview h1::before {
+  max-width: 1000px;
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fc625d;
+  width: 12px;
+  height: 12px;
+  left: 10px;
+  top: 10px;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  z-index: 2;
+}
+.markdown-preview.markdown-preview h1 {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  line-height: 70px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-bottom: 0em;
+  border: 0px;
+  /* 一级标题内容 */
+  font-size: 24px;
+  color: #0f59a4;
+}
+.markdown-preview.markdown-preview h2 {
+  display: inline-block;
+  background: #2dc878;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: #666666 2px 3px 1.5px 1.5px;
+  /* 二级标题内容 */
+  color: #fffef9;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: #666666 1px 1px 1px;
+}
+.markdown-preview.markdown-preview h2::after {
+  display: block;
+}
+.markdown-preview.markdown-preview h3:before {
+  content: "";
+  background: size 1.5em;
+  display: inline-block;
+  margin-top: 0.5em;
+  padding-left: 8px;
+}
+.markdown-preview.markdown-preview h3 {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  color: #0f59a4;
+  line-height: 1.5em;
+}
+.markdown-preview.markdown-preview h4:before {
+  content: "";
+  background: size 1.5em;
+  display: inline-block;
+  text-indent: 0.75em;
+}
+.markdown-preview.markdown-preview h4 {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #168381;
+  text-indent: 0.75em;
+  line-height: 1.5em;
+}
+.markdown-preview.markdown-preview h5 {
+  font-weight: bold;
+  text-indent: 1em;
+  color: #2b9678;
+  font-size: 17px;
+}
+.markdown-preview.markdown-preview h6 {
+  font-size: 16px;
+  color: #ff6668;
+  line-height: 1.5em;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview p {
+  padding-top: 0px;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #4a4a4a;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+.markdown-preview.markdown-preview blockquote {
+  padding: 15px 15px 10px 10px;
+  line-height: 27px;
+  border-radius: 10px;
+  display: block;
+  border-color: #bababa;
+  color: #656565;
+  background-color: #f3f0ea;
+  font-style: italic;
+  border-left: 5px solid;
+  padding-left: 1em;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+.markdown-preview.markdown-preview blockquote p {
+  padding: 0px;
+  font-size: 15px;
+  color: #126b15;
+}
+.markdown-preview.markdown-preview a:hover,
+.markdown-preview.markdown-preview a:active {
+  font-size: larger;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .markdown-preview.markdown-preview a:hover,
+  .markdown-preview.markdown-preview a:active {
+    background: linear-gradient(to right, red, #01d6c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.markdown-preview.markdown-preview a {
+  color: #143974;
+  text-decoration: underline;
+}
+.markdown-preview.markdown-preview strong {
+  line-height: 1.75em;
+  color: #ec0434;
+}
+.markdown-preview.markdown-preview em {
+  color: #126b15;
+  /*字符间距*/
+}
+.markdown-preview.markdown-preview em strong {
+  color: #126b15;
+  /*字符间距*/
+}
+.markdown-preview.markdown-preview del,
+.markdown-preview.markdown-preview s {
+  font-style: italic;
+  text-decoration: line-through;
+  font-weight: bolder;
+  color: #fc625d;
+}
+.markdown-preview.markdown-preview sub {
+  color: #0b941b;
+}
+.markdown-preview.markdown-preview hr {
+  height: 2px;
+  padding: 0;
+  border: none;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(60, 122, 198, 0), #063a7a, rgba(60, 122, 198, 0));
+}
+.markdown-preview.markdown-preview .container img {
+  max-width: 100%;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  border-radius: 10px;
+  max-width: 99%;
+  max-height: 960px;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview img:active {
+  transform: scale(2);
+}
+.markdown-preview.markdown-preview audio {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview video {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  max-height: 700px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 480px) {
+  .markdown-preview.markdown-preview {
+    /*此适配不同手机型号下文字，图片的大小*/
+  }
+}
+@media only screen and (max-width: 375px) {
+  .markdown-preview.markdown-preview {
+    /*此适配不同手机型号下文字，图片的大小*/
+  }
+}
+.markdown-preview.markdown-preview figcaption {
+  display: block;
+  font-size: 12px;
+  font-family: PingFangSC-Light;
+}
+.markdown-preview.markdown-preview ul,
+.markdown-preview.markdown-preview ol {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+.markdown-preview.markdown-preview p + ul,
+.markdown-preview.markdown-preview p + ol {
+  margin-top: -1em;
+  margin-left: 2em;
+}
+.markdown-preview.markdown-preview li ul {
+  margin-top: 0em;
+}
+.markdown-preview.markdown-preview li::marker {
+  color: #6116ac;
+  font-weight: bolder;
+  font-style: italic;
+}
+.markdown-preview.markdown-preview ul li::marker {
+  font-style: normal;
+  font-weight: 800;
+}
+.markdown-preview.markdown-preview li {
+  list-style-type: decimal;
+  list-style-position: outside;
+  color: #01474e;
+  size: 14px;
+}
+.markdown-preview.markdown-preview ol li {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview ul li {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview li li {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview li ol {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+  margin-top: 0px;
+}
+.markdown-preview.markdown-preview li p {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.markdown-preview.markdown-preview table {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 1em;
+  border: 0px;
+  border-spacing: 0;
+  display: table;
+  /*去掉单元格间隙*/
+  border-collapse: collapse;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.markdown-preview.markdown-preview thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+  margin: 0 auto;
+  width: 100%;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+.markdown-preview.markdown-preview thead.md-table-edit {
+  background-color: transparent;
+}
+.markdown-preview.markdown-preview thead th,
+.markdown-preview.markdown-preview tfoot th {
+  padding: 0.25em 0.25em 0.25em 0.4em;
+  text-transform: uppercase;
+}
+.markdown-preview.markdown-preview th {
+  text-align: center;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #042335;
+}
+.markdown-preview.markdown-preview td {
+  vertical-align: middle;
+  padding: 0.25em 0.5em 0.25em 0.4em;
+  color: #237465;
+}
+.markdown-preview.markdown-preview tr:nth-of-type(even) {
+  background: #eee;
+}
+.markdown-preview.markdown-preview td:nth-child(1) {
+  font-weight: bolder;
+  font-style: italic;
+  color: #064d8c;
+  word-break: keep-all;
+}
+.markdown-preview.markdown-preview caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+.markdown-preview.markdown-preview .md-fences {
+  margin-left: 2em;
+  margin-bottom: 3em;
+}
+.markdown-preview.markdown-preview .md-fences .CodeMirror.CodeMirror-wrap {
+  top: -0.8em;
+}
+.markdown-preview.markdown-preview tt {
+  font-size: 0.875em;
+  line-height: 1.714285em;
+}
+.markdown-preview.markdown-preview body .task-list {
+  padding-left: 1rem;
+}
+.markdown-preview.markdown-preview body .task-list-item {
+  list-style-type: none;
+  margin-left: -1.8em;
+}
+.markdown-preview.markdown-preview body .task-list-item .task-list-item-checkbox {
+  margin-right: 0.8em;
+}
+.markdown-preview.markdown-preview body .task-list-item input:before {
+  content: "\221A";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #ddd;
+  background-color: #F3F2EE;
+}
+.markdown-preview.markdown-preview body .task-list-item input:checked:before,
+.markdown-preview.markdown-preview body .task-list-item input[checked]:before {
+  color: inherit;
+}
+.markdown-preview.markdown-preview body kbd {
+  color: #1f0909;
+}
+.markdown-preview.markdown-preview body li > p {
+  left: 0;
+}
+.markdown-preview.markdown-preview body .md-meta,
+.markdown-preview.markdown-preview body .md-before,
+.markdown-preview.markdown-preview body .md-after {
+  color: #999;
+}
+.markdown-preview.markdown-preview .footnotes {
+  padding-top: 8px;
+}
+.markdown-preview.markdown-preview .footnote-word {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-ref {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item em {
+  color: #3c70c6;
+  font-size: 13px;
+  font-style: normal;
+  border-bottom-color: 1px dashed #3c70c6;
+}
+.markdown-preview.markdown-preview .footnotes-sep:before {
+  background-image: none;
+  background-size: none;
+  display: block;
+  width: auto;
+  height: auto;
+}
+.markdown-preview.markdown-preview .footnote-num {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item p {
+  color: #3c70c6;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview .footnote-item a {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item p em {
+  font-size: 14px;
+  font-weight: normal;
+  border-bottom: 1px dashed #3c70c6;
+}
+.markdown-preview.markdown-preview .block-equation svg {
+  max-width: 300% !important;
+}
+.markdown-preview.markdown-preview .inline-equation svg {
+  max-width: 300% !important;
+}
+.markdown-preview.markdown-preview .imageflow-img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+}
+.markdown-preview.markdown-preview .nextpage {
+  page-break-after: always;
+  border: 0px;
+  background-image: none;
+  background: none;
+}
+.markdown-preview.markdown-preview .container {
+  width: 1100px;
+  max-width: 100%;
+}
+.markdown-preview.markdown-preview input {
+  text-align: center;
+  vertical-align: middle;
+}
+.markdown-preview.markdown-preview code {
+  display: inline-block;
+  color: #1c2939;
+  background-color: #f7e8c1;
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 0em;
+  margin: 0;
+  text-indent: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: "LXGW WenKai Mono Screen", "Inconsolata", "monospace", "KaTeX_Main", "DejaVu Sans Mono", "SimHei", "Times New Roman", "serif", "Lucida Console", Consolas, "Monaco", " Lucida Console", " Liberation Mono", "Bitstream Vera Sans Mono", " Courier New";
+}
+.markdown-preview.markdown-preview pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em !important;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: rgba(153, 122, 102, 0.08);
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight:before,
+.markdown-preview.markdown-preview pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+.markdown-preview.markdown-preview pre {
+  background: #f0f1f1;
+  border: 0px solid #b66a07;
+  border-radius: 10px;
+  font: 16px/22px, "Microsoft YaHei", Arial, Sans-Serif;
+  line-height: 1.35em;
+  max-width: 90%;
+  text-shadow: none;
+  color: #000;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4);
+  margin: auto;
+  margin-bottom: 1em;
+  margin-top: 0em;
+  padding-top: 0.13em;
+  padding-bottom: 0em;
+  padding-left: 0em;
+  font-weight: bolder;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.markdown-preview.markdown-preview pre:after {
+  color: #ccc;
+  content: attr(data-lang);
+  font-size: 16px;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px 10px 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+.markdown-preview.markdown-preview .language- {
+  padding: 2px;
+}
+.markdown-preview.markdown-preview pre code {
+  width: 100%;
+  background-color: #eee;
+  margin: 0px;
+  border: 0px;
+  padding-left: 4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.markdown-preview.markdown-preview .token {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview .token.comment {
+  font-style: italic;
+  color: #075811;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview .token.function {
+  color: #ff6600;
+}
+.markdown-preview.markdown-preview .token.string {
+  color: #0a1e51;
+}
+.markdown-preview.markdown-preview .token.number {
+  color: #c23651;
+}
+.markdown-preview.markdown-preview .token.directive-hash {
+  color: #06615e;
+}
+.markdown-preview.markdown-preview .token.class-name {
+  color: teal;
+}
+.markdown-preview.markdown-preview .token.keyword {
+  color: #8d211e;
+  font-style: italic;
+  font-weight: 1100;
+}
+.markdown-preview.markdown-preview .token.operator {
+  color: #681817;
+}
+.markdown-preview.markdown-preview mjx-container,
+.markdown-preview.markdown-preview .mathjax-exps,
+.markdown-preview.markdown-preview .MathJax,
+.markdown-preview.markdown-preview .katex,
+.markdown-preview.markdown-preview .mstyle,
+.markdown-preview.markdown-preview .mrow,
+.markdown-preview.markdown-preview .mfrac,
+.markdown-preview.markdown-preview .math,
+.markdown-preview.markdown-preview .mord,
+.markdown-preview.markdown-preview .mo,
+.markdown-preview.markdown-preview .mi,
+.markdown-preview.markdown-preview .mn {
+  line-height: 2em;
+  color: #f97d1d;
+  font-style: normal;
+  font-family: Inconsolata;
+}
+.markdown-preview.markdown-preview .root {
+  vertical-align: middle;
+  min-width: 100px;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview details {
+  border-bottom: #06615e solid 1px;
+}
+.markdown-preview.markdown-preview summary {
+  text-align: center;
+  list-style: inside inherit;
+  color: #237465;
+  font-size: larger;
+  font-weight: bolder;
+  border-bottom: #06615e solid 1px;
+}
+.markdown-preview.markdown-preview summary:hover,
+.markdown-preview.markdown-preview summary:active {
+  font-size: xx-large;
+  color: #fc625d;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="数学和物理概念可视化应用">数学和物理概念可视化应用 </h1>
+<hr>
+<h2 id="一-数学黑魔法">一、数学黑魔法 </h2>
+<h3 id="11-数论-高斯的光芒">1.1 数论-高斯的光芒 </h3>
+<h3 id="111-正负数-虚实数-有无理数">1.1.1 正负数 虚实数 有无理数 </h3>
+<h3 id="112-素数和加密">1.1.2 素数和加密 </h3>
+<h3 id="113-梅森素数和哥德巴赫">1.1.3 梅森素数和哥德巴赫 </h3>
+<h3 id="114-数列">1.1.4 数列 </h3>
+<h3 id="115-余数和同余-奇偶校验">1.1.5 余数和同余 奇偶校验 </h3>
+<h3 id="116-函数">1.1.6 函数 </h3>
+<h3 id="117-映射和坐标变换">1.1.7 映射和坐标变换 </h3>
+<h3 id="12-指数对数和苹果树">1.2 指数对数和苹果树 </h3>
+<h4 id="121-指数对数">1.2.1 指数对数 </h4>
+<h4 id="122-复利和稳定复利">1.2.2 复利和稳定复利 </h4>
+<h4 id="123-树结构的必要性-算法的极限为什么是对数">1.2.3 树结构的必要性 算法的极限为什么是对数 </h4>
+<h4 id="124-阶乘和箭号-大的不可思议">1.2.4 阶乘和箭号 大的不可思议 </h4>
+<h3 id="13-太阳和尼罗河-进制">1.3 太阳和尼罗河-进制 </h3>
+<h4 id="131-二进制">1.3.1 二进制 </h4>
+<h4 id="132-三进制">1.3.2 三进制 </h4>
+<h4 id="133-八进制">1.3.3 八进制 </h4>
+<h4 id="134-十进制">1.3.4 十进制 </h4>
+<h4 id="135-十二进制">1.3.5 十二进制 </h4>
+<h4 id="136-十六进制">1.3.6 十六进制 </h4>
+<h4 id="137-六十进制">1.3.7 六十进制 </h4>
+<h4 id="138-三百六十度">1.3.8 三百六十度 </h4>
+<h3 id="14-赌神必备-概率和随机">1.4 赌神必备-概率和随机 </h3>
+<h4 id="141-排列组合">1.4.1 排列组合 </h4>
+<h4 id="142-大数定理和中心极限定理">1.4.2 大数定理和中心极限定理 </h4>
+<h4 id="143-概率和分布-为什么正态分布很多">1.4.3 概率和分布 为什么正态分布很多 </h4>
+<h4 id="144-概率陷阱">1.4.4 概率陷阱 </h4>
+<h4 id="145-条件概率和贝叶斯教主">1.4.5 条件概率和贝叶斯教主 </h4>
+<h4 id="146-马尔可夫链">1.4.6 马尔可夫链 </h4>
+<h4 id="147-鞅伦和赌博如何必胜">1.4.7 鞅伦和赌博如何必胜 </h4>
+<h4 id="148-即使必胜也要有凯利公式">1.4.8 即使必胜也要有凯利公式 </h4>
+<h4 id="149-观察者和实验者错觉-小概率黑天鹅事件">1.4.9 观察者和实验者错觉 小概率黑天鹅事件 </h4>
+<h3 id="15-黑客的帝国-矩阵">1.5 黑客的帝国-矩阵 </h3>
+<h4 id="151-物体和空间">1.5.1 物体和空间 </h4>
+<h4 id="152-空间的基准-基向量-空间维度">1.5.2 空间的基准 基向量 空间维度 </h4>
+<h4 id="153-换一组基向量会怎样空间还是那个空间么">1.5.3 换一组基向量会怎样？空间还是那个空间么？ </h4>
+<h4 id="154-矩阵是什么矩阵就是描述一个物体在空间中的位置">1.5.4 矩阵是什么？矩阵就是描述一个物体在空间中的位置 </h4>
+<h4 id="155-物体瞬移了-乘以一个变换矩阵-变换矩阵是什么是另一组基描述了物体的位置-运动是相对的">1.5.5 物体瞬移了 乘以一个变换矩阵 变换矩阵是什么？是另一组基描述了物体的位置 运动是相对的 </h4>
+<h4 id="156-不同的基描述同一个变换矩阵究竟有什么共性本征值">1.5.6 不同的基描述同一个变换矩阵究竟有什么共性？本征值 </h4>
+<h4 id="157-空间解析几何-点线面">1.5.7 空间解析几何 点线面 </h4>
+<h4 id="158-有用的旋转变换">1.5.8 有用的旋转变换 </h4>
+<h4 id="159-逆矩阵解方程组和谷歌看家法宝pagerank">1.5.9 逆矩阵解方程组和谷歌看家法宝pagerank </h4>
+<h4 id="1510-最小二乘法和定位算法">1.5.10 最小二乘法和定位算法 </h4>
+<h3 id="16-莱布尼茨我不服-微积分">1.6 莱布尼茨我不服-微积分 </h3>
+<h4 id="161-函数的图像">1.6.1 函数的图像 </h4>
+<h4 id="162-速度的速度的速度的速度-导数">1.6.2 速度的速度的速度的速度 导数 </h4>
+<h4 id="163-差值和逼近">1.6.3 差值和逼近 </h4>
+<h4 id="164-聚沙成塔-面积体积各种积">1.6.4 聚沙成塔 面积体积各种积 </h4>
+<h3 id="17-让暴躁的世界平缓-简单滤波器">1.7 让暴躁的世界平缓-简单滤波器 </h3>
+<h4 id="171-三角函数组成世界">1.7.1 三角函数组成世界？ </h4>
+<h4 id="172-傅里叶祖师爷">1.7.2 傅里叶祖师爷 </h4>
+<h4 id="173-广播如何分频道">1.7.3 广播如何分频道 </h4>
+<h4 id="174-模拟滤波器和数字滤波器">1.7.4 模拟滤波器和数字滤波器 </h4>
+<h4 id="175-噪声之中淹没了一架战斗机-匹配滤波">1.7.5 噪声之中淹没了一架战斗机 匹配滤波 </h4>
+<h4 id="176-稳定一下情绪-滑动滤波窗">1.7.6 稳定一下情绪 滑动滤波窗 </h4>
+<h4 id="177-图像的降噪-二维滤波器">1.7.7 图像的降噪 二维滤波器 </h4>
+<h4 id="178-预测未来的卡曼滤波器">1.7.8 预测未来的卡曼滤波器 </h4>
+<h3 id="18-摊开的地球仪-卡诺图和逻辑化简">1.8 摊开的地球仪-卡诺图和逻辑化简 </h3>
+<h4 id="181-逻辑和真值表">1.8.1 逻辑和真值表 </h4>
+<h4 id="182-逻辑也是一种空间逻辑运算">1.8.2 逻辑也是一种空间？逻辑运算 </h4>
+<h4 id="183-卡诺图和贯通性">1.8.3 卡诺图和贯通性 </h4>
+<h3 id="19-田忌的小算盘-规划问题">1.9 田忌的小算盘-规划问题 </h3>
+<h4 id="191-规划问题-田忌赛马-状态图">1.9.1 规划问题 田忌赛马 状态图 </h4>
+<h4 id="192-背包问题和穷举">1.9.2 背包问题和穷举 </h4>
+<h4 id="193-递归和规划">1.9.3 递归和规划 </h4>
+<h3 id="110-以牙还牙的汉莫拉比法典-博弈论">1.10 以牙还牙的汉莫拉比法典-博弈论 </h3>
+<h4 id="1101-合作还是不合作-动和静-全知还是蒙在鼓里">1.10.1 合作还是不合作 动和静 全知还是蒙在鼓里 </h4>
+<h4 id="1102-囚徒的均衡分析-制造概率均衡点">1.10.2 囚徒的均衡分析 制造概率均衡点 </h4>
+<h4 id="1103-规则塑造人性">1.10.3 规则塑造人性 </h4>
+<h4 id="1104-公共知识和信息对称武器">1.10.4 公共知识和信息对称武器 </h4>
+<h4 id="1105-先手必胜的游戏是否有意义">1.10.5 先手必胜的游戏是否有意义 </h4>
+<h4 id="1106-博弈实验和社会人格延续-以牙还牙">1.10.6 博弈实验和社会人格延续 以牙还牙 </h4>
+<h2 id="二-物理白魔法">二、物理白魔法 </h2>
+<h3 id="21-经典的力和加速度">2.1 经典的力和加速度 </h3>
+<h4 id="211-三角函数和反三角函数">2.1.1 三角函数和反三角函数 </h4>
+<h4 id="212-牛顿第二定律-力的分解和加速度用scratch实现">2.1.2 牛顿第二定律 力的分解和加速度用Scratch实现 </h4>
+<h4 id="213-多个力怎么办分解之后合成">2.1.3 多个力怎么办？分解之后合成 </h4>
+<h3 id="22-撬地球的棍子-简单机构">2.2 撬地球的棍子-简单机构 </h3>
+<h4 id="221-刚体表面触碰效果实现">2.2.1 刚体表面触碰效果实现 </h4>
+<h4 id="222-杠杆和力量传递">2.2.2 杠杆和力量传递 </h4>
+<h4 id="223-变速-齿轮">2.2.3 变速 齿轮 </h4>
+<h4 id="224-旋转变直线伸缩-齿条">2.2.4 旋转变直线伸缩 齿条 </h4>
+<h4 id="225-旋转变往复-凸轮-曲柄摇臂-急回机构">2.2.5 旋转变往复 凸轮 曲柄摇臂 急回机构 </h4>
+<h4 id="226-极度减速-蜗杆">2.2.6 极度减速 蜗杆 </h4>
+<h4 id="227-间歇运动机构">2.2.7 间歇运动机构 </h4>
+<h4 id="228-来了就不许走-棘轮和棘轮效应-擒纵器">2.2.8 来了就不许走 棘轮和棘轮效应 擒纵器 </h4>
+<h3 id="23-最接近魔法的学问-电磁">2.3 最接近魔法的学问-电磁 </h3>
+<h4 id="231-电荷和洛伦兹力-高能粒子回旋加速器">2.3.1 电荷和洛伦兹力 高能粒子回旋加速器 </h4>
+<h4 id="232-霍尔元件是什么">2.3.2 霍尔元件是什么 </h4>
+<h4 id="233-电子枪和扫描">2.3.3 电子枪和扫描 </h4>
+<h4 id="234-法拉第的发电机-电线里面发生了什么">2.3.4 法拉第的发电机 电线里面发生了什么 </h4>
+<h4 id="235-麦克斯韦干了啥-为啥最伟大">2.3.5 麦克斯韦干了啥 为啥最伟大 </h4>
+<h4 id="236-电磁波和电路里面的电是一码事么">2.3.6 电磁波和电路里面的电是一码事么？ </h4>
+<h4 id="237-微波炉wifi和高压电线哪个更危险尺度-波长-谐振和能量交换">2.3.7 微波炉WiFi和高压电线哪个更危险？尺度 波长 谐振和能量交换 </h4>
+<h4 id="238-电也是守恒的电路原理-欧姆定律弱爆了-我们用基尔霍夫定律">2.3.8 电也是守恒的？电路原理 欧姆定律弱爆了 我们用基尔霍夫定律 </h4>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#数学和物理概念可视化应用" class="md-toc-link"><p>数学和物理概念可视化应用</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#一-数学黑魔法" class="md-toc-link"><p>一、数学黑魔法</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#11-数论-高斯的光芒" class="md-toc-link">
+            <p>1.1 数论-高斯的光芒</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#111-正负数-虚实数-有无理数" class="md-toc-link">
+            <p>1.1.1 正负数 虚实数 有无理数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#112-素数和加密" class="md-toc-link">
+            <p>1.1.2 素数和加密</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#113-梅森素数和哥德巴赫" class="md-toc-link">
+            <p>1.1.3 梅森素数和哥德巴赫</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#114-数列" class="md-toc-link">
+            <p>1.1.4 数列</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#115-余数和同余-奇偶校验" class="md-toc-link">
+            <p>1.1.5 余数和同余 奇偶校验</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#116-函数" class="md-toc-link">
+            <p>1.1.6 函数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#117-映射和坐标变换" class="md-toc-link">
+            <p>1.1.7 映射和坐标变换</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#12-指数对数和苹果树" class="md-toc-link"><p>1.2 指数对数和苹果树</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#121-指数对数" class="md-toc-link">
+            <p>1.2.1 指数对数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#122-复利和稳定复利" class="md-toc-link">
+            <p>1.2.2 复利和稳定复利</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#123-树结构的必要性-算法的极限为什么是对数" class="md-toc-link">
+            <p>1.2.3 树结构的必要性 算法的极限为什么是对数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#124-阶乘和箭号-大的不可思议" class="md-toc-link">
+            <p>1.2.4 阶乘和箭号 大的不可思议</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#13-太阳和尼罗河-进制" class="md-toc-link"><p>1.3 太阳和尼罗河-进制</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#131-二进制" class="md-toc-link">
+            <p>1.3.1 二进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#132-三进制" class="md-toc-link">
+            <p>1.3.2 三进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#133-八进制" class="md-toc-link">
+            <p>1.3.3 八进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#134-十进制" class="md-toc-link">
+            <p>1.3.4 十进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#135-十二进制" class="md-toc-link">
+            <p>1.3.5 十二进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#136-十六进制" class="md-toc-link">
+            <p>1.3.6 十六进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#137-六十进制" class="md-toc-link">
+            <p>1.3.7 六十进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#138-三百六十度" class="md-toc-link">
+            <p>1.3.8 三百六十度</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#14-赌神必备-概率和随机" class="md-toc-link"><p>1.4 赌神必备-概率和随机</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#141-排列组合" class="md-toc-link">
+            <p>1.4.1 排列组合</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#142-大数定理和中心极限定理" class="md-toc-link">
+            <p>1.4.2 大数定理和中心极限定理</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#143-概率和分布-为什么正态分布很多" class="md-toc-link">
+            <p>1.4.3 概率和分布 为什么正态分布很多</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#144-概率陷阱" class="md-toc-link">
+            <p>1.4.4 概率陷阱</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#145-条件概率和贝叶斯教主" class="md-toc-link">
+            <p>1.4.5 条件概率和贝叶斯教主</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#146-马尔可夫链" class="md-toc-link">
+            <p>1.4.6 马尔可夫链</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#147-鞅伦和赌博如何必胜" class="md-toc-link">
+            <p>1.4.7 鞅伦和赌博如何必胜</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#148-即使必胜也要有凯利公式" class="md-toc-link">
+            <p>1.4.8 即使必胜也要有凯利公式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#149-观察者和实验者错觉-小概率黑天鹅事件" class="md-toc-link">
+            <p>1.4.9 观察者和实验者错觉 小概率黑天鹅事件</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#15-黑客的帝国-矩阵" class="md-toc-link"><p>1.5 黑客的帝国-矩阵</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#151-物体和空间" class="md-toc-link">
+            <p>1.5.1 物体和空间</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#152-空间的基准-基向量-空间维度" class="md-toc-link">
+            <p>1.5.2 空间的基准 基向量 空间维度</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#153-换一组基向量会怎样空间还是那个空间么" class="md-toc-link">
+            <p>1.5.3 换一组基向量会怎样？空间还是那个空间么？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#154-矩阵是什么矩阵就是描述一个物体在空间中的位置" class="md-toc-link">
+            <p>1.5.4 矩阵是什么？矩阵就是描述一个物体在空间中的位置</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#155-物体瞬移了-乘以一个变换矩阵-变换矩阵是什么是另一组基描述了物体的位置-运动是相对的" class="md-toc-link">
+            <p>1.5.5 物体瞬移了 乘以一个变换矩阵 变换矩阵是什么？是另一组基描述了物体的位置 运动是相对的</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#156-不同的基描述同一个变换矩阵究竟有什么共性本征值" class="md-toc-link">
+            <p>1.5.6 不同的基描述同一个变换矩阵究竟有什么共性？本征值</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#157-空间解析几何-点线面" class="md-toc-link">
+            <p>1.5.7 空间解析几何 点线面</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#158-有用的旋转变换" class="md-toc-link">
+            <p>1.5.8 有用的旋转变换</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#159-逆矩阵解方程组和谷歌看家法宝pagerank" class="md-toc-link">
+            <p>1.5.9 逆矩阵解方程组和谷歌看家法宝pagerank</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1510-最小二乘法和定位算法" class="md-toc-link">
+            <p>1.5.10 最小二乘法和定位算法</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#16-莱布尼茨我不服-微积分" class="md-toc-link"><p>1.6 莱布尼茨我不服-微积分</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#161-函数的图像" class="md-toc-link">
+            <p>1.6.1 函数的图像</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#162-速度的速度的速度的速度-导数" class="md-toc-link">
+            <p>1.6.2 速度的速度的速度的速度 导数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#163-差值和逼近" class="md-toc-link">
+            <p>1.6.3 差值和逼近</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#164-聚沙成塔-面积体积各种积" class="md-toc-link">
+            <p>1.6.4 聚沙成塔 面积体积各种积</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#17-让暴躁的世界平缓-简单滤波器" class="md-toc-link"><p>1.7 让暴躁的世界平缓-简单滤波器</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#171-三角函数组成世界" class="md-toc-link">
+            <p>1.7.1 三角函数组成世界？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#172-傅里叶祖师爷" class="md-toc-link">
+            <p>1.7.2 傅里叶祖师爷</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#173-广播如何分频道" class="md-toc-link">
+            <p>1.7.3 广播如何分频道</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#174-模拟滤波器和数字滤波器" class="md-toc-link">
+            <p>1.7.4 模拟滤波器和数字滤波器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#175-噪声之中淹没了一架战斗机-匹配滤波" class="md-toc-link">
+            <p>1.7.5 噪声之中淹没了一架战斗机 匹配滤波</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#176-稳定一下情绪-滑动滤波窗" class="md-toc-link">
+            <p>1.7.6 稳定一下情绪 滑动滤波窗</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#177-图像的降噪-二维滤波器" class="md-toc-link">
+            <p>1.7.7 图像的降噪 二维滤波器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#178-预测未来的卡曼滤波器" class="md-toc-link">
+            <p>1.7.8 预测未来的卡曼滤波器</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#18-摊开的地球仪-卡诺图和逻辑化简" class="md-toc-link"><p>1.8 摊开的地球仪-卡诺图和逻辑化简</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#181-逻辑和真值表" class="md-toc-link">
+            <p>1.8.1 逻辑和真值表</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#182-逻辑也是一种空间逻辑运算" class="md-toc-link">
+            <p>1.8.2 逻辑也是一种空间？逻辑运算</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#183-卡诺图和贯通性" class="md-toc-link">
+            <p>1.8.3 卡诺图和贯通性</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#19-田忌的小算盘-规划问题" class="md-toc-link"><p>1.9 田忌的小算盘-规划问题</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#191-规划问题-田忌赛马-状态图" class="md-toc-link">
+            <p>1.9.1 规划问题 田忌赛马 状态图</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#192-背包问题和穷举" class="md-toc-link">
+            <p>1.9.2 背包问题和穷举</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#193-递归和规划" class="md-toc-link">
+            <p>1.9.3 递归和规划</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#110-以牙还牙的汉莫拉比法典-博弈论" class="md-toc-link"><p>1.10 以牙还牙的汉莫拉比法典-博弈论</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1101-合作还是不合作-动和静-全知还是蒙在鼓里" class="md-toc-link">
+            <p>1.10.1 合作还是不合作 动和静 全知还是蒙在鼓里</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1102-囚徒的均衡分析-制造概率均衡点" class="md-toc-link">
+            <p>1.10.2 囚徒的均衡分析 制造概率均衡点</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1103-规则塑造人性" class="md-toc-link">
+            <p>1.10.3 规则塑造人性</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1104-公共知识和信息对称武器" class="md-toc-link">
+            <p>1.10.4 公共知识和信息对称武器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1105-先手必胜的游戏是否有意义" class="md-toc-link">
+            <p>1.10.5 先手必胜的游戏是否有意义</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#1106-博弈实验和社会人格延续-以牙还牙" class="md-toc-link">
+            <p>1.10.6 博弈实验和社会人格延续 以牙还牙</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#二-物理白魔法" class="md-toc-link"><p>二、物理白魔法</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#21-经典的力和加速度" class="md-toc-link"><p>2.1 经典的力和加速度</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#211-三角函数和反三角函数" class="md-toc-link">
+            <p>2.1.1 三角函数和反三角函数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#212-牛顿第二定律-力的分解和加速度用scratch实现" class="md-toc-link">
+            <p>2.1.2 牛顿第二定律 力的分解和加速度用Scratch实现</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#213-多个力怎么办分解之后合成" class="md-toc-link">
+            <p>2.1.3 多个力怎么办？分解之后合成</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#22-撬地球的棍子-简单机构" class="md-toc-link"><p>2.2 撬地球的棍子-简单机构</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#221-刚体表面触碰效果实现" class="md-toc-link">
+            <p>2.2.1 刚体表面触碰效果实现</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#222-杠杆和力量传递" class="md-toc-link">
+            <p>2.2.2 杠杆和力量传递</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#223-变速-齿轮" class="md-toc-link">
+            <p>2.2.3 变速 齿轮</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#224-旋转变直线伸缩-齿条" class="md-toc-link">
+            <p>2.2.4 旋转变直线伸缩 齿条</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#225-旋转变往复-凸轮-曲柄摇臂-急回机构" class="md-toc-link">
+            <p>2.2.5 旋转变往复 凸轮 曲柄摇臂 急回机构</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#226-极度减速-蜗杆" class="md-toc-link">
+            <p>2.2.6 极度减速 蜗杆</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#227-间歇运动机构" class="md-toc-link">
+            <p>2.2.7 间歇运动机构</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#228-来了就不许走-棘轮和棘轮效应-擒纵器" class="md-toc-link">
+            <p>2.2.8 来了就不许走 棘轮和棘轮效应 擒纵器</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#23-最接近魔法的学问-电磁" class="md-toc-link"><p>2.3 最接近魔法的学问-电磁</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#231-电荷和洛伦兹力-高能粒子回旋加速器" class="md-toc-link">
+            <p>2.3.1 电荷和洛伦兹力 高能粒子回旋加速器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#232-霍尔元件是什么" class="md-toc-link">
+            <p>2.3.2 霍尔元件是什么</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#233-电子枪和扫描" class="md-toc-link">
+            <p>2.3.3 电子枪和扫描</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#234-法拉第的发电机-电线里面发生了什么" class="md-toc-link">
+            <p>2.3.4 法拉第的发电机 电线里面发生了什么</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#235-麦克斯韦干了啥-为啥最伟大" class="md-toc-link">
+            <p>2.3.5 麦克斯韦干了啥 为啥最伟大</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#236-电磁波和电路里面的电是一码事么" class="md-toc-link">
+            <p>2.3.6 电磁波和电路里面的电是一码事么？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#237-微波炉wifi和高压电线哪个更危险尺度-波长-谐振和能量交换" class="md-toc-link">
+            <p>2.3.7 微波炉WiFi和高压电线哪个更危险？尺度 波长 谐振和能量交换</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#238-电也是守恒的电路原理-欧姆定律弱爆了-我们用基尔霍夫定律" class="md-toc-link">
+            <p>2.3.8 电也是守恒的？电路原理 欧姆定律弱爆了 我们用基尔霍夫定律</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>

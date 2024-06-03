@@ -3,14 +3,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js"></script>
+        
       
       
       
       
       
       <style>
-      @import url("https://cdn.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css");
+      @import url("https://fastly.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css");
 code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
 /* Please visit the URL below for more information: */
 /*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
@@ -80,7 +85,6 @@ margin-left: -16px;
   -webkit-text-size-adjust: none;
   -webkit-touch-callout: none;
   box-sizing: border-box;
-  font-family: "Inconsolata", "Lucida Console", 'LXGW WenKai Screen R', 'LXGW WenKai Mono', Consolas, "KaTeX_Main", "Monaco", " Lucida Console", " Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", " Courier New", "monospace", 'SimHei', 'Times New Roman', serif;
 }
 .markdown-preview.markdown-preview body {
   line-height: 1.5em;
@@ -92,6 +96,7 @@ margin-left: -16px;
   /*设置最大宽度*/
   margin: 0 auto;
   /*设置内容居中*/
+  font-family: "LXGW WenKai Mono Screen", "LXGW WenKai Screen", "monospace", "KaTeX_Main", "DejaVu Sans Mono", "SimHei", "Times New Roman", "serif", "Lucida Console", Consolas, "Monaco", " Lucida Console", " Liberation Mono", "Bitstream Vera Sans Mono", " Courier New";
 }
 .markdown-preview.markdown-preview h1,
 .markdown-preview.markdown-preview h2,
@@ -172,19 +177,19 @@ margin-left: -16px;
   display: block;
   font-size: 18px;
   font-weight: bold;
-  color: #1661ab;
+  color: #168381;
   text-indent: 0.75em;
   line-height: 1.5em;
 }
 .markdown-preview.markdown-preview h5 {
   font-weight: bold;
   text-indent: 1em;
-  color: #158bb8;
+  color: #2b9678;
   font-size: 17px;
 }
 .markdown-preview.markdown-preview h6 {
   font-size: 16px;
-  color: #eb085f;
+  color: #ff6668;
   line-height: 1.5em;
   text-align: center;
   font-style: italic;
@@ -237,7 +242,7 @@ margin-left: -16px;
 }
 .markdown-preview.markdown-preview strong {
   line-height: 1.75em;
-  color: #ff1818;
+  color: #ec0434;
 }
 .markdown-preview.markdown-preview em {
   color: #126b15;
@@ -271,7 +276,7 @@ margin-left: -16px;
   display: block;
   border-radius: 10px;
   max-width: 99%;
-  max-height: 1024px;
+  max-height: 960px;
   margin: 0 auto;
 }
 .markdown-preview.markdown-preview img:active {
@@ -389,7 +394,7 @@ margin-left: -16px;
   text-align: center;
   font-weight: bolder;
   color: #fff;
-  background-color: #353535;
+  background-color: #042335;
 }
 .markdown-preview.markdown-preview td {
   vertical-align: middle;
@@ -433,7 +438,7 @@ margin-left: -16px;
   margin-right: 0.8em;
 }
 .markdown-preview.markdown-preview body .task-list-item input:before {
-  content: '\221A';
+  content: "\221A";
   display: inline-block;
   width: 1.25rem;
   height: 1.5rem;
@@ -521,9 +526,8 @@ margin-left: -16px;
 }
 .markdown-preview.markdown-preview code {
   display: inline-block;
-  color: #ef632b;
-  background-color: #f2fffe;
-  border: 2px solid #ccc;
+  color: #1c2939;
+  background-color: #f7e8c1;
   border-radius: 5px;
   font-weight: 800;
   padding: 0em;
@@ -531,6 +535,7 @@ margin-left: -16px;
   text-indent: 0;
   word-wrap: break-word;
   word-break: break-all;
+  font-family: "LXGW WenKai Mono Screen", "Inconsolata", "monospace", "KaTeX_Main", "DejaVu Sans Mono", "SimHei", "Times New Roman", "serif", "Lucida Console", Consolas, "Monaco", " Lucida Console", " Liberation Mono", "Bitstream Vera Sans Mono", " Courier New";
 }
 .markdown-preview.markdown-preview pre[data-line] {
   position: relative;
@@ -640,10 +645,10 @@ margin-left: -16px;
   color: #ff6600;
 }
 .markdown-preview.markdown-preview .token.string {
-  color: blue;
+  color: #0a1e51;
 }
 .markdown-preview.markdown-preview .token.number {
-  color: #237465;
+  color: #c23651;
 }
 .markdown-preview.markdown-preview .token.directive-hash {
   color: #06615e;
@@ -652,9 +657,15 @@ margin-left: -16px;
   color: teal;
 }
 .markdown-preview.markdown-preview .token.keyword {
+  color: #8d211e;
   font-style: italic;
   font-weight: 1100;
 }
+.markdown-preview.markdown-preview .token.operator {
+  color: #681817;
+}
+.markdown-preview.markdown-preview mjx-container,
+.markdown-preview.markdown-preview .mathjax-exps,
 .markdown-preview.markdown-preview .MathJax,
 .markdown-preview.markdown-preview .katex,
 .markdown-preview.markdown-preview .mstyle,
@@ -665,9 +676,10 @@ margin-left: -16px;
 .markdown-preview.markdown-preview .mo,
 .markdown-preview.markdown-preview .mi,
 .markdown-preview.markdown-preview .mn {
-  line-height: 1.5em;
-  color: #bf39b4;
+  line-height: 2em;
+  color: #f97d1d;
   font-style: normal;
+  font-family: Inconsolata;
 }
 .markdown-preview.markdown-preview .root {
   vertical-align: middle;
@@ -702,6 +714,7 @@ margin-left: -16px;
       <div class="crossnote markdown-preview  ">
       
 <h1 id="scratch-入门">Scratch 入门 </h1>
+<hr>
 <h2 id="一-scratch界面简介">一、Scratch界面简介 </h2>
 <p>首先要从Scratch的原理说起。Scratch的基本原理是“<strong>精灵挂脚本</strong>”。精灵在中文版的翻译中是“<strong>角色</strong>”。<br>
 Scratch打开时默认的那只猫就是一个角色，一切程序都围绕着角色来进行。<br>
@@ -789,6 +802,804 @@ Scratch打开时默认的那只猫就是一个角色，一切程序都围绕着�
 换句话说，<strong>本来想点一下舞台上的角色，结果却会把角色拖动起来</strong>。这样的设置意义在于可以<strong>方便我们在舞台上面使用鼠标拖拽排布角色</strong>。</p>
 <p>而全屏播放器模式之中，角色是<strong>默认不可以被鼠标随便拖动</strong>的。这样就避免了执行程序时候的各种错误。当然也可以把播放时可拖拽的开关打开，这样在播放时我们也可以随意拖拽角色实现一些功能。</p>
 <h2 id="三-积木介绍">三、积木介绍 </h2>
+<p><code>Scratch</code>是积木式的语言（<code>Blockly</code>），依靠积木的可连接性来组成代码，防止简单语法错误的发生。<br>
+默认的<code>Scratch</code>界面分为九种积木，两大类：</p>
+<ol>
+<li><strong>形象部分</strong>：运动、外观、声音</li>
+<li><strong>抽象部分</strong>：事件、控制、侦测、运算、变量、自制积木。</li>
+</ol>
+<p>本章将分别介绍所有积木的使用方式和一些易错细节，最后会展开描述所有积木的潜在使用场景。<br>
+注意：本章建议在<strong>看完全书之后再次阅读，或已经学习过Scratch一段时间的读者阅读</strong>，你将获得对Scratch更加系统和深化的理解。</p>
+<h3 id="31-运动">3.1 运动 </h3>
+<p><img src="imgs/img-22.png" alt=""><br>
+Scratch的运动积木可以实现的功能归根结底只有两类：</p>
+<ol>
+<li>移动</li>
+<li>转向</li>
+</ol>
+<p>其中移动类又分为了：</p>
+<ol>
+<li>直接移动和滑动</li>
+<li>增量移动</li>
+<li>移动到某角色或者鼠标指针</li>
+<li>向面向方向移动</li>
+</ol>
+<p>转向类分为了：</p>
+<ol>
+<li>直接转向</li>
+<li>增量转向</li>
+<li>面向某角色或鼠标指针</li>
+</ol>
+<p><strong>注意：</strong></p>
+<ol>
+<li>直接移动或者转向的模式相当于<strong>直接指挥角色</strong>。直接安排角色到达某个地方面向某个角度。</li>
+<li>增量的移动转向或者向面向方向移动，相当于<strong>编写角色的内部逻辑</strong>。例如设定某小车遇到红色左转30°遇到蓝色右转30°。</li>
+</ol>
+<h3 id="32-外观">3.2 外观 </h3>
+<p><img src="imgs/img-23.png" alt=""><br>
+外观控制包括了下面几种类型：</p>
+<ol>
+<li>角色身上造型切换</li>
+<li>外观特效</li>
+<li>角色大小设定</li>
+<li>说话思考</li>
+<li>层叠关系设定</li>
+<li>显示隐藏</li>
+</ol>
+<h4 id="321-造型切换">3.2.1 造型切换 </h4>
+<p>其中造型切换可以传入变量控制，其中变量可以是两种形式：</p>
+<ol>
+<li>数字123456…对应了造型的编号</li>
+<li>字符串，例如：“造型1”，对应了造型的名称</li>
+</ol>
+<p><img src="imgs/img-25.png" alt=""><br>
+<img src="imgs/img-24.png" alt=""></p>
+<p>Scratch都可以自动的识别并找到对应的造型。如果好事者非要把编号为2的造型名称写成1，想看看究竟<strong>造型编号</strong>和<strong>造型名称</strong>哪个优先级更高。<br>
+那么答案是<strong>造型名称更高</strong>，在“将造型切换为”积木中传入变量1时，名字为“1”的2号造型会显示出来。<br>
+<img src="imgs/img-26.png" alt=""><br>
+<img src="imgs/img-27.png" alt=""></p>
+<h4 id="322-外观特效">3.2.2 外观特效 </h4>
+<p>角色外观的特效分为了好多种类：</p>
+<ul>
+<li>颜色</li>
+<li>鱼眼</li>
+<li>旋转</li>
+<li>像素化</li>
+<li>马赛克</li>
+<li>亮度</li>
+<li>虚像</li>
+</ul>
+<p>其中最有用的是<code>颜色</code>特效，他会在<strong>HSB</strong>的色轮上，把造型现有的所有颜色都增加固定的数值。<br>
+例如造型现在是<strong>红色</strong>，<code>增加颜色特效120</code>会把角色变成<strong>蓝色</strong>，造型身上如果还有<strong>绿色</strong>，则会被转换为<strong>红色</strong>。<br>
+我们如果<strong>不想制造更多的造型</strong>，而想制造一些<strong>新鲜感</strong>的话，可以对角色的颜色特效进行设定，比如用一个红色的角色做基础款造型，这样方便我们<strong>知道增加颜色特效之后，造型大致会变成什么颜色</strong>。<br>
+但是这里有个<strong>警告</strong>：对于不了解Scratch性能的初学者，请减少颜色特效的使用，这<strong>几乎是最能拖慢Scratch运行速度的语句</strong>。这相当于给正常走路的人背了一大桶水，又要走路又要负重。</p>
+<p>第二有用的特效是<code>亮度</code>和<code>虚像</code>：</p>
+<ul>
+<li><code>亮度</code>的正值可以增加<code>亮度</code>直到<code>100</code>会变成<code>纯白</code>，负数值直到<code>-100</code>会变成<code>纯黑</code></li>
+<li><code>虚像</code>特效从<code>0</code>到<code>100</code>分别对应了<code>实体</code>和<code>绝对看不到</code>。
+<ol>
+<li>虚像设为100时，角色完全不可见，但是仍旧<strong>可以识别碰撞</strong></li>
+<li>如果也不想角色识别碰撞，可以直接将角色<strong>隐藏</strong></li>
+</ol>
+</li>
+</ul>
+<p>这两种用法会在不同场景派上用场其他的外观特效使用较少，请读者自行尝试功能，但是要注意的是在<strong>使用过外观特效</strong>之后一定要使用<strong>清除全部特效</strong>，否则很可能会因为设置了虚像而找不到角色。</p>
+<h4 id="323-大小设定">3.2.3 大小设定 </h4>
+<p>Scratch的舞台大小是<span class="mathjax-exps">$480 \times 360$</span>，导入计算机图片作为造型时可以传入不同大小的图片，如果大于Scratch的舞台，软件会自动帮我们把图片缩放到合适尺寸。但是这样可能会造成清晰图片的锯齿化。所以，请<strong>合理选择图片的大小</strong>。</p>
+<p>角色身上的<strong>第一个脚本</strong>，我们要养成习惯<strong>对角色的大小进行设定</strong>。而增量大小设定积木可以配合循环模块来动态变化角色的外观。例如可以将角色做成心跳的闪动效果，下图就是心跳效果的实现和变种：<br>
+<img src="imgs/img-28.png" alt=""></p>
+<h4 id="324-说话思考">3.2.4 说话思考 </h4>
+<p>对于<strong>高端玩家</strong>来说，说话思考积木，大多数情况下应该只用在<strong>调试</strong>过程中。可以将变量或者积木块放入说话和思考框之中，让程序在运行过程之中显示中间结果，方便我们调试程序。<br>
+相当于文本语言中的<code>print</code>，请收好你们说的<code>hello world</code>的冲动。<br>
+<img src="imgs/img-29.png" alt=""></p>
+<h4 id="325-层叠关系设定">3.2.5 层叠关系设定 </h4>
+<p>Scratch的层叠关系设定十分迷惑。<br>
+设想我们有多个角色，每一个人身上都有一段<code>当绿旗被点击</code>和<code>移到最前面</code>的积木脚本。点击绿旗之后会发生什么情况呢？<br>
+大多数人会说不知道，求是的说，Scratch会把你创建顺序在先的<code>当绿旗被点击</code>之下的脚本先执行。<br>
+这是由于这个<code>当绿旗被点击</code>积木在Scratch内部被首先注册出来，所以就会首先运行。这种多个脚本同时执行，说穿了只是<strong>计算机运行速度很快的假象</strong>。在Scratch内核，程序执行还是<strong>有顺序的而并非真的并发</strong>。<br>
+<img src="imgs/%E5%B1%82%E7%BA%A7%E5%85%B3%E7%B3%BB.gif" alt=""><br>
+再来设想我们的多个角色身上<code>当绿旗被点击</code>的积木下有的跟着<code>移到最前面</code>积木，有的跟着<code>下移1层</code>，有的跟着<code>下移2层</code>…当我们点击绿旗让程序运行，会发生什么？<br>
+答案是，虽然我们知道了先拿出来的<code>当绿旗被点击</code>积木首先运行，但是由于层级关系太复杂，还是很混乱<strong>无法预测</strong>。这就是Scratch层叠关系设置欠合理的地方。</p>
+<p>所以我们在使用层叠关系时候应该坚持一些<strong>原则</strong>：</p>
+<ol>
+<li>例如尽量不使用多于3层的层叠关系</li>
+<li>如果一定要使用多层次关系，那么在设定层级关系时请使用微小的等待时间差距来自己控制层级顺序</li>
+<li>对于一直要处在最上层或者最底层的角色，请使用重复执行移到最上层或下移10层的脚本控制角色</li>
+<li>更好的层级控制方法是在舞台上使用发送消息并等待积木，实现多角色之间的顺序设置层级，这是因为程序执行中有可能出现卡顿，上面3中通过时间设定不够准确</li>
+</ol>
+<p><img src="imgs/img-30.png" alt=""></p>
+<h4 id="326-显示和隐藏">3.2.6 显示和隐藏 </h4>
+<p>在角色的属性盘之中，我们也可以设定角色<strong>是否显示</strong>，且Scratch的显示隐藏还有各类特效和画笔都是<strong>记忆状态</strong>，换句话说：</p>
+<ul>
+<li>如果某次运行我们让角色隐藏了，那么下次再运行程序，角色还是被隐藏的。</li>
+<li>这次画的画，如果没有在下次开始时清空就会存留下去。</li>
+</ul>
+<p>所以我们如果要使用隐藏积木，请一定记住让<strong>显示积木跟在<code>当绿旗被点击</code>积木后面</strong>。成对使用积木的规律我们要遵守以下三条：</p>
+<ol>
+<li>隐藏和显示</li>
+<li>外观特效和清除特效</li>
+<li>画笔图章和清空</li>
+</ol>
+<p>事实上更加广义的来说，这是一个将程序<strong>初始化</strong>的过程。任何的程序都需要妥善的初始化，你需要做两件事情：</p>
+<ol>
+<li>将所有的状态都清空或者设为初始值</li>
+<li>将所有定义的变量都赋予一个初始的数值</li>
+<li>把所有角色都置于你已知的控制范围内，这是防止程序逐渐庞大后出现奇怪问题的预防针。</li>
+</ol>
+<h3 id="33-声音">3.3 声音 </h3>
+<p>这里指的是角色携带的音轨播放：<br>
+<img src="imgs/img-31.png" alt=""><br>
+我们可以把角色携带的声音用积木块播放出来，这主要作用是播放音效，例如吃到金币的<strong>音效</strong>，被打击的音效等等，我们还可以选择：</p>
+<ol>
+<li><code>播放声音</code>：打开声音就让脚本继续向下执行</li>
+<li><code>播放声音并等待</code>：打开声音不放完就不往下执行脚本</li>
+</ol>
+<p>一般<strong>触发音效的情况</strong>下要使用第一种，这样让角色播放音效的时候相当于打开了音乐就继续去做别的事情，不耽误后面的程序运行。但是要注意的是，如果要播放游戏结束音效，我们打开声音后面跟着一个<code>停止全部</code>积木，那么声音就听不到了，因为播放声音了之后马上结束了所有脚本的运行。<br>
+但是我们又不想播放声音并等待，因为那样会造成角色阵亡了还可以乱动，直到结束音乐播放完毕才可以停下来脚本。这种问题我们有两种解决方案可以参考：</p>
+<ol>
+<li>使用<code>播放声音</code>+<code>消息</code>+<code>停止角色身上其他脚本</code>积木，消息通知舞台上所有其他人停止。</li>
+<li>使用<code>播放声音并等待</code>+<code>消息</code>+<code>结束全部</code>，通知本角色身上关于运动的脚本停止。</li>
+</ol>
+<p>但如果是要播放背景音乐，那一定要使用<code>重复执行</code>+<code>播放声音并等待</code>，必须播放完了一遍再播放下一遍。</p>
+<h3 id="34-音乐">3.4 音乐 </h3>
+<p>在扩展积木中有个音乐分类，这里有Scratch合成音符播放：<br>
+<img src="imgs/img-32.png" alt=""><br>
+Scratch的播放音符可以实现打击乐器和乐音乐器两种效果，通过数字编号<strong>0到200对应了十二平均律</strong>的各种音高。这样我们就可以用变量来控制音符的播放了，这样可以播放我们自己的乐谱。<br>
+然而Scratch的音符是通过正弦波频率来合成的，低于<strong>40编号的音符听上去很奇怪</strong>，而且无法实现连续音符的过渡，所有的音符都是单独的，<strong>并不能实现什么优美的音乐效果</strong>。所以如果想播放音乐，还是<strong>使用外部导入音乐</strong>来的方便。</p>
+<h3 id="35-画笔">3.5 画笔 </h3>
+<p>Scratch的画笔是角色坐标和外观的延伸，也是在扩展模块里面，默认没有加载进来。<br>
+<img src="imgs/img-33.png" alt=""></p>
+<ol>
+<li><code>落笔</code>和<code>抬笔</code>指的是在角色中心，也即是角色坐标位置落笔Scratch积木和应用原则</li>
+<li><code>图章</code>指的是将角色现在的造型印在背景上</li>
+<li><code>画笔</code>和<code>图章</code>都直接画在了<code>舞台背景</code>之上，如果有其他角色，将会<strong>覆盖画笔</strong>的内容，因为<strong>舞台</strong>在Scratch之中是默认<strong>最底层</strong>的，不可能有比舞台还底层的东西。</li>
+<li>画笔图章和角色隐藏与否无关，<strong>隐藏的角色依旧可以画笔和使用图章</strong>。</li>
+<li>画笔和图章之间是可以互相覆盖的，<strong>后画的覆盖先画的</strong>。</li>
+</ol>
+<p>对于画笔来说，Scratch 3.0之中可以完整的设置色相、饱和度和明度，也即是HSB颜色空间。<br>
+在Scratch 2.0中我们只能设置画笔颜色为0到200为红橙黄绿青蓝紫的色相，饱和度是固定的。<br>
+作为代替，我们可以使用取色器设定画笔颜色积木块来设置其他颜色。不过麻烦在于我们没有办法取Scratch软件外的颜色，除非我们<strong>把色卡做成一个角色造型</strong>，导入到Scratch之中，然后<strong>使用取色器取用颜色</strong>。<br>
+其实Scratch留有一个RGB的后门的，<code>取色器</code>设定画笔颜色积木块可以放入一个变量。我们可以用这样的方式来控制RGB和透明度Alpha:<br>
+<img src="imgs/img-34.png" alt=""><br>
+<img src="imgs/img-35.png" alt=""><br>
+应用上，画笔大多是和运动控制结合使用的，然而我们总是局限于运动物体速度过慢的情况，这种情况下我们要使用<code>自制积木</code>的<code>运行时不刷新屏幕模式</code>来实现快速画笔，该模式将在自定义模块部分详细介绍。</p>
+<h3 id="36-事件">3.6 事件 </h3>
+<p>Scratch之中圆顶的积木称之为<strong>脚本入口</strong>，也即是当他们等待的条件满足时，就开始下面连接的脚本。Scratch有六大脚本入口：</p>
+<ol>
+<li>绿旗入口</li>
+<li>切换背景入口</li>
+<li>角色点击入口</li>
+<li>按键入口</li>
+<li>声控入口</li>
+<li>消息入口</li>
+</ol>
+<p><img src="imgs/img-36.png" alt=""><br>
+事件里面除了接受信号的，还有发送消息的：<br>
+<img src="imgs/img-37.png" alt=""><br>
+其中前五个入口是可以由人为发起的，最后一个是角色之间互发消息发起的。这里面最常见的绿旗入口我们几乎每天都要用到，但是我们真的了解绿旗入口么？</p>
+<h4 id="361-绿旗">3.6.1 绿旗 </h4>
+<p>我们究竟需要几个绿旗入口？前面在讲解层叠关系时说到了绿旗入口的Scratch内核注册顺序问题。<br>
+虽然说计算机内部都是<strong>顺序执行</strong>的，但是我们还是在编写<strong>并发程序</strong>，也即是说许多绿旗入口在你一次点击之下会集体开始执行。在这种可怕的无法预测的情况下，我们需要做到的是<strong>防止两个绿旗入口下的脚本互相干扰</strong>，例如：</p>
+<ul>
+<li>一段代码把一个变量改变了一个数值，另一段代码又改回去</li>
+<li>一段说要停止程序，另一段却又开始等等。</li>
+</ul>
+<p>合理的拆分程序到不同的绿旗入口之下是一种必要的程序逻辑训练，如果有条件和耐心，不断地重新编写一个程序，以求更加的清晰和优化，这会极大地有助于编程思维能力的提升。<br>
+笔者的计算机课程老师经常教育笔者：<strong>如果发现程序错了，全部重新写一次，那将比你试图修改要快的多，而且你将有机会重新审视自己这段程序的逻辑，是最好的训练之一。</strong><br>
+我们要坚持的原则是：</p>
+<ol>
+<li>把互相<strong>无关</strong>的东西放在<strong>不同</strong>的绿旗入口之下。</li>
+<li>检查程序流向是否会<strong>互相交叉干扰</strong>，同一个消息只有一个发送者，同一个变量同时只有一个更改者。</li>
+</ol>
+<p><img src="imgs/img-39.png" alt=""><br>
+好事者又要提问了，如果同时一定有好多角色可以操作到某个变量，应该怎么办？<br>
+答案是，应该<strong>加锁</strong>，这个过程将在后续章节之中介绍。</p>
+<h4 id="362-切换背景入口">3.6.2 切换背景入口 </h4>
+<p>切换背景入口是为了<strong>不同关卡的场景</strong>切换而生，进入规定关卡则执行该入口下的内容。建议在设计复杂的多关卡游戏时，<strong>只在总控制部分</strong>放置切换背景更改状态的脚本。<br>
+如果每个角色身上都带有此类脚本，而背景又经常切换的时候，逻辑将变得及其复杂，调试起来十分痛苦。</p>
+<h4 id="363-角色点击入口">3.6.3 角色点击入口 </h4>
+<p>角色的点击入口又要牵涉前文提到过的<strong>拖拽角色优先级最高</strong>。我们可以尝试简单的放下，当角色被点击则角色大小增加10。</p>
+<ul>
+<li>在编辑器状态下点击角色，角色将被拖拽起来而不会执行增加大小的积木。</li>
+<li>在播放器状态下，点击角色可以看到角色增加了大小。</li>
+</ul>
+<p>而且更重要的一点是，这个入口是一次性激发的，也即是我们如果在播放器状态下对角色点着鼠标不放，角色大小只会增加一次。<br>
+要想执行第二次<strong>必须松开鼠标按键再次点击</strong>。这种防止被多次触发的机制也让该入口成为Scratch最安全的入口之一，当然前提是在播放器状态下。</p>
+<h4 id="364-按键入口">3.6.4 按键入口 </h4>
+<p>刚才我们讨论了角色被点击入口，大家可能还不能理解入口被多次触发带来的困扰，现在麻烦就要来了。<br>
+假设我们要写一段脚本，当向上键被按下时，角色的y坐标增加10。使用如下代码，当我们长按向上键时，可以观察到角色首先向上移动了一下，接着开始快速向上移动，中间发生了一个小的卡顿，好像向上窜了一下才往前移动，控制起来十分不流畅。<br>
+<img src="imgs/img-38.png" alt=""><br>
+为什么会发生这种奇怪的现象？<br>
+这是因为Scratch对于<strong>积木块执行速度的有特殊的控制</strong>。Scratch既想让按键可以单独的控制某个动作，不至于因为单独按键发生了连续执行的效果，又想让按键可以产生连续的控制这个动作。<br>
+这种矛盾的做法<strong>让按键入口很难作为角色移动的控制</strong>。一般来说我们要使用重复执行和侦测判断按键来实现稳定的角色移动控制。代码如下：<br>
+<img src="imgs/img-40.png" alt=""><br>
+为什么重复执行价侦测判断的方案就可以稳定的控制角色移动呢？这要从<strong>游戏引擎</strong>说起了，任何一款用作游戏开发的引擎必然会自带一个<strong>执行速度固定</strong>的语句。<br>
+我们要实现角色以一个固定速度移动，我们只需要让他<strong>固定时间长度往前移动固定步数</strong>即可。设想这个语句的执行时间不固定，角色的速度也会不固定，这样就没法实现最简单的匀速运动。<br>
+熟悉游戏开发的朋友可能知道，在Unity编辑器之中有一个FixUpdate()语句，可是实现固定时间长度的运行。高级的物理引擎也都是基于这个语句实现的。<br>
+在Scratch之中，为了不把这个问题展示给初学者引起不必要的迷惑，开发者们聪明的将重复执行积木变成了这个固定时间长度语句。<br>
+也就是循环中间装入不是很多语句的时候，每次循环中间的语句执行完毕的时候还会等一小下，把一次循环的总时长补到大约是<code>0.03s</code>左右（测量并不准确，大概1s循环30次）。<br>
+<img src="imgs/img-41.png" alt=""><br>
+因此，我们把“重复执行”积木之中放入一个“移动10步”积木，就可以实现角色的移动。究其根本是因为<strong>重复执行锁定了每一次执行的时间</strong>。<br>
+好事者又想问，如果我们往重复执行里面放入许多<code>耗时极长</code>的语句，会不会挤爆重复执行语句？<br>
+答案是<strong>不会</strong>，一旦重复执行之中包含的语句超过了重复执行锁定的时长，重复执行的时间就被<strong>撑长</strong>了，撑到执行完中间包含的所有语句，也就是说执行时长超过<code>0.03s</code>。</p>
+<h4 id="365-声控入口">3.6.5 声控入口 </h4>
+<p>Scratch可以调用麦克风识别响度数值，如果响度大于某数值则该入口开启。<br>
+声控入口和角色点击入口一样是一个<strong>单次入口</strong>，也即是<strong>开启之后必须等响度小于这个数值之后才能第二次开启</strong>。不会产生多次开启的情况，也是一个比较安全的入口。</p>
+<h4 id="366-消息入口">3.6.6 消息入口 </h4>
+<p>消息入口也称为消息接收器，是六个入口之中唯一一个不能靠人为开启，只能靠程序控制的入口。<br>
+角色的消息既<strong>可以发给别的角色，也可以发给自己</strong>，还可以发给舞台上的脚本。这部分内容在后续内容将会详尽介绍。</p>
+<h3 id="37-侦测">3.7 侦测 </h3>
+<p>Scratch的侦测积木分为以下几类：</p>
+<ol>
+<li>距离和坐标侦测类</li>
+<li>角色信息侦测类</li>
+<li>视频侦测类</li>
+<li>响度侦测类</li>
+<li>询问回答和计时器</li>
+<li>碰撞侦测类</li>
+<li>按键侦测类</li>
+</ol>
+<p><img src="imgs/img-42.png" alt=""><br>
+<img src="imgs/img-45.png" alt=""><br>
+侦测积木主要会产生两类结果：</p>
+<ul>
+<li>一类是数字，例如：坐标值、距离值、视频变动剧烈程度、响度、计时。</li>
+<li>另一类是布尔值，也就是真或者假，例如：是否按下了鼠标按键、是否按下了某键盘按键、是否碰撞某角色某颜色等。</li>
+</ul>
+<h4 id="371-距离和坐标侦测类">3.7.1 距离和坐标侦测类 </h4>
+<p><img src="imgs/img-44.png" alt=""><br>
+该类积木主要作用是获得和某角色或者鼠标指针的距离以及获得鼠标指针的位置：</p>
+<ul>
+<li>可以方便的实现一些例如防御力场之类的效果，例如距离某角色50步就无法继续前进。</li>
+<li>也可以获得和鼠标之间的距离用来实现鼠标操纵。</li>
+</ul>
+<h4 id="372-角色信息侦测类">3.7.2 角色信息侦测类 </h4>
+<p><img src="imgs/img-43.png" alt=""><br>
+该积木可以实现在<strong>某角色</strong>身上的脚本中获知<strong>其他角色</strong>状态的功能。例如某boss想根据玩家角色的坐标值做出一些反应，就要依靠这块积木获得玩家角色的坐标值。<br>
+如果不想使用这块积木，我们仍旧有替代方案。那就是把<strong>玩家角色的坐标值赋值给一个全局变量</strong>，然后所有人都可以看到这个变量。但是，这难道不是多此一举么？为什么要绕一个弯做这样的事情？<br>
+其实这种做法是有使用场景限制的，如果<strong>某个数值有许多人都要读取</strong>，那么最好把它做成一个全局变量。这样当我们要改写程序的时候，只需要改变这个全局变量就好，只需要<strong>动这一个地方</strong>。<br>
+假如我们在每一个用到这个数值的地方都用<strong>侦测角色信息</strong>的积木这样使用，那么我们如果要改动就要改动好多地方，这时候疏漏和麻烦就找上门了。<br>
+不要一味地使用角色信息侦测积木，合理的使用变量可以方便我们做出易于更改维护的程序。</p>
+<h4 id="373-视频侦测类">3.7.3 视频侦测类 </h4>
+<p>视频侦测类默认没有加载，需要我们添加进来。<br>
+<img src="imgs/img-45.png" alt=""><br>
+这是一个帮助文档也稀里糊涂解释的东西，它包含两个类型的内容：</p>
+<ol>
+<li>视频运动(motion)对于角色</li>
+<li>视频方向(direction)对于角色</li>
+</ol>
+<h5 id="3731-视频运动">3.7.3.1 视频运动 </h5>
+<p><strong>视频运动</strong>其实是角色对应视频区域之中，画面活动频繁程度的一个数值。角色对应区域画面如果没有任何移动，那么该数值将会很低，甚至为零。<br>
+<img src="imgs/img-46.png" alt=""><br>
+如果该区域画面之中活动剧烈，这个数值将会激增。Scratch官方以此为根据做了一个切水果的游戏，就是检测落下水果对应视频区域画面活动剧烈程度，判断是否被人手在视频中切中。<br>
+好事者又来提问了，假如我们<strong>让一个苹果从舞台上方逐渐掉落</strong>，那么苹果背后的视频和苹果发生相对运动，在苹果的眼中视频运动应该很高才对，是这样的么？<br>
+答案是不会的，我们可以简单地实现一下这个场景，就会发现这个数值根本就在0左右<strong>没有动</strong>。<br>
+原因是Scratch的运行和拍电影一样是一帧一帧执行的，只是速度很快的时候我们肉眼无法分辨觉得它在运动。<strong>每一次视频运动检测都在角色移动了微小一步之后发生，这时角色已经停下，下次微小移动还没发生</strong>，当然不会和视频有相对运动。</p>
+<h5 id="3732-视频方向">3.7.3.2 视频方向 </h5>
+<p><strong>视频方向</strong>这个概念就更加迷惑了，这个数值好像一直就在狂跳从没稳定过。其实这个视频方向指的是角色对应视频区域里面视频运动方向。如果不理解的话，我们来做个试验。</p>
+<ol>
+<li>首先画一个占据舞台的大圆球作为角色1，如果没有完全占据则调整外观角色大小。首先将圆球设置外观特效为虚像80，打开摄像头，然后把视频方向对于角色1的赋值给变量<br>
+dir。<img src="imgs/img-47.png" alt=""></li>
+<li>画一个指向默认方向90°的方框，中心设置见上图。让该方框的方向重复执行始终指向<br>
+dir。<img src="imgs/img-48.png" alt=""></li>
+<li>运行观察，在大圆盘内挥手观察角色2指向的方向就会发现这个指针在那蹦迪：<br>
+<img src="imgs/%E8%A7%86%E9%A2%91%E6%96%B9%E5%90%91%E4%BE%A6%E6%B5%8B.gif" alt=""></li>
+</ol>
+<p>我们可以见到，手臂在视频中朝向哪里挥动，角色2就像指针一样指向了哪里。但是值得注意的一点是，这个方向<strong>十分不稳定</strong>，跳动还是有些剧烈，不适宜直接使用。本书将在后续章节<strong>滤波器</strong>之中讲述如何让该数值稳定下来以便使用。<br>
+此外关于视频处理要补充的一点是：无论我们将视频透明度设置成多少，哪怕设置成100完全看不到视频图像，动作和方向检测依然不受影响的生效。</p>
+<h4 id="374-响度侦测类">3.7.4 响度侦测类 </h4>
+<p><img src="imgs/img-49.png" alt=""><br>
+相对检测相对于视频检测就容易理解的多，无非是麦克风输入的声音大小会变成一个响度数值。在之前的响度入口之中也可以直接使用。在此不做详述。</p>
+<h4 id="374-询问回答和计时器">3.7.4 询问回答和计时器 </h4>
+<p><img src="imgs/img-50.png" alt=""><br>
+熟悉文本语言的读者应该一眼就瞧出来询问回答就是C语言中的<code>scanf</code>，为了输入变量而生。一般的用法是：</p>
+<ol>
+<li>向询问框之中放入字符串变量，例如列表中存储许多问题，抽出一条放入询问框</li>
+<li>询问之后程序会等待用户作答，按Enter键之后，这个答案就被存储进了<code>回答</code>变量之中</li>
+<li>将回答变量用在别的地方，例如判断是否答案正确</li>
+</ol>
+<p>计时器变量大家十分熟悉，但是却并不一定知道如何把他玩出花活。这里就举两个例子帮助大家打开思路，例子实现在后续章节介绍</p>
+<ol>
+<li>使用计时器和自定义的变量配合实现蓄力攻击的效果</li>
+<li>使用计时器实现连击效果，要知道连击的触发只在一段时间内有效</li>
+</ol>
+<p>另一件值得注意的事情是，Scratch的计时器和等待1秒积木，归根结底和其他语言之中的<br>
+wait(),delay()差不多，<strong>并不是真实世界的时间</strong>。其实Scratch是留了最精确的时间取值点的，那就是一个不起眼的“自两千年至今的时间”积木。</p>
+<ol>
+<li><code>等待1秒</code>积木的运行和Scratch的软件运行有关，软件卡顿则计时卡顿，所以<strong>最不准确</strong>。</li>
+<li><code>计时器</code>积木的运行和CPU的运行有关，计算机卡顿则计时卡顿，所以<strong>第二不准确</strong>。</li>
+<li><code>自两千年至今的天数</code>所获得时间是获取网络时间，要秒数只需要给他乘以24小时再乘以3600秒，<strong>最为精确</strong>。</li>
+</ol>
+<h4 id="375-碰撞侦测类">3.7.5 碰撞侦测类 </h4>
+<p><img src="imgs/img-51.png" alt=""><br>
+这类积木可以说是最常用到的积木了，角色之间发生交互，被子弹击中等都要靠它们来实现。是否碰到某角色和鼠标大家凭直觉都会使用，就不在此赘述。这里要主要说的是碰到颜色的应用场景。Scratch提供了两类颜色碰撞侦测：</p>
+<ul>
+<li>角色碰到某颜色</li>
+<li>角色的某颜色碰到某颜色</li>
+</ul>
+<p>这里依靠取色器规定颜色，当然也可以用我们之前介绍画笔取色器时说到的RGB后门来规定颜色。颜色碰撞有两类用法：</p>
+<ol>
+<li>区分碰到一个物体上的不同部分。我们称之为<strong>一化为多</strong></li>
+<li>用许多角色共有的一种颜色碰撞检测语句，来代替多条碰撞角色检测语句，我们称之为<strong>多归为一</strong></li>
+</ol>
+<p><code>一化为多</code>的举例：由于Scratch没有自带物理引擎，许多角色间碰撞和反弹实现起来总是比较尴尬，补充方法就是依靠颜色检测来实现。假如我们想知道是<strong>撞到了一个角色的侧面还是撞到了顶面</strong>。这时候就只能画上一些可以区别的颜色，通过颜色就可以判断是撞到了哪个部分。<br>
+<code>多归为一</code>的举例：假如舞台上有<strong>好几种敌人</strong>，玩家角色碰到敌人会阵亡。那么最好在设计的时候就把所有的敌人<strong>都标记上共同的一个颜色</strong>，只要在玩家角色上检测是否碰到该颜色，就知道是否碰到了敌人。否则我们就要写出碰撞所有敌人的语句十分麻烦。<br>
+此外，角色的某颜色碰到某颜色，适用于判断角色的某个部分是否碰到另外角色的某部分。</p>
+<h4 id="376-按键侦测类">3.7.6 按键侦测类 </h4>
+<p>该类积木的使用场景均在键盘和鼠标控制之中，后续章节会主要介绍。</p>
+<h3 id="38-运算">3.8 运算 </h3>
+<p>Scratch的运算分为三类</p>
+<ol>
+<li>数字运算</li>
+<li>字符串运算</li>
+<li>布尔值运算</li>
+</ol>
+<p><img src="imgs/img-52.png" alt=""></p>
+<h4 id="381-数字运算">3.8.1 数字运算 </h4>
+<p><img src="imgs/img-53.png" alt=""><br>
+Scratch的数字运算<strong>没有括号</strong>，每一个积木就相当于一个括号，所以请大家关注一下运算的<strong>优先级关系</strong>。尤其是多层嵌套之后往往会看花眼。这时候的解决办法就是，<strong>多设置几个中间变量打散计算步骤</strong>，这样也可以检查计算中的数值出现的问题。<br>
+除了四则运算之外，Scratch提供了两个方便的运算积木，<code>求余</code>和<code>四舍五入</code>。在文本语言之中，求余可以方便我们获得数字的某一位或者某几位。<br>
+然而在Scratch之中，<code>数字</code>和<code>字符串</code>是界限不明显的。我们可以把<code>数字</code>当成<code>字符串</code>，接着使用<code>字符串运算</code>的提取某一位字符来实现获得数字的某一位。<br>
+Scratch还给我们提供了包括乘方开方、上下取整、反三角函数和指数对数在内的一个较为强大的<code>科学计算积木</code>，在后续的数学章节之中我们会着重介绍这些工具。</p>
+<h4 id="382-字符串运算">3.8.2 字符串运算 </h4>
+<p><img src="imgs/img-54.png" alt=""><br>
+Scratch之中的字符串工具可以使用在许多地方，包括使用字符串链接工具和变量组合来实现对于角色外观声音背景等的切换。读者可以自行尝试，所有可以从本地上传的例如音乐图片等均可以通过字符串变量来控制切换。<br>
+例如我们向一个角色上传了十段音乐，命名分别为：音乐1、音乐2、音乐3…我们可以使用如下的积木来实现批量播放音乐。<br>
+<img src="imgs/img-55.png" alt=""></p>
+<h4 id="383-布尔值运算">3.8.3 布尔值运算 </h4>
+<p><img src="imgs/img-56.png" alt=""><br>
+首先要说的是什么是<code>布尔值</code>，为什么要有<code>布尔值</code>。<br>
+布尔值只有两个，一个是<code>True</code>另一个是<code>False</code>。布尔值的产生是为了<strong>让计算机学会应对真实世界情况</strong>。小到游戏之中一个角色被子弹击中会扣血，大到火箭发射按钮，全部都是由布尔值操纵的。<br>
+设想一种情况，我们想让计算机在周围声音很大时作出一些反应，那么步骤应该是：</p>
+<ol>
+<li>真实世界被<strong>传感器</strong>处理，例如我们可以获得一个响度数值，这个响度数值有时大有时小。</li>
+<li>我们要设定一个值50，然后写一个<code>布尔单元</code>：如果大于50就为<code>True</code>，如果小于等于50就为<code>False</code>。</li>
+<li>计算机就会在现实世界声音很大后作出一些反应。</li>
+</ol>
+<p>但是现实世界往往更为复杂，让计算机作出判断的条件也更多，甚至条件之间要互相影响。<br>
+比如我们想让计算机在中午12点之后对于周围声音很大作出反应，那么步骤将被改写为：</p>
+<ol>
+<li>真实世界被<strong>传感器</strong>处理，例如我们可以获得一个响度数值，这个响度数值有时大有时小。</li>
+<li>另外有一个时钟<strong>传感器</strong>，可以获得时间。</li>
+<li>设定<code>声音大于50</code>布尔单元，设定<code>过了12点</code>布尔单元</li>
+<li>进行布尔运算得到：<code>声音大于50</code>并且<code>过了12点</code></li>
+<li>计算机将会对过了12点之后的声音很大作出反应</li>
+</ol>
+<p>这样我们处理问题的完整流程应该是：</p>
+<ol>
+<li>真实世界</li>
+<li>传感器获得数值</li>
+<li>设置布尔单元处理单个传感器</li>
+<li>对于多个布尔单元进行布尔运算得到一个结果</li>
+<li>让计算机对于计算结果布尔值进行反应</li>
+</ol>
+<p><img src="imgs/img-57.png" alt=""></p>
+<h3 id="39-变量">3.9 变量 </h3>
+<p><img src="imgs/img-58.png" alt=""><br>
+Scratch自带两种数据结构，变量和列表。一共有以下几类积木：</p>
+<ol>
+<li>变量赋值、变量增值</li>
+<li>列表增删改查，列表长度信息</li>
+</ol>
+<h4 id="391-变量">3.9.1 变量 </h4>
+<p>变量在创建时会被询问作用域，也即是询问是对舞台上所有角色有效，还是只对当前角色有效。</p>
+<ul>
+<li>对所有角色有效的变量我们称之为<strong>全局变量</strong>；</li>
+<li>只对于角色自己有效的变量我们称之为<strong>私有变量</strong>或者称之为<strong>局部变量</strong>。</li>
+</ul>
+<p>不同角色的私有变量可以重名，这就省去了我们命名的麻烦。<br>
+如果<strong>想给每一个克隆出来的角色加上一个血量值</strong>，那么我们必须用到<code>私有变量</code>。如果不小心设置了全局变量，那么一个角色死亡时，所有的克隆角色都将死亡，这显然是不合理的。<br>
+不管怎样，我们要<strong>尽量的使用私有变量，可以私有的变量都设为私有</strong>，这样在复制或者导入导出角色时，会减少许多因为全局变量带来的麻烦。</p>
+<h4 id="392-列表">3.9.2 列表 </h4>
+<p>Scratch的列表的操作十分简单，无非是<code>增删改查</code>四类，再加上一个判断列表长度。<br>
+列表创建之后，会在舞台上显示，这时在舞台上右键列表可以导入导出数据。列表支持txt格式，以换行符区别列表不同的项目。换句话说，我们创建一个txt，在里面写入数据，回车换行就可以把数据导入到Scratch的列表之中。<br>
+这种导入有什么用武之地呢？这里列举几个场景供大家参考：</p>
+<ol>
+<li>用别的语言写好的<strong>曲线坐标方程</strong>，可以通过x、y两个列表导入Scratch绘制<strong>复杂图形</strong></li>
+<li><strong>乐谱</strong>可以通过列表导入实现Scratch音乐播放</li>
+<li><strong>语言问答库</strong>可以通过列表导入之后制作问答机器人</li>
+</ol>
+<h3 id="310-控制">3.10 控制 </h3>
+<p><img src="imgs/img-59.png" alt=""><br>
+Scratch的控制积木分为四类:</p>
+<ol>
+<li>循环类</li>
+<li>条件分支类</li>
+<li>等待停止类</li>
+<li>克隆相关类</li>
+</ol>
+<h4 id="3101-循环">3.10.1 循环 </h4>
+<p><img src="imgs/img-60.png" alt=""><br>
+Scratch提供了三种循环积木，分别是：</p>
+<ol>
+<li>无限重复积木</li>
+<li>计数循环积木</li>
+<li>条件跳出循环积木</li>
+</ol>
+<p><strong>无限循环</strong></p>
+<ul>
+<li>也称之为“死循环”，应用极其广泛。任何一个系统在启动的时候都进入了一个死循环，无条件的重复一些语句，例如监听某个按键是否按下，判断是否碰撞某个角色，一直重复某种运动等等。在前面按键入口的地方曾经叙述过Scratch死循环的运行最短时间固定特性，在此不重复讲述。</li>
+<li>要注意的原则是：<strong>尽量少让消息入口下面使用死循环</strong>，可能会产生一些令人迷惑的结果。</li>
+</ul>
+<p><strong>计数循环</strong></p>
+<ul>
+<li>可以循环规定次数，然后继续后面的积木运行。这个积木值得注意的是，我们是否可以动态的更改循环次数？例如我们用一个变量i来规定循环次数，在该循环之中不停地改变<code>i</code>的数值，那么循环的次数会根据i来改变么？</li>
+<li>答案是<strong>不会</strong>，Scratch的计数循环<strong>只会记住第一次传入的<code>i</code>的数值</strong>，并严格执行这么多次循环然后跳出循环。这是为了防止儿童在编程时动态的改变循环次数产生错误。Scratch里面不可以在程序之中新建变量和列表，原因也是如此，这样可以防止儿童在使用时产生程序崩溃。</li>
+</ul>
+<p><strong>条件跳出循环</strong></p>
+<ul>
+<li>每次执行前都会判断条件是否成立，如果条件不成立就不进入这一次循环。这个积木很好的补充了Scratch没有break语句的缺陷。</li>
+</ul>
+<h4 id="3102-条件分支">3.10.2 条件分支 </h4>
+<p><img src="imgs/img-61.png" alt=""><br>
+条件分支积木十分简单，只有<code>if</code>和<code>if else</code>两块，不做赘述。</p>
+<h4 id="3103-等待和停止类">3.10.3 等待和停止类 </h4>
+<p><strong>等待？秒</strong><br>
+<img src="imgs/img-65.png" alt=""></p>
+<ul>
+<li><code>等待？秒</code>是Scratch最常用的控制运行节奏的语句，经常和重复执行动作配合使用。但是要注意的是，因为循环执行最短时间固定的特性，<code>等待？秒</code>如果设置的<strong>时间过于小</strong>，将变得<strong>毫无意义</strong>。因为Scratch还是会<strong>自动补全时间到循环的固定最短时长</strong>。</li>
+<li><strong>需要注意的是</strong>：<code>等待？秒</code>积木也会自动补全时间差，该积木有一个最短运行时间大约是<code>0.033s</code>，和循环最短时间一致，具体应用细节请参考后续章节scratch疑难问题举例。</li>
+</ul>
+<p><strong>在条件到达之前一直等待</strong><br>
+<img src="imgs/img-66.png" alt=""></p>
+<ul>
+<li>这个积木十分有用，可以方便的帮助我们消除某些二值条件的重复影响。</li>
+<li>例如，当我们按下空格的时候要执行一个动作，不论我们是用按键入口方法实现，还是用重复执行+条件判断按键是否按下来实现。当我们长按空格的时候，动作会被病态的重复好多次。这时候我们就要依靠等待<code>空格键按下不成立</code>的来实现<strong>长按屏蔽</strong>。只有当空格键抬起，这条等待语句才可以继续向下执行循环。<br>
+<img src="imgs/img-64.png" alt=""><br>
+<img src="imgs/img-62.png" alt=""><br>
+<img src="imgs/img-63.png" alt=""></li>
+</ul>
+<p><strong>停止积木</strong><br>
+<img src="imgs/img-67.png" alt=""></p>
+<ul>
+<li>
+<p>停止积木有三种：</p>
+<ol>
+<li>停止全部，等同于绿旗边上的红灯，结束全部舞台上的程序</li>
+<li>停止当前脚本，停止本段脚本</li>
+<li>停止角色其他脚本，停止角色身上除了本段脚本之外的所有脚本</li>
+</ol>
+</li>
+<li>
+<p><strong>需要注意的是</strong>：</p>
+<ul>
+<li>停止全部有时候<strong>并不能</strong>真的停下我们全部的程序，原因可能是程序有绿旗入口之外的别的入口。</li>
+<li>虽然程序被停止了，但是<strong>入口又被按键声音等激发打开</strong>。</li>
+<li>妥善的停止程序运行是一个很细致的工作，有时候游戏角色阵亡，但是还有一系列特效和动作没有播放，这时候不能贸然停止全部。要用消息等待等方式确保所有舞台其他角色都停止运行，然后再停止全部。</li>
+</ul>
+</li>
+</ul>
+<h3 id="311-克隆相关类">3.11 克隆相关类 </h3>
+<p><img src="imgs/img-68.png" alt=""><br>
+Scratch和一系列游戏编辑器一样，都需要克隆功能，来制造<strong>批量</strong>的敌人、子弹、背景等角色。克隆积木分为：</p>
+<ol>
+<li>克隆动作</li>
+<li>克隆体入口</li>
+<li>删除克隆体</li>
+</ol>
+<p><code>克隆动作</code>可以由本角色发出，克隆自己。也可以由别的角色发出克隆某角色。推荐的方法是，<strong>使用舞台作为克隆的总控制器</strong>，防止脚本理解和管理混乱。<br>
+<code>克隆体入口</code>是决定<code>克隆体</code>和<code>母体</code>区别的关键，<code>母体</code>并不会运行该入口下的脚本，只有成为了克隆体才会执行该入口以下的脚本。通常的做法是：</p>
+<ol>
+<li>将母体大小和造型等设置完毕后隐藏。</li>
+<li>在克隆体启动入口下将克隆角色移动到规定位置后显示。</li>
+</ol>
+<p>克隆之中的细节问题将在后续的克隆专题之中详尽描述。</p>
+<h3 id="312-自制积木">3.12 自制积木 </h3>
+<p><img src="imgs/img-69.png" alt=""><br>
+Scratch的<code>自制积木</code>之中涉及函数制作，和文本语言的函数功能类似，只是没有返回值的存在。<br>
+其意义在于打包某功能之后重复使用。可以设置参数，这里包括了<code>数字参数</code>、<code>字符串参数</code>、<code>布尔参数</code>三类，分别对应Scratch的三种变量类型。<br>
+好事者又来提问，如果我们定义两个自定义积木，分别定义他们的参数。他们都包含一个叫做<code>num</code>的参数，那么这个从定义条上拖出来的参数可以互换着使用么？<br>
+答案是，可以的。Blockly的底层还是文本语言，<strong>重名的不同<code>函数参数</code>可以互相放置</strong>，不会产生问题。<br>
+自定义积木最关键的使用方法是<code>运行时不刷新屏幕</code>，一旦勾选了这个选项，入口下的所有循环<strong>都被取消了固定的最小运行时间</strong>，运行速度大约会提升1000倍，所有程序跑的飞一样快。<br>
+但是一旦不小心往这里面放置了很多语句，电脑就会被卡住，这也是风险所在。<br>
+还需要注意的是Scratch自带的加速模式（编辑菜单下）并不建议使用，因为<strong>很可能会让计算机死机</strong>。</p>
+<h2 id="四-scratch疑难问题举例">四、Scratch疑难问题举例 </h2>
+<p>由于Scratch是一款面向少儿的编辑器，为了避免儿童的随意使用造成软件崩溃，引入了许多不够完善的特性。刚接触时往往会陷入一些奇怪的疑难问题之中。本章将会从以下几个方面介绍日常使用Scratch会碰到的边角问题：</p>
+<ol>
+<li>绘图和外观的坑</li>
+<li>看不见摸不着的事件控制</li>
+<li>不知道该用什么变量的克隆体</li>
+<li>Scratch的谜之容错</li>
+<li>拖慢脚本的罪魁祸首</li>
+</ol>
+<h3 id="41-绘图和外观的坑">4.1 绘图和外观的坑 </h3>
+<h4 id="411-任何图片都不能离开舞台">4.1.1 任何图片都不能离开舞台 </h4>
+<p>为了防止不小心把角色移动出舞台<strong>找不到</strong>，scratch做了几个限制。首先任何角色在移动到舞台边缘的时候会强制<strong>留下一个边缘(大约15像素)</strong>，刚好可以用鼠标拖拽它回到舞台之中。<br>
+例如我们使用坐标移动积木让某角色移动到<code>(100,0)</code>。这样角色实际上的x坐标在250多就已经卡住了，刚好在舞台上漏了一个角。<br>
+对于角色的限制不光在于位置，还包括了角色的<strong>外观大小(不能超出屏幕)</strong>。我们让角色大小设定为极大例如1000，在外观积木盒子最下方的大小变量之上用鼠标勾选之后，可以观察到，角色根本没有变成1000，而是卡在了几百就不在增加。<br>
+相应的，如果我们给角色设定一个1的大小甚至-1000的大小，角色大小就被锁定成了5。这是为了<strong>防止角色太小无法画在舞台上</strong>。<br>
+理解了scratch的这个角色不能离开舞台的机制之后，我们就可以考虑一些问题。如果想让一个克隆体从画面外移动进画面，这个动作可以做到么？答案是不能。<br>
+因为角色一旦设置一个画面外的位置，scratch就会强制把角色的一个小角拉到舞台上，这样画面边界一定会留一点角色，<strong>根本无法让角色完全从舞台外移入舞台</strong>。<br>
+<img src="imgs/img-70.png" alt=""><br>
+如果我们一定要让角色从舞台外移动进舞台，就要把入口这个边界<strong>用一个不透明的角色</strong>遮盖住。这样在视觉效果中，就看不到这里的异常了。<br>
+例如我们想用scratch做一个横版卷轴游戏，类似超级马里奥。地图的卷动就需要从舞台外移动进来，这时候就需要把边界遮住防止玩家看到这里堆了奇怪的东西。</p>
+<h4 id="412-矢量图和位图切边">4.1.2 矢量图和位图切边 </h4>
+<p>首先要界定什么是<code>矢量图</code>什么是<code>标量图（位图）</code>，我们做如下界定：</p>
+<ol>
+<li>矢量图是指软件自己知道如何可以画出来的图，可以一条线一条线的画出来</li>
+<li>标量图是软件只拿到了一副画，这幅画被毁掉了软件也不会补充回来了</li>
+</ol>
+<p>关于矢量和标量的定义和意义大家如果有兴趣请参看后文的数学概念。scratch对于外形自带了两种编辑模式可以互相切换，不过<strong>非常不建议各位读者使用这些编辑功能</strong>，因为十分不完善的编辑功能影响体验。这里要强调的是几个原则：</p>
+<ol>
+<li>从本地导入的图片，即时原来是所谓的“矢量图”格式，例如png等。导入scratch之后也默认变成了一个位图，因为它并不是scratch自己画的。</li>
+<li>scratch承认的矢量图，只有两类。一类是造型之中切换矢量图编辑模式自己绘制的图片，另一类是scratch角色库之中自带的角色。</li>
+<li>scratch承认的矢量图在造型之中编辑。如果不小心被我们在编辑中移动出画布，还可以移动回来。</li>
+</ol>
+<p>但是本地导入的图片如果不小心移动出编辑画面就会发生切割丢失现象。<br>
+<img src="imgs/%E4%BD%8D%E5%9B%BE%E5%88%87%E5%89%B2%E9%97%AE%E9%A2%98.gif" alt=""><br>
+挪出去的猫猫变成了：<br>
+<img src="imgs/img-71.png" alt=""><br>
+为什么会发生切割丢失现象呢？原因是图片移出了编辑区之后都会发生切割，但是<strong>矢量图scratch知道怎么画回来，而位图scratch不知道怎么画于是就丢失了</strong>。如何避免这个情况发生呢？只有一个办法：<strong>编辑时候不要把图片放到屏幕外面。</strong></p>
+<h4 id="413-角色和克隆体的复杂层级关系">4.1.3 角色和克隆体的复杂层级关系 </h4>
+<p>在scratch之中有一种复杂的层级关系和管理原则：</p>
+<ol>
+<li>角色在舞台上被拖拽就会默认移到顶层。</li>
+<li>舞台无论如何都在最下层，画笔和图章都会绘制在舞台上。换句话说任何不透明角色都可以挡住画笔和图章。</li>
+<li>任何新创建的角色都会默认移到顶层。</li>
+<li>角色的克隆体默认在角色下一层。</li>
+<li>角色再次克隆的克隆体再角色和前一个克隆体之间。因为首先它是新生成的物体放在最顶层，其次执行角色本体在克隆体之上的操作。</li>
+</ol>
+<p><img src="imgs/img-72.png" alt=""><br>
+这个层级关系很迷吧，是不是跟我们想象中不一样？所以在处理层级关系的时候我们一定要小心。</p>
+<h4 id="414-默认角度90">4.1.4 默认角度90° </h4>
+<p>scratch之中角色的默认角度是90°，我们在导入图片制作角色时一定要注意尽量让俯视图片的头部方向朝右。<br>
+<img src="imgs/img-73.png" alt="">例如我们要做一个火箭，火箭的头部如果朝上，后果就是我们用移动积木和方向积木来控制火箭时，火箭永远都是横着飞，这是我们尽量要避免的。<br>
+但是如果是横版角色，例如scratch初始化的那只猫，就不存在这个问题了，因为它只有左右两个方向。</p>
+<h4 id="415-消失的几种姿势">4.1.5 消失的几种姿势 </h4>
+<p>scratch之中可以通过三种方式让一个角色从我们眼前消失：</p>
+<ol>
+<li><strong>隐藏</strong>：最常用的方法，但是要注意隐藏是一个下次运行仍旧会保存的状态，要和显示积木配合使用。隐藏了之后无法判断碰撞其他角色，但是请注意，这时候<strong>仍旧可以在隐藏角色身上判断碰撞边缘和鼠标指针</strong>，这是scratch的特殊细节。</li>
+<li><strong>透明度特效</strong>：在外观特效里面可以用<code>透明度特效</code>让角色消失，这时候我们仍旧可以让角色判断和别的角色的碰撞，因为他还在舞台上。这样做的副作用是带来<strong>运行速度的减慢</strong>，如果有大规模的克隆体请尽量避免使用这种方法防止运行卡顿。</li>
+<li><strong>选取角色图片和背景颜色相同，角色自然就隐藏起来了</strong>：有些区域我们想看到角色就把该区域的背景换成不同颜色即可。这种方法十分巧妙，并不增加scratch的运行负担而且仍旧可以正常判断碰撞。</li>
+</ol>
+<h3 id="42-看不见摸不着的事件控制">4.2 看不见摸不着的事件控制 </h3>
+<h4 id="421-鼠标点绿旗的迷惑">4.2.1 鼠标点绿旗的迷惑 </h4>
+<p>在scratch之中，绿旗是我们最常使用的入口，但是如果我们让角色在鼠标按下的时候做出一些动作（例如发射子弹），这时候问题就来了。<br>
+一旦我们点击绿旗开始还没准备好真正开枪，scratch会马上发射一个子弹。这是因为scratch在<strong>绿旗入口的瞬间抓到了鼠标按下的事件</strong>。为了解决这个怪异的行为，我们必须使用一个称之为<code>锁</code>的东西。<br>
+scratch给我们提供了很方便的实现锁的工具，那就是<code>等到直到</code>积木。我们只需要在绿旗入口下跟一句：<code>等到直到鼠标键按下不成立</code>。<br>
+<img src="imgs/img-74.png" alt=""><br>
+这样在我们点击绿旗之后，程序会等待直到我们把鼠标键松开，才继续向下运行。就好像一个锁把程序运行的脚步锁住。这个概念我们将会在后文经常用到。 在真正的文本语言之中，锁的实现是用变量记录状态做的。这种方法略显复杂。在scratch之中经常使用的就是等待直到积木。</p>
+<h4 id="422-消息等待">4.2.2 消息等待 </h4>
+<p>在scratch之中，我们经常会接触到消息发送接受。最常见的错误就是在消息等待过程之中使用死循环。<img src="imgs/img-75.png" alt=""><br>
+<code>广播消息并等待</code>积木将会等待所有的消息接收者执行完毕，如果有一个接受者身上带有一个死循环重复执行。<br>
+那么它将永远无法执行完毕，广播消息并等待的积木也将天长地久的等下去无法继续运行后面的内容。</p>
+<h4 id="423-等待0秒等待-1秒最小等待时间是多少">4.2.3 等待0秒？等待-1秒？最小等待时间是多少？ </h4>
+<p>在scratch之中我们最容易搞不清楚的就是等待1秒积木。<br>
+其实等待积木和任何重复执行积木都在一次运行或者一次循环之后会将运行时间补充到0.33秒。<br>
+如果我们将等待积木写等待0秒或者等待-1秒，再测量其运行时间，结果都将是0.33秒左右。<br>
+<img src="imgs/img-76.png" alt=""><br>
+<img src="imgs/img-77.png" alt=""></p>
+<h4 id="424-藏起来就不刷新屏幕的列表和变量-没有anyone刷新屏幕就飞快">4.2.4 藏起来就不刷新屏幕的列表和变量 没有anyone刷新屏幕就飞快 </h4>
+<p>是不是scratch的所有重复执行都会补充时间到0.33秒呢？这里是有例外的。<br>
+如果我们把重复执行之中只放一个操作列表的语句，例如加入一个元素。</p>
+<p>然后我们：</p>
+<ol>
+<li>先不增加刷新屏幕的代码，点击绿旗我们打开列表显示观察会发现一瞬间就执行完了，第一条时间和最后一条只差了零点几秒，这是因为重复执行积木中<strong>没有任何要刷新屏幕</strong>的积木，所以默认全速运行，也不会补充时间。<br>
+<img src="imgs/img-78.png" alt=""></li>
+<li>如果我们加入了刷新屏幕的代码，这时候再运行，发现列表元素增加的过程慢了许多。这是因为如果循环中有<strong>刷新屏幕</strong>的动作，重复执行积木会<strong>补充时间</strong>。<br>
+<img src="imgs/img-79.png" alt=""></li>
+</ol>
+<h4 id="425-死循环嵌套的后果">4.2.5 死循环嵌套的后果 </h4>
+<p>新手经常犯的错误还包括死循环嵌套死循环。外层的死循环运行第一次的时候就进入了内层的死循环，从此陷入了内层的死循环再也无法出来。也就是说，外层循环变成了一个摆设，因为就运行了一次根本不会循环。请大家一定要注意。<br>
+<img src="imgs/img-80.png" alt=""></p>
+<h4 id="426-计数循环变计数能否进行">4.2.6 计数循环变计数能否进行 </h4>
+<p>假如我们用一个变量来控制计数循环，如果这个变量在循环之中被改变了，那么循环次数会动态的改变么？答案是，不会。<br>
+计数循环在<strong>第一次运行时就已经被锁定了运行次数</strong>，无论我们怎么改这个变量，循环次数是不会发生改变的。这是为了防止出现一些运行错误。<br>
+<img src="imgs/img-81.png" alt=""></p>
+<h4 id="427-拖拽优先级最高">4.2.7 拖拽优先级最高 </h4>
+<p>在scratch的<strong>编辑模式</strong>（就是平常的模式，相对于全屏播放模式来说的），运行程序时，拖拽的优先级是高于点击判断的。<br>
+如果我们程序中设定了点击角色之后有一些操作，那么点击角色之后会<strong>先把角色拖拽起来</strong>，而不是执行这些操作。<br>
+假如我们要做一个画笔，点击鼠标之后落笔开始画。点击画笔之后<strong>先会拖拽起来画笔图案，而不是首先落笔</strong>。 解决这样的问题有两个办法：</p>
+<ol>
+<li>第一个是永远<strong>在播放模式下运行</strong>，且不去勾选播放模式可以拖动的选项，这样就不会出现拖动的情况。</li>
+<li>第二种是将<strong>画笔图案的中心设置在图案外</strong>，这样在点击和移动到鼠标时，鼠标不会碰到图案，从而不会产生拖拽，巧妙地解决问题。<br>
+<img src="imgs/img-83.png" alt=""><br>
+<img src="imgs/img-82.png" alt=""></li>
+</ol>
+<h4 id="428-并行的条件竞争-碰到边缘反弹和等待碰到边缘">4.2.8 并行的条件竞争 碰到边缘反弹和等待碰到边缘 </h4>
+<p>在scratch之中，每一个程序入口下的脚本都是并行的。<br>
+这样就会产生竞争，如果两个并行的脚本同时操纵一个角色，就会改来改去发生错误。<br>
+例如我们在角色身上写两个脚本。</p>
+<ul>
+<li>一个让角色重复执行移动，碰到边缘就反弹。</li>
+<li>另一个脚本重复执行判断是否碰到边缘，碰到边缘就让角色说：“碰到边缘”。 这样的运行，偶尔角色会说碰到边缘，偶尔不会说。</li>
+</ul>
+<p><img src="imgs/img-84.png" alt=""><br>
+就是因为发生了竞争，碰到边缘的时候：</p>
+<ul>
+<li>如果碰到边缘反弹的积木先执行，角色脱离了边缘才进行碰到边缘检测说话，这时候不会说话。</li>
+<li>如果碰到边缘检测说话先执行，那么角色就会说话。</li>
+</ul>
+<p>A和B两种情况我们并不知道哪个会先发生，这就是并发竞争。<br>
+需要注意的是，这种竞争产生的bug偶尔会出现偶尔不会出现，十分难以察觉，属于最难搞定的bug之一。</p>
+<h4 id="429-真实时间的获取">4.2.9 真实时间的获取 </h4>
+<p>在scratch之中，有许多和时间有关的积木，我们来看一下他们之间的区别。</p>
+<ol>
+<li>等待1秒积木</li>
+<li>计时器</li>
+<li>自2000年至今的天数</li>
+</ol>
+<p>最不准确的积木就是等待1秒，前面我们已经说过，该积木会带来三十分之一秒的刷新延迟，本身也不适合记录精确时间。<br>
+计时器看上去比等待1秒积木靠谱的多，但是依旧有一个问题，如果我们的程序有些庞大，<strong>运行速度整体变慢</strong>，计时器也会变得很卡，这时候时间也不做准。<br>
+最准确的时间是自2000年至今的天数，这个积木块用的是计算机时间，我们把这个积木<br>
+乘以24小时再乘以3600秒，就会得到<strong>秒级别的真实时间</strong>。当然我们可以获得更小的时间分辨率，但是意义不大。<br>
+<img src="imgs/img-85.png" alt=""></p>
+<h3 id="43-不知道该用什么变量的克隆体">4.3 不知道该用什么变量的克隆体 </h3>
+<p>scratch的克隆体是不大容易理解的概念，其中经常使用的一些私有和公有变量的概更是抽<br>
+象，下面我们来例举一些常见的使用方法。</p>
+<h4 id="431-私有变量和私有改动">4.3.1 私有变量和私有改动 </h4>
+<p>在克隆体之中，我们为了<strong>独立控制每个克隆体</strong>，经常会给克隆体设置<code>私有变量(局部变量)</code>。<br>
+实际上我们是把<strong>私有变量设置在母体</strong>身上，当克隆动作执行时，克隆体身上也<strong>复制(继承)<strong>了这个私有变量，但是这个私有变量就是</strong>属于克隆体</strong>的，和母体再无关系。<br>
+实际上克隆会复制以下事情：</p>
+<ol>
+<li>母体角色当前的外观造型</li>
+<li>母体角色当前的位置坐标</li>
+<li>母体身上全部的脚本</li>
+<li>母体身上全部的私有变量和私有列表</li>
+</ol>
+<p>前两条容易理解，第三条说克隆体复制了母体的全部脚本，那么当作为克隆体启动这个入口的意义在哪里？<br>
+其实克隆体也复制了母体身上当绿旗被点击入口的脚本，只是<strong>绿旗这时候没有被点击</strong>所以<strong>不满足这个入口条件不会运行</strong>，而作为克隆体启动入口这时候刚好满足条件可以运行。<br>
+如果母体身上带有一些消息入口，克隆体<strong>同样会复制下来</strong>，当消息广播时同样可以运行，我们可以通过消息来控制克隆体。<br>
+第四条说母体身上全部的私有变量和私有列表，那么公有的呢？答案是<strong>公有的不需要刻意复制，谁都可以自由使用</strong>。而私有变量如果不复制，在别的角色身上是看不到没法用的。<br>
+另一个关键的事情是积木盒子之中角色可以打钩显示的变量全都默认是私有变量，比如：</p>
+<ol>
+<li>xy坐标</li>
+<li>方向</li>
+<li>造型编号</li>
+<li>响度</li>
+<li>……</li>
+</ol>
+<p><img src="imgs/img-86.png" alt=""><br>
+<img src="imgs/img-87.png" alt=""><br>
+请大家注意区分，私有变量显示时有<code>XXX：变量名</code>，而公有变量只有变量名。</p>
+<h4 id="432-消息入口的继承">4.3.2 消息入口的继承 </h4>
+<p>刚才提到了克隆体可以复制母体的消息入口，这个机制可以很方便的实现克隆体的控制。例如我们要某个消息可以把所有的克隆体清除掉，那么简单的在母体身上写下脚本：</p>
+<ol>
+<li>接收到消息</li>
+<li>删除本克隆体</li>
+</ol>
+<p><img src="imgs/img-88.png" alt=""><br>
+这里的消息可以帮我们实现许多集体效果。<br>
+例如我们想通过一个消息让所有的克隆体震动一下，做出一个炫酷的效果。<br>
+我们可以让消息入口下跟一个：</p>
+<ol>
+<li><code>y坐标</code>增加-20</li>
+<li>等待0.1秒后<code>y坐标</code>增加20。</li>
+</ol>
+<p>其他用法请大家自己探索。</p>
+<h4 id="433-使用消息指数克隆">4.3.3 使用消息指数克隆 </h4>
+<p>如果我们想通过很少的代码大量的克隆角色，常用的方法有：</p>
+<ol>
+<li>重复执行+克隆某角色（运行速度慢有卡顿感）</li>
+<li>把重复执行+克隆做成一个<strong>运行时不刷新屏幕</strong>的自定义积木</li>
+<li>让克隆体克隆自己</li>
+</ol>
+<p>这里主要说一下第三个方法。学过幂指数就应该知道，如果我们让克隆体作为克隆体产生时克隆自己，克隆体将会<strong>以2的指数</strong>来增长。<br>
+<img src="imgs/img-90.png" alt=""><br>
+<img src="imgs/img-91.png" alt=""><br>
+<img src="imgs/img-92.png" alt=""><br>
+scratch为了防止克隆体太多拖慢速度，会限制同时存在的角色总数目为300个。<br>
+<img src="imgs/img-89.png" alt=""><br>
+我们还可以用消息来控制角色的克隆过程，为了区分克隆出来的人，我们让本体接收到消息时左转移动并克隆自己，让克隆体启动时向右移动。<br>
+这样克隆体也继承了这个消息入口，再次发送这个消息时，刚才的克隆体也会分裂出下一代的克隆体。<br>
+<img src="imgs/img-93.png" alt=""><br>
+聪明的同学发现了，这就是一个<code>递归</code>，克隆体继承了本体克隆的功能，然后又克隆克隆体，分形树就出来了。</p>
+<h4 id="434-网格锁定">4.3.4 网格锁定 </h4>
+<p>如果我们想让克隆体在播放时可以被拖动，但是放开鼠标按键的时候我们想让角色固定在我们约定的网格上。<br>
+例如我们想做一个拼图，希望拖拽放手时拼图块可以自动对齐。<br>
+这时候我们就要用坐标取整的方法了，首先打开角色的播放时可以被拖动开关，然后在克隆体身上加上取整移动。<br>
+<img src="imgs/img-94.png" alt=""></p>
+<h4 id="435-克隆体整理">4.3.5 克隆体整理 </h4>
+<p>有时候我们想用克隆体做一个整齐的砖墙，这种位置有规律的克隆体应该怎么做呢？<br>
+基本的思路是：</p>
+<ol>
+<li>生成位置变量</li>
+<li>重复执行克隆角色</li>
+<li>更新生成位置变量</li>
+</ol>
+<p>这里面有许多讲究和细微差别，首先如果我们用重复执行来克隆多个角色，重复执行本身是有0.33秒的固定刷新时间的，如果我们要克隆一百块的砖墙，就会耗费三秒钟。<br>
+如果我们想快速的刷新就一定要使用<code>自定义积木</code>把重复执行克隆角色的动作包进去，并且<strong>运行时不刷新屏幕</strong>。<br>
+<img src="imgs/img-95.png" alt=""></p>
+<h5 id="4341-一维的情况">4.3.4.1 一维的情况 </h5>
+<p>这时候问题就来了，例如我们要克隆一排角色，每隔10步摆放一个，如下图所示的积木：<br>
+<img src="imgs/img-96.png" alt=""><br>
+这样运行的结果是，克隆出来的十个角色都叠在了一起，并没有按我们预想的排成10步为间隔的一排。这究竟是什么原因呢？ 其实scratch执行一次克隆角色到作为克隆体积木启动之间是有一个比较大的时间差的，我们可以用如下的积木去测量这个时间差：<br>
+<img src="imgs/img-97.png" alt=""><br>
+可以观察到克隆动作到作为克隆体启动之间大概平均会耗费<code>0.001</code>秒左右，大概是重复执行刷新屏幕时间的<strong>三十分之一</strong>左右，而且这个时间差并不准确，每次执行会变动。<br>
+但是无论如何，这个时间和计算机全速运行的时间相比是很长的。<br>
+换句话说我们<strong>运行时不刷新屏幕</strong>的全速运行重复执行克隆动作，每一个克隆动作开始时刻的差别很小，几乎可以认为是同时开始，更新变量posi的值瞬间已经被算好了结果是100。<br>
+耗费<code>0.001</code>秒左右所有克隆体的<strong>作为克隆体被启动的入口才慢吞吞</strong>的开始执行，他们能读取到的变量posi值已经等于100了，所以所有克隆体都把自己移动到了100的位置。<br>
+我们该如何解决这个问题呢？很简单，更新变量放在作为克隆体启动入口下。<br>
+因为所有的克隆体本身就有一个顺序在，虽然<strong>每次的克隆动作启动几乎是同时的，但是还是有顺序差别</strong>。让他们每次作为克隆体启动时更新位置变量，就可以让角色按我们预想的顺序间隔排列了。<br>
+<img src="imgs/img-98.png" alt=""></p>
+<h6 id="4342-二维的情况">4.3.4.2 二维的情况 </h6>
+<p>上面讨论的是克隆一行角色，是一维情况。如果我们想克隆一个二维的砖墙，应该怎么做呢？<br>
+如果不考虑运行速度，为了代码的简约，我们会采用如下方法来实现：<br>
+<img src="imgs/img-99.png" alt=""><br>
+如果我们想追求运行速度，用自定义积木不刷新的方法来实现，就一定要用克隆体内更新变量的方法来实现。又因为我们有两个变量要更新，这里我们就要加入一个<code>算式</code>来计算他在第几行第几列：<br>
+<img src="imgs/img-100.png" alt=""><br>
+<img src="imgs/img-101.png" alt=""><br>
+可以看到算式有点麻烦，不是很好理解，而且每次更改十分不便。这时候我们就需要进一步抽象：</p>
+<ol>
+<li>使用列表先生成位置</li>
+<li>所有的角色更新变量只对应了列表的编号</li>
+<li>克隆体在生成的时候直接读取自己的坐标即可</li>
+</ol>
+<p>这样只需要用一个变量就解决了所有的问题，而且在我们改动了生成的规则时，<strong>不需要再更改每一个角色身上的“算式”</strong>，这样比较容易修改易于维护。<br>
+<img src="imgs/img-102.png" alt=""><br>
+<img src="imgs/img-103.png" alt=""></p>
+<h4 id="436-克隆体克隆别的克隆体的队列设置">4.3.6 克隆体克隆别的克隆体的队列设置 </h4>
+<p>如果我们要让一个克隆体克隆另一个克隆体，例如被克隆出来的<code>敌机</code>，要克隆发射<code>子弹</code>。最直接的思路是:</p>
+<ol>
+<li>敌机更新一个xy的位置变量。</li>
+<li>接着马上克隆子弹。</li>
+<li>子弹作为克隆体启动时就移动到xy这个位置。</li>
+</ol>
+<p>但是这里面存在着并行的<strong>竞争问题</strong>，如果两个克隆敌机在很短时间内<strong>几乎同时发射了子弹</strong>：</p>
+<ol>
+<li>A敌机先更新xy变量，并克隆子弹。</li>
+<li>子弹作为克隆体启动的时间内，xy被B敌机更新。</li>
+<li>本该从A射出的子弹结果却从B射出。</li>
+</ol>
+<p>解决这样的竞争我们需要用到一个排队的思想(其实就是数据结构中的<code>队列</code>):</p>
+<ol>
+<li>敌机每次发射时先把xy这个发射位置写入一个数组。</li>
+<li>舞台上的脚本一旦发现数组之中有元素就按顺序克隆一个子弹。</li>
+<li>之后把这一条发射位置删掉。</li>
+</ol>
+<p>这样提出<strong>发射要求</strong>和<strong>处理发射</strong>要求就被分开了。就好像我们去买东西，要买东西的人（要发射子弹的敌机）都要排队，而售货员（舞台）负责卖给你东西（克隆子弹）。这样就不会出现竞争的问题。<br>
+<img src="imgs/img-104.png" alt=""><br>
+运行效果如下：<br>
+<img src="imgs/%E5%85%8B%E9%9A%86%E4%BD%93%E5%8F%91%E5%B0%84%E5%AD%90%E5%BC%B9.gif" alt=""><br>
+需要注意的是，克隆体克隆别的克隆体时，要尽量谨慎的使用<code>运行不刷新的自定义积木</code>,由于他会克隆很快，很可能会导致一瞬间克隆了很多，造成scratch运行卡顿。</p>
+<h3 id="44-scratch的谜之容错">4.4 Scratch的谜之容错 </h3>
+<h4 id="441-不写入数字会如何">4.4.1 不写入数字会如何 </h4>
+<p>在许多计算机语言中，都存在默认值问题，也就是当我们<strong>定义了一个变量，又没有给变量赋值</strong>。<br>
+这时候变量值是多少呢？为了防止发生错误，我们就要给一个默认的数值。<br>
+scratch之中，<strong>数值变量的默认值是0，布尔变量的默认值是false</strong>。<br>
+在运算积木盒子里面，所有的空格都是默认值。<br>
+例如：</p>
+<ul>
+<li>加法积木，我们如果不填入内容就默认是0。</li>
+<li>与或非积木不填入的空格也默认是填入了false，也就是说什么都不填的与或双击运行结果是false。</li>
+<li>不成立积木双击运行结果是true（因为默认填入的是false）。</li>
+</ul>
+<p><img src="imgs/img-105.png" alt=""><br>
+除法积木和余数积木因为分母不能为零，所以什么都不写入<strong>直接双击运行结果是NaN</strong>代表了没有结果返回。<br>
+比较复杂的是大小判断积木。大于小于积木在什么都不填入的情况下双击运行结果是false，而等于判断积木在什么都不填入时双击结果是true因为<code>0==0</code>是真的。</p>
+<h4 id="442-写入小数的列表提取">4.4.2 写入小数的列表提取 </h4>
+<p>我们可以在取出列表某一项元素时使用小数，例如取得列表的1.345项，这时候scratch会把1.345<strong>向下取整</strong>为1，然后取出第一项。<br>
+如果我们试着访问列表的<strong>第0项</strong>或者<strong>负数项</strong>，又或者是访问<strong>超过列表项目数</strong>的项，返回的结果都是<code>空白</code>。<br>
+<img src="imgs/img-106.png" alt=""><br>
+<img src="imgs/img-107.png" alt=""><br>
+<img src="imgs/img-108.png" alt=""></p>
+<h4 id="443-造型编号0的问题-颜色和角度的小于零">4.4.3 造型编号0的问题 颜色和角度的小于零 </h4>
+<p>在scratch之中，有一些可以循环访问的东西。包括：</p>
+<ol>
+<li>角色的造型编号</li>
+<li>HSV的颜色数值</li>
+<li>角色方向</li>
+</ol>
+<p>例如角色<code>造型编号</code>如果写入<code>0</code>，则是切换到角色最后一个造型，以此类推的<code>-1</code>是<strong>倒数第二个造型</strong>。<br>
+<img src="imgs/img-109.png" alt=""><br>
+<img src="imgs/img-110.png" alt=""><br>
+<img src="imgs/img-111.png" alt=""><br>
+而颜色超过了200则相当于又从零开始，小于零相当于从200倒数。<br>
+方向也是同样，这些可以避免许多使用时的错误。</p>
+<h4 id="444-积木空缺填补参数-面向角色的积木块可以加入变量">4.4.4 积木空缺填补参数 面向角色的积木块可以加入变量 </h4>
+<p>在将造型切换为积木中，造型不止可以通过下拉菜单来选择，还可以<strong>放一个变量来控制</strong>。<br>
+这个变量可以是<code>数字</code>也可以是<code>字符串</code>。如果是数字的话，对应的就是<code>造型编号</code>，如果是字符串对应的就是<code>造型名称</code>。<br>
+<strong>同时有数字和字符串时，造型编号会优先于造型名称</strong>。</p>
+<h4 id="445-利用容错能做什么">4.4.5 利用容错能做什么 </h4>
+<p>如果我们要分辨一个变量是数字还是字符串，我们就可以用变量乘以1，观察变量是否等于变量本身，在scratch之中：</p>
+<ol>
+<li>字符串乘以1的容错结果是0；</li>
+<li>数字乘以1会得到数字本身。</li>
+</ol>
+<p>这样我们就可以简单的判断变量是否是数字了：<br>
+<img src="imgs/img-112.png" alt=""><br>
+<img src="imgs/img-113.png" alt=""><br>
+<img src="imgs/img-114.png" alt=""></p>
 
       </div>
       <div class="md-sidebar-toc">
@@ -857,11 +1668,378 @@ Scratch打开时默认的那只猫就是一个角色，一切程序都围绕着�
           </a></div>
         </div>
       </details>
-    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
-          <a href="#三-积木介绍" class="md-toc-link">
-            <p>三、积木介绍</p>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#三-积木介绍" class="md-toc-link"><p>三、积木介绍</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#31-运动" class="md-toc-link">
+            <p>3.1 运动</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#32-外观" class="md-toc-link"><p>3.2 外观</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#321-造型切换" class="md-toc-link">
+            <p>3.2.1 造型切换</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#322-外观特效" class="md-toc-link">
+            <p>3.2.2 外观特效</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#323-大小设定" class="md-toc-link">
+            <p>3.2.3 大小设定</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#324-说话思考" class="md-toc-link">
+            <p>3.2.4 说话思考</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#325-层叠关系设定" class="md-toc-link">
+            <p>3.2.5 层叠关系设定</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#326-显示和隐藏" class="md-toc-link">
+            <p>3.2.6 显示和隐藏</p>
 
           </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#33-声音" class="md-toc-link">
+            <p>3.3 声音</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#34-音乐" class="md-toc-link">
+            <p>3.4 音乐</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#35-画笔" class="md-toc-link">
+            <p>3.5 画笔</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#36-事件" class="md-toc-link"><p>3.6 事件</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#361-绿旗" class="md-toc-link">
+            <p>3.6.1 绿旗</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#362-切换背景入口" class="md-toc-link">
+            <p>3.6.2 切换背景入口</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#363-角色点击入口" class="md-toc-link">
+            <p>3.6.3 角色点击入口</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#364-按键入口" class="md-toc-link">
+            <p>3.6.4 按键入口</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#365-声控入口" class="md-toc-link">
+            <p>3.6.5 声控入口</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#366-消息入口" class="md-toc-link">
+            <p>3.6.6 消息入口</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#37-侦测" class="md-toc-link"><p>3.7 侦测</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#371-距离和坐标侦测类" class="md-toc-link">
+            <p>3.7.1 距离和坐标侦测类</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#372-角色信息侦测类" class="md-toc-link">
+            <p>3.7.2 角色信息侦测类</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#373-视频侦测类" class="md-toc-link"><p>3.7.3 视频侦测类</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3731-视频运动" class="md-toc-link">
+            <p>3.7.3.1 视频运动</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3732-视频方向" class="md-toc-link">
+            <p>3.7.3.2 视频方向</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#374-响度侦测类" class="md-toc-link">
+            <p>3.7.4 响度侦测类</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#374-询问回答和计时器" class="md-toc-link">
+            <p>3.7.4 询问回答和计时器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#375-碰撞侦测类" class="md-toc-link">
+            <p>3.7.5 碰撞侦测类</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#376-按键侦测类" class="md-toc-link">
+            <p>3.7.6 按键侦测类</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#38-运算" class="md-toc-link"><p>3.8 运算</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#381-数字运算" class="md-toc-link">
+            <p>3.8.1 数字运算</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#382-字符串运算" class="md-toc-link">
+            <p>3.8.2 字符串运算</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#383-布尔值运算" class="md-toc-link">
+            <p>3.8.3 布尔值运算</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#39-变量" class="md-toc-link"><p>3.9 变量</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#391-变量" class="md-toc-link">
+            <p>3.9.1 变量</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#392-列表" class="md-toc-link">
+            <p>3.9.2 列表</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#310-控制" class="md-toc-link"><p>3.10 控制</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3101-循环" class="md-toc-link">
+            <p>3.10.1 循环</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3102-条件分支" class="md-toc-link">
+            <p>3.10.2 条件分支</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3103-等待和停止类" class="md-toc-link">
+            <p>3.10.3 等待和停止类</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#311-克隆相关类" class="md-toc-link">
+            <p>3.11 克隆相关类</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#312-自制积木" class="md-toc-link">
+            <p>3.12 自制积木</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#四-scratch疑难问题举例" class="md-toc-link"><p>四、Scratch疑难问题举例</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#41-绘图和外观的坑" class="md-toc-link"><p>4.1 绘图和外观的坑</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#411-任何图片都不能离开舞台" class="md-toc-link">
+            <p>4.1.1 任何图片都不能离开舞台</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#412-矢量图和位图切边" class="md-toc-link">
+            <p>4.1.2 矢量图和位图切边</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#413-角色和克隆体的复杂层级关系" class="md-toc-link">
+            <p>4.1.3 角色和克隆体的复杂层级关系</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#414-默认角度90" class="md-toc-link">
+            <p>4.1.4 默认角度90°</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#415-消失的几种姿势" class="md-toc-link">
+            <p>4.1.5 消失的几种姿势</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#42-看不见摸不着的事件控制" class="md-toc-link"><p>4.2 看不见摸不着的事件控制</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#421-鼠标点绿旗的迷惑" class="md-toc-link">
+            <p>4.2.1 鼠标点绿旗的迷惑</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#422-消息等待" class="md-toc-link">
+            <p>4.2.2 消息等待</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#423-等待0秒等待-1秒最小等待时间是多少" class="md-toc-link">
+            <p>4.2.3 等待0秒？等待-1秒？最小等待时间是多少？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#424-藏起来就不刷新屏幕的列表和变量-没有anyone刷新屏幕就飞快" class="md-toc-link">
+            <p>4.2.4 藏起来就不刷新屏幕的列表和变量 没有anyone刷新屏幕就飞快</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#425-死循环嵌套的后果" class="md-toc-link">
+            <p>4.2.5 死循环嵌套的后果</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#426-计数循环变计数能否进行" class="md-toc-link">
+            <p>4.2.6 计数循环变计数能否进行</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#427-拖拽优先级最高" class="md-toc-link">
+            <p>4.2.7 拖拽优先级最高</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#428-并行的条件竞争-碰到边缘反弹和等待碰到边缘" class="md-toc-link">
+            <p>4.2.8 并行的条件竞争 碰到边缘反弹和等待碰到边缘</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#429-真实时间的获取" class="md-toc-link">
+            <p>4.2.9 真实时间的获取</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#43-不知道该用什么变量的克隆体" class="md-toc-link"><p>4.3 不知道该用什么变量的克隆体</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#431-私有变量和私有改动" class="md-toc-link">
+            <p>4.3.1 私有变量和私有改动</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#432-消息入口的继承" class="md-toc-link">
+            <p>4.3.2 消息入口的继承</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#433-使用消息指数克隆" class="md-toc-link">
+            <p>4.3.3 使用消息指数克隆</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#434-网格锁定" class="md-toc-link">
+            <p>4.3.4 网格锁定</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#435-克隆体整理" class="md-toc-link"><p>4.3.5 克隆体整理</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#4341-一维的情况" class="md-toc-link"><p>4.3.4.1 一维的情况</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#4342-二维的情况" class="md-toc-link">
+            <p>4.3.4.2 二维的情况</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#436-克隆体克隆别的克隆体的队列设置" class="md-toc-link">
+            <p>4.3.6 克隆体克隆别的克隆体的队列设置</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#44-scratch的谜之容错" class="md-toc-link"><p>4.4 Scratch的谜之容错</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#441-不写入数字会如何" class="md-toc-link">
+            <p>4.4.1 不写入数字会如何</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#442-写入小数的列表提取" class="md-toc-link">
+            <p>4.4.2 写入小数的列表提取</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#443-造型编号0的问题-颜色和角度的小于零" class="md-toc-link">
+            <p>4.4.3 造型编号0的问题 颜色和角度的小于零</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#444-积木空缺填补参数-面向角色的积木块可以加入变量" class="md-toc-link">
+            <p>4.4.4 积木空缺填补参数 面向角色的积木块可以加入变量</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#445-利用容错能做什么" class="md-toc-link">
+            <p>4.4.5 利用容错能做什么</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
         </div>
       </details>
     

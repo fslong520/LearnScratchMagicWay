@@ -1,0 +1,1362 @@
+<!DOCTYPE html><html><head>
+      <title>02-程序逻辑及Scratch高级技能</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      
+        <script type="text/javascript">
+          window.MathJax = ({"tex":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]},"options":{},"loader":{}});
+        </script>
+        <script type="text/javascript" async="" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.0.5/es5/tex-mml-chtml.js"></script>
+        
+      
+      
+      
+      
+      
+      <style>
+      @import url("https://fastly.jsdelivr.net/gh/alphardex/aqua.css/dist/aqua.min.css");
+code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+.markdown-preview.markdown-preview {
+  /*重头戏开始*/
+  /*初始化格式*/
+  /* 一级标题 */
+  /*三个小点点*/
+  /*二级标题*/
+  /* 三级标题 */
+  /* 四级标题 */
+  /* 引用
+* 左边缘颜色 border-left-color:black;
+* 背景色 background:gray; */
+  /* 引用文字 */
+  /* 链接 */
+  /* 加粗 */
+  /* 斜体 */
+  /* 加粗斜体 */
+  /* 删除线 */
+  /* 分割线 */
+  /* 图片 */
+  /*音频*/
+  /*视频*/
+  /* 图片描述文字 */
+  /* 列表内容 */
+  /* ol+p strong {
+margin-left: -16px;
+}*/
+  /* 序号 */
+  /*设置条纹*/
+  /*设置首列不同*/
+  /* 脚注文字 */
+  /* 脚注上标 */
+  /* 脚注超链接样式 */
+  /* "参考资料"四个字 
+* 内容 content: "参考资料";
+*/
+  /* 参考资料编号 */
+  /* 参考资料文字 */
+  /* 参考资料超链接 */
+  /* 参考资料解释 */
+  /* 行间公式*/
+  /* 行内公式*/
+  /* 滑动图片*/
+  /*打印时强制下一页*/
+  /*容器和媒体*/
+  /*代码块*/
+  /* 行内代码 */
+  /* 非微信代码块
+* 代码块不换行 display:-webkit-box !important;
+* 代码块换行 display:block;
+*/
+  /* 表格内的单元格
+* 字体大小 font-size: 16px;
+* 边框 border: 1px solid #ccc;
+* 内边距 padding: 5px 10px;
+*/
+  /*mpe的代码样式*/
+  /*数学相关*/
+}
+.markdown-preview.markdown-preview * {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  box-sizing: border-box;
+}
+.markdown-preview.markdown-preview body {
+  line-height: 1.5em;
+  letter-spacing: 0.034em;
+  font-size: 16px;
+  word-break: all;
+  background-color: #ffffff;
+  max-width: 1000px;
+  /*设置最大宽度*/
+  margin: 0 auto;
+  /*设置内容居中*/
+  font-family: "LXGW WenKai Mono Screen", "LXGW WenKai Screen", "monospace", "KaTeX_Main", "DejaVu Sans Mono", "SimHei", "Times New Roman", "serif", "Lucida Console", Consolas, "Monaco", " Lucida Console", " Liberation Mono", "Bitstream Vera Sans Mono", " Courier New";
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3,
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5,
+.markdown-preview.markdown-preview h6 {
+  margin-bottom: 0.25em;
+  margin-top: 0.5em;
+}
+.markdown-preview.markdown-preview h1::before {
+  max-width: 1000px;
+  content: " ";
+  position: absolute;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #fc625d;
+  width: 12px;
+  height: 12px;
+  left: 10px;
+  top: 10px;
+  -webkit-box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  z-index: 2;
+}
+.markdown-preview.markdown-preview h1 {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 70px;
+  line-height: 70px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding-bottom: 0em;
+  border: 0px;
+  /* 一级标题内容 */
+  font-size: 24px;
+  color: #0f59a4;
+}
+.markdown-preview.markdown-preview h2 {
+  display: inline-block;
+  background: #2dc878;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  padding: 8px;
+  box-shadow: #666666 2px 3px 1.5px 1.5px;
+  /* 二级标题内容 */
+  color: #fffef9;
+  font-size: 20px;
+  font-weight: normal;
+  text-shadow: #666666 1px 1px 1px;
+}
+.markdown-preview.markdown-preview h2::after {
+  display: block;
+}
+.markdown-preview.markdown-preview h3:before {
+  content: "";
+  background: size 1.5em;
+  display: inline-block;
+  margin-top: 0.5em;
+  padding-left: 8px;
+}
+.markdown-preview.markdown-preview h3 {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  color: #0f59a4;
+  line-height: 1.5em;
+}
+.markdown-preview.markdown-preview h4:before {
+  content: "";
+  background: size 1.5em;
+  display: inline-block;
+  text-indent: 0.75em;
+}
+.markdown-preview.markdown-preview h4 {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #168381;
+  text-indent: 0.75em;
+  line-height: 1.5em;
+}
+.markdown-preview.markdown-preview h5 {
+  font-weight: bold;
+  text-indent: 1em;
+  color: #2b9678;
+  font-size: 17px;
+}
+.markdown-preview.markdown-preview h6 {
+  font-size: 16px;
+  color: #ff6668;
+  line-height: 1.5em;
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview p {
+  padding-top: 0px;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: #4a4a4a;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+.markdown-preview.markdown-preview blockquote {
+  padding: 15px 15px 10px 10px;
+  line-height: 27px;
+  border-radius: 10px;
+  display: block;
+  border-color: #bababa;
+  color: #656565;
+  background-color: #f3f0ea;
+  font-style: italic;
+  border-left: 5px solid;
+  padding-left: 1em;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+.markdown-preview.markdown-preview blockquote p {
+  padding: 0px;
+  font-size: 15px;
+  color: #126b15;
+}
+.markdown-preview.markdown-preview a:hover,
+.markdown-preview.markdown-preview a:active {
+  font-size: larger;
+}
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .markdown-preview.markdown-preview a:hover,
+  .markdown-preview.markdown-preview a:active {
+    background: linear-gradient(to right, red, #01d6c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.markdown-preview.markdown-preview a {
+  color: #143974;
+  text-decoration: underline;
+}
+.markdown-preview.markdown-preview strong {
+  line-height: 1.75em;
+  color: #ec0434;
+}
+.markdown-preview.markdown-preview em {
+  color: #126b15;
+  /*字符间距*/
+}
+.markdown-preview.markdown-preview em strong {
+  color: #126b15;
+  /*字符间距*/
+}
+.markdown-preview.markdown-preview del,
+.markdown-preview.markdown-preview s {
+  font-style: italic;
+  text-decoration: line-through;
+  font-weight: bolder;
+  color: #fc625d;
+}
+.markdown-preview.markdown-preview sub {
+  color: #0b941b;
+}
+.markdown-preview.markdown-preview hr {
+  height: 2px;
+  padding: 0;
+  border: none;
+  text-align: center;
+  background-image: linear-gradient(to right, rgba(60, 122, 198, 0), #063a7a, rgba(60, 122, 198, 0));
+}
+.markdown-preview.markdown-preview .container img {
+  max-width: 100%;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  border-radius: 10px;
+  max-width: 99%;
+  max-height: 960px;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview img:active {
+  transform: scale(2);
+}
+.markdown-preview.markdown-preview audio {
+  display: block;
+  margin: 0 auto;
+}
+.markdown-preview.markdown-preview video {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80%;
+  max-height: 700px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 480px) {
+  .markdown-preview.markdown-preview {
+    /*此适配不同手机型号下文字，图片的大小*/
+  }
+}
+@media only screen and (max-width: 375px) {
+  .markdown-preview.markdown-preview {
+    /*此适配不同手机型号下文字，图片的大小*/
+  }
+}
+.markdown-preview.markdown-preview figcaption {
+  display: block;
+  font-size: 12px;
+  font-family: PingFangSC-Light;
+}
+.markdown-preview.markdown-preview ul,
+.markdown-preview.markdown-preview ol {
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+.markdown-preview.markdown-preview p + ul,
+.markdown-preview.markdown-preview p + ol {
+  margin-top: -1em;
+  margin-left: 2em;
+}
+.markdown-preview.markdown-preview li ul {
+  margin-top: 0em;
+}
+.markdown-preview.markdown-preview li::marker {
+  color: #6116ac;
+  font-weight: bolder;
+  font-style: italic;
+}
+.markdown-preview.markdown-preview ul li::marker {
+  font-style: normal;
+  font-weight: 800;
+}
+.markdown-preview.markdown-preview li {
+  list-style-type: decimal;
+  list-style-position: outside;
+  color: #01474e;
+  size: 14px;
+}
+.markdown-preview.markdown-preview ol li {
+  list-style-type: decimal;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview ul li {
+  list-style-type: disc;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview li li {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+}
+.markdown-preview.markdown-preview li ol {
+  list-style-type: lower-latin;
+  list-style-position: outside;
+  margin-top: 0px;
+}
+.markdown-preview.markdown-preview li p {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.markdown-preview.markdown-preview table {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 1em;
+  border: 0px;
+  border-spacing: 0;
+  display: table;
+  /*去掉单元格间隙*/
+  border-collapse: collapse;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.markdown-preview.markdown-preview thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+  margin: 0 auto;
+  width: 100%;
+  vertical-align: middle;
+  word-break: keep-all;
+}
+.markdown-preview.markdown-preview thead.md-table-edit {
+  background-color: transparent;
+}
+.markdown-preview.markdown-preview thead th,
+.markdown-preview.markdown-preview tfoot th {
+  padding: 0.25em 0.25em 0.25em 0.4em;
+  text-transform: uppercase;
+}
+.markdown-preview.markdown-preview th {
+  text-align: center;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #042335;
+}
+.markdown-preview.markdown-preview td {
+  vertical-align: middle;
+  padding: 0.25em 0.5em 0.25em 0.4em;
+  color: #237465;
+}
+.markdown-preview.markdown-preview tr:nth-of-type(even) {
+  background: #eee;
+}
+.markdown-preview.markdown-preview td:nth-child(1) {
+  font-weight: bolder;
+  font-style: italic;
+  color: #064d8c;
+  word-break: keep-all;
+}
+.markdown-preview.markdown-preview caption {
+  color: #000;
+  font: italic 85%/1 arial, sans-serif;
+  padding: 1em 0;
+  text-align: center;
+}
+.markdown-preview.markdown-preview .md-fences {
+  margin-left: 2em;
+  margin-bottom: 3em;
+}
+.markdown-preview.markdown-preview .md-fences .CodeMirror.CodeMirror-wrap {
+  top: -0.8em;
+}
+.markdown-preview.markdown-preview tt {
+  font-size: 0.875em;
+  line-height: 1.714285em;
+}
+.markdown-preview.markdown-preview body .task-list {
+  padding-left: 1rem;
+}
+.markdown-preview.markdown-preview body .task-list-item {
+  list-style-type: none;
+  margin-left: -1.8em;
+}
+.markdown-preview.markdown-preview body .task-list-item .task-list-item-checkbox {
+  margin-right: 0.8em;
+}
+.markdown-preview.markdown-preview body .task-list-item input:before {
+  content: "\221A";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  text-align: center;
+  color: #ddd;
+  background-color: #F3F2EE;
+}
+.markdown-preview.markdown-preview body .task-list-item input:checked:before,
+.markdown-preview.markdown-preview body .task-list-item input[checked]:before {
+  color: inherit;
+}
+.markdown-preview.markdown-preview body kbd {
+  color: #1f0909;
+}
+.markdown-preview.markdown-preview body li > p {
+  left: 0;
+}
+.markdown-preview.markdown-preview body .md-meta,
+.markdown-preview.markdown-preview body .md-before,
+.markdown-preview.markdown-preview body .md-after {
+  color: #999;
+}
+.markdown-preview.markdown-preview .footnotes {
+  padding-top: 8px;
+}
+.markdown-preview.markdown-preview .footnote-word {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-ref {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item em {
+  color: #3c70c6;
+  font-size: 13px;
+  font-style: normal;
+  border-bottom-color: 1px dashed #3c70c6;
+}
+.markdown-preview.markdown-preview .footnotes-sep:before {
+  background-image: none;
+  background-size: none;
+  display: block;
+  width: auto;
+  height: auto;
+}
+.markdown-preview.markdown-preview .footnote-num {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item p {
+  color: #3c70c6;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview .footnote-item a {
+  color: #3c70c6;
+}
+.markdown-preview.markdown-preview .footnote-item p em {
+  font-size: 14px;
+  font-weight: normal;
+  border-bottom: 1px dashed #3c70c6;
+}
+.markdown-preview.markdown-preview .block-equation svg {
+  max-width: 300% !important;
+}
+.markdown-preview.markdown-preview .inline-equation svg {
+  max-width: 300% !important;
+}
+.markdown-preview.markdown-preview .imageflow-img {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+}
+.markdown-preview.markdown-preview .nextpage {
+  page-break-after: always;
+  border: 0px;
+  background-image: none;
+  background: none;
+}
+.markdown-preview.markdown-preview .container {
+  width: 1100px;
+  max-width: 100%;
+}
+.markdown-preview.markdown-preview input {
+  text-align: center;
+  vertical-align: middle;
+}
+.markdown-preview.markdown-preview code {
+  display: inline-block;
+  color: #1c2939;
+  background-color: #f7e8c1;
+  border-radius: 5px;
+  font-weight: 800;
+  padding: 0em;
+  margin: 0;
+  text-indent: 0;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: "LXGW WenKai Mono Screen", "Inconsolata", "monospace", "KaTeX_Main", "DejaVu Sans Mono", "SimHei", "Times New Roman", "serif", "Lucida Console", Consolas, "Monaco", " Lucida Console", " Liberation Mono", "Bitstream Vera Sans Mono", " Courier New";
+}
+.markdown-preview.markdown-preview pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em !important;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: rgba(153, 122, 102, 0.08);
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight:before,
+.markdown-preview.markdown-preview pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: 0.4em;
+  left: 0.6em;
+  min-width: 1em;
+  padding: 0 0.5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: 0.3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+.markdown-preview.markdown-preview pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: 0.4em;
+}
+.markdown-preview.markdown-preview pre {
+  background: #f0f1f1;
+  border: 0px solid #b66a07;
+  border-radius: 10px;
+  font: 16px/22px, "Microsoft YaHei", Arial, Sans-Serif;
+  line-height: 1.35em;
+  max-width: 90%;
+  text-shadow: none;
+  color: #000;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.4);
+  margin: auto;
+  margin-bottom: 1em;
+  margin-top: 0em;
+  padding-top: 0.13em;
+  padding-bottom: 0em;
+  padding-left: 0em;
+  font-weight: bolder;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+.markdown-preview.markdown-preview pre:after {
+  color: #ccc;
+  content: attr(data-lang);
+  font-size: 16px;
+  height: 15px;
+  line-height: 15px;
+  padding: 5px 10px 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+.markdown-preview.markdown-preview .language- {
+  padding: 2px;
+}
+.markdown-preview.markdown-preview pre code {
+  width: 100%;
+  background-color: #eee;
+  margin: 0px;
+  border: 0px;
+  padding-left: 4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.markdown-preview.markdown-preview .token {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview .token.comment {
+  font-style: italic;
+  color: #075811;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.markdown-preview.markdown-preview .token.function {
+  color: #ff6600;
+}
+.markdown-preview.markdown-preview .token.string {
+  color: #0a1e51;
+}
+.markdown-preview.markdown-preview .token.number {
+  color: #c23651;
+}
+.markdown-preview.markdown-preview .token.directive-hash {
+  color: #06615e;
+}
+.markdown-preview.markdown-preview .token.class-name {
+  color: teal;
+}
+.markdown-preview.markdown-preview .token.keyword {
+  color: #8d211e;
+  font-style: italic;
+  font-weight: 1100;
+}
+.markdown-preview.markdown-preview .token.operator {
+  color: #681817;
+}
+.markdown-preview.markdown-preview mjx-container,
+.markdown-preview.markdown-preview .mathjax-exps,
+.markdown-preview.markdown-preview .MathJax,
+.markdown-preview.markdown-preview .katex,
+.markdown-preview.markdown-preview .mstyle,
+.markdown-preview.markdown-preview .mrow,
+.markdown-preview.markdown-preview .mfrac,
+.markdown-preview.markdown-preview .math,
+.markdown-preview.markdown-preview .mord,
+.markdown-preview.markdown-preview .mo,
+.markdown-preview.markdown-preview .mi,
+.markdown-preview.markdown-preview .mn {
+  line-height: 2em;
+  color: #f97d1d;
+  font-style: normal;
+  font-family: Inconsolata;
+}
+.markdown-preview.markdown-preview .root {
+  vertical-align: middle;
+  min-width: 100px;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview details {
+  border-bottom: #06615e solid 1px;
+}
+.markdown-preview.markdown-preview summary {
+  text-align: center;
+  list-style: inside inherit;
+  color: #237465;
+  font-size: larger;
+  font-weight: bolder;
+  border-bottom: #06615e solid 1px;
+}
+.markdown-preview.markdown-preview summary:hover,
+.markdown-preview.markdown-preview summary:active {
+  font-size: xx-large;
+  color: #fc625d;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="程序逻辑及scratch高级技能">程序逻辑及Scratch高级技能 </h1>
+<h2 id="1-scratch的形象世界">1、Scratch的形象世界 </h2>
+<h3 id="11-简单运动控制">1.1 简单运动控制 </h3>
+<h4 id="111-运动的两种方式-坐标描述和面向描述">1.1.1 运动的两种方式 坐标描述和面向描述 </h4>
+<p>scratch的运动可以通过两种方式来控制：<br>
+一个是直接告诉scratch，角色要移动到哪个坐标、哪个其他角色（的坐标）。我们称之为“上帝式移动”。<br>
+另一个是在角色身上告诉角色重复执行往前移动，然后改变角色的方向。我们称之为“驾驶式移动”。<br>
+这两类运动方式使用的时候当然要按着场景来区别。顾名思义当我们想让角色直接移动到某位置时，就可以使用上帝式移动。而在代入游戏角色时，就要使用驾驶式移动了。</p>
+<h4 id="112-偏心旋转和步进旋转">1.1.2 偏心旋转和步进旋转 </h4>
+<p>scratch的旋转运动可以用两种方法实现：<br>
+一种就是设置角色的中心在图形的外侧或者外部，这时候我们让角色重复执行左转或者右转时，角色因为中心在外部从而看上去像角色在绕着某中心做圆周运动。<br>
+另一种是让角色重复执行向前移动n步向左或向右转m角度。这种方式就好比祖冲之的割圆术将圆割成了多边形。因为是一步一步的旋转，我们将其称为步进旋转。</p>
+<h4 id="113-高级的步进旋转讲解和三角函数计算公式">1.1.3 高级的步进旋转讲解和三角函数计算公式 </h4>
+<p>为了实现角色按着约定半径进行圆周运动，我们需要知道步进n和每步旋转角m还有圆周半径r之间的关系。初中几何告诉我们，r=n/2/sin(m/2)。在这里我们可以用一个自定义积木块来实现这个公式的计算，这里不用设置刷新屏幕也可以，因为这个自定义积木并没有包含重复执行等刷新屏幕的语句。这里我们实现了输入变量n和r来计算每步旋转角度，这样做的原因是因为我们常常需要控制步进来让运动看起来更加平滑，而角度不够直观，我们也很少去控制。<br>
+这个自定义积木还可以有很多应用，例如实现蛇形运动等，留给读者自己去实现。</p>
+<h4 id="114-随机运动的实现">1.1.4 随机运动的实现 </h4>
+<p>在计算机中我们应用的最多的就是随机，而在随机之上叠加的各种规则，可以让程序看起来更加的自然，甚至更加智能。前面几种基础运动，直线和曲线运动，我们可以给他们加上：</p>
+<ol>
+<li>随机的步进</li>
+<li>随机次数的步进（通过随机数和重复执行n次来实现）</li>
+<li>随机的角度</li>
+<li>随机的掉头，也即是随机乘以-1</li>
+<li>随机的游走，在一个变量x上不断叠加+1或者-1（不限制在±1，什么数字都可以）。这样做可以实现一种游动的效果，在随机过程专业课之中称之为随机游走。</li>
+</ol>
+<p>这五种基本的套路可以互相组合，形成很复杂的随机运动效果。</p>
+<h4 id="115-撞墙了怎么办回头和回头前冲">1.1.5 撞墙了怎么办？回头和回头前冲 </h4>
+<p>如果我们让一个角色随机的在舞台上乱晃，就像没头苍蝇一样。那么就有一个问题，角色撞墙了会发生什么？前面的内容已经说过，scratch是不允许任何角色的图案脱离舞台的。如果一个角色在随机的乱晃，撞墙了他也绝对不会脱离舞台，而且很可能会在舞台边上晃半天也不会回到舞台中心。这种情况很不美观，也不方便我们制作作品。<br>
+我们要使用一个判断来检测角色是否撞到了舞台边上，然后让角色回头，也就是重复执行判断角色碰到边界就反弹。但是前面疑难杂症部分也描述过，这个积木块是给初学者用的，存在很多不确定问题。最好使用侦测积木侦测到碰到边缘就旋转180度来的妥当，这里要注意的是，在旋转之后，角色仍旧有可能还碰到边缘，重复执行的检测又一次执行了180度翻转。看上去角色就在边界转来转去抖个不停。这也是常见的使用错误。<br>
+正确的做法是，在旋转180度积木后跟一句向前移动。这样在角色转身之后有一个前冲的效果，不至于再次碰到边缘。问题又来了，如果我们使用如下的积木来实现一个随机运动撞墙回头的角色，为什么回头前冲之后，角色还是会经常在墙边不肯回到中心呢？</p>
+<p>######（这里用一个随机转向的例子）</p>
+<p>我们来脑内设想一下这个过程，角色在一次循环之后有二分之一的概率会面向墙壁运动，我们应该让角色的转向随机的慢一些，这样看上去不会像没头苍蝇一样乱撞。这里我们通过一个随机10-20次的重复执行计数循环来实现控制角色移动方向，在碰到边界回头时，改变角色的方向变量减去180，使用增量来控制角色。可以观察到角色更像一个智慧生物在运动了。需要注意的是这种用增量来控制角色的思想，就是随机游走的思想，可以让角色的运动看上去不突兀。</p>
+<p>######（更改代码）</p>
+<h4 id="116-如何把随机运动物体限定在画面中间-幽灵追随">1.1.6 如何把随机运动物体限定在画面中间 幽灵追随 </h4>
+<p>如果我们仍旧强迫症不可解，就是要一个速度很均匀的运动在舞台中央不会碰到墙壁的角色。该如何实现呢？<br>
+这里提供一种方案供大家思考：我们用两个角色，一个十分快速的随机移动，我们把它隐藏起来，起名叫做“幽灵”。另一个主角色，我们让他重复执行匀速运动，且每一次重复执行的时候都面向幽灵。因为幽灵速度极快的在舞台上飞动乱撞，而主角色只是方向在变化，而速度恒定。且因为是面向飞动的幽灵，方向变动也不是特别突兀。这样就实现了十分逼真的类生物移动效果。主角色会在舞台中央匀速但是偶尔转向的移动。<br>
+需要注意的是：幽灵本身因为隐藏起来了，他还可以通过碰撞边缘的侦测模块识别是否撞墙。在scratch之中，是否碰到边缘和是否碰到鼠标指针是两个特殊的判断，即时我们把角色隐藏起来，仍然可以使用。如果在后续版本的scratch之中这个功能产生了改变，还请读者自己设立一个变量来实时观察这个状态是否仍旧如此对于隐藏不敏感。<br>
+在文本语言之中，我们所熟知的是面向过程和面向对象两种编程模式。但是在scratch之中，我们其实是面向角色来编程更为方便。在幽灵追随这个例子之中，我们使用了一个幽灵跟随就省去了不少编写复杂随机逻辑的工作。后续也会有很多例子使用幽灵这一概念来帮助我们完成一些写在一个角色身上会很麻烦的事情。</p>
+<h4 id="117-永远撞不到的物体-图章轨迹刷新">1.1.7 永远撞不到的物体 图章轨迹刷新 </h4>
+<p>如果我们想做一个永远无法被碰撞到的角色，该如何实现呢？这里提供一个解决思路，我们将角色隐藏，在角色运动的重复执行之中开始将舞台画笔清空，角色移动之后，使用图章积木将角色画在画笔上。这样，别的角色再也不会误碰到该角色，而该角色也没有被隐藏消失，我们仍旧可以看到他的活动。<br>
+大家一定会问这样做的意义在哪里。原因是有时候我们为了某些互相产生复杂逻辑条件的碰撞（例如碰到角色 且 碰到红色 且 碰到别的角色不成立），这时候让一个角色不可触碰，逻辑条件会简约不少，不失为一个优雅的好方法。</p>
+<h3 id="12-画笔和运动结合的威力">1.2 画笔和运动结合的威力 </h3>
+<ol>
+<li>色轮和色环</li>
+<li>旋转和画笔结合</li>
+<li>斐波那契曲线</li>
+<li>彩虹旋涡</li>
+<li>闪电和雷暴</li>
+<li>画笔贪食蛇</li>
+<li>流星和星轨</li>
+<li>残影和运动轨迹绘制 抛射游戏</li>
+<li>递归分形图</li>
+</ol>
+<h3 id="13-外观控制和简单序列帧动画">1.3 外观控制和简单序列帧动画 </h3>
+<ol>
+<li>膨胀效果</li>
+<li>颜色等闪动效果</li>
+<li>序列帧动画制作和导入</li>
+<li>虚像隐藏的意义</li>
+<li>旋转和传送门效果</li>
+</ol>
+<h2 id="2-scratch的抽象世界">2、Scratch的抽象世界 </h2>
+<h3 id="21-变量可以实现那些事">2.1 变量可以实现那些事 </h3>
+<ol>
+<li>方便记录 变量计分 第一次应用</li>
+<li>方便调整 变量规定 步进 上线 血量等</li>
+<li>方便控制 变量控制角色属性</li>
+<li>方便逻辑 计数变量遍历列表</li>
+<li>方便存储 存储数据信息</li>
+</ol>
+<p>变量作为几乎所有编程语言的最基础概念，是我们进入程序世界的时候最先要了解的。一般我们把变量解释为一个写了变量名的盒子，盒子里面装的东西被称之为数据，数据是可以被替换的，但是盒子还是盒子，只能装一个东西。例如装一个数字，装一个单词（字符串）等等。<br>
+在真实的计算机世界中，变量（寄存器变量除外）其实对应了内存之中的一个地址。内存就好比一个巨大无比的仓库。我们一旦命名了一个叫做a的变量，计算机就依照某种规则给我们的a分配了一个格子，然后把地址和变量名挂钩对应起来。当然地址是一串数字，我们人类不会喜欢看也记不住，我们就只要记住a就行了。<br>
+当我们把a删除掉，计算机就把分配的格子和a的对应关系忘记掉，以便下次继续分配给别的变量使用。<br>
+变量究竟有哪些作用，为什么几乎所有的编程语言都会有这个东西呢？</p>
+<h4 id="211-方便记录">2.1.1 方便记录 </h4>
+<p>最直观的感觉是变量可以帮我们记录事情，例如记录游戏的得分，记录玩家的血量，记录敌人的数目，记录各种事情。说白了就是让电脑这个好脑子帮我们记住事。</p>
+<h4 id="212-方便调整">2.1.2 方便调整 </h4>
+<p>我们可以用很多变量来实现各种复杂的功能，例如加分减分，规定血量上限，规定速度上限等等。这些事情往往是几个变量相互作用，一些用来记录，另一些变量则负责做出规定。在一些计算机语言之中，负责做出规定的这些不变的值，也被称之为“常量”，也即是恒常的量。<br>
+这时候我们一定很疑惑，数学之中的方程式我们很熟悉，3x+5=y，x和y是变量，5是常数量，为什么计算机里面5这种常量还要放在变量里面呢？<br>
+这里要注意：计算机和数学的概念不同，计算机所有的量本质上讲都是变量，即使是5这样的常数，即使是1000这种血量上限，即使是50这种速度上限。我们难保不会下次心血来潮给他改一个数值。所以计算机索性把所有的量都弄成了变量。请大家不要和数学的说法混淆。</p>
+<h4 id="213-方便控制">2.1.3 方便控制 </h4>
+<p>我们在所有的游戏之中都会对人物做出很多属性的设定，例如血量多少，跑多快，攻击力如何等等。这时候我们经常使用一组变量来实现对人物的控制。这样的规定还有一种类似模板的功效，我们再创建别的人物也可以用这一套变量来描述。这样在设计时候会清晰不少。<br>
+在文本语言之中，我们常常听到一个说法是面向对象。究竟什么是面向对象呢？其实和刚说到的模板很类似，例如我们要给游戏设计100个怪物，他们的血量速度和攻击力都不一样。但是他们都有一些共性，因为我们用了同一套变量同一个模板来描述他们。这套模板就被称之为类（class）而每一个怪物拥有独一无二的变量数值，他们就被称之为类的一个实例。这就是面向对象的基础解释。</p>
+<h4 id="214-方便逻辑">2.1.4 方便逻辑 </h4>
+<p>在后面的控制流中，我们常常使用变量来控制循环的逻辑。具体用法很简单，就好比用一个变量来帮我们计数，每次循环结束它就被加了1，而它从0开始就恰好是循环的一个编号。这种用法可以方便我们把数组的每一个元素按顺序拿出来。我们称这种方法为“遍历”。<br>
+也许我们会觉得这种遍历不是理所应当的，为什么还要单独的说呢？那么我们可以试验几个好玩的事情，例如把列表的所有偶数项拿出来求和，把列表的素数项求和。这时候我们就发现，一个技术的变量是多么的方便。</p>
+<h4 id="215-方便存储">2.1.5 方便存储 </h4>
+<p>在计算机科学之中，我们常常把数据是如何存储的称之为“数据结构”。变量就是最简单的一个数据结构，列表是更加方便的一个数据结构，他把变量编号放在了一起，我们可以更加方便有序的使用这些变量。当然还有更加高级的一些数据结构，他们都有特定的用途。这些将在后文有所涉及。</p>
+<h3 id="22-布尔表达式和逻辑运算-另一种加减乘除">2.2 布尔表达式和逻辑运算 另一种加减乘除 </h3>
+<h4 id="221-布尔值和布尔">2.2.1 布尔值和布尔 </h4>
+<h4 id="221-布尔表达式和布尔运算逻辑运算">2.2.1 布尔表达式和布尔运算（逻辑运算） </h4>
+<h4 id="222-真值表">2.2.2 真值表 </h4>
+<h4 id="223-逻辑运算和条件分支嵌套的互相转换">2.2.3 逻辑运算和条件分支嵌套的互相转换 </h4>
+<h3 id="23-列表-有序世界的基础">2.3 列表-有序世界的基础 </h3>
+<h4 id="231-列表和字典的区别">2.3.1 列表和字典的区别 </h4>
+<h4 id="232-列表存语言-聊天机器">2.3.2 列表存语言 聊天机器 </h4>
+<h4 id="233-列表存随机-不重复随机列表">2.3.3 列表存随机 不重复随机列表 </h4>
+<h4 id="234-列表存方向-贪食蛇-和重复蛇">2.3.4 列表存方向 贪食蛇 和重复蛇 </h4>
+<h4 id="235-列表和字符串的异同">2.3.5 列表和字符串的异同 </h4>
+<h3 id="24-循环-批量化的天使">2.4 循环-批量化的天使 </h3>
+<h4 id="241-循环100000次">2.4.1 循环100000次 </h4>
+<h4 id="242-多重循环的意义-扫描屏幕">2.4.2 多重循环的意义 扫描屏幕 </h4>
+<h4 id="243-数独游戏">2.4.3 数独游戏 </h4>
+<h4 id="244-循环的展开-水仙花数">2.4.4 循环的展开 水仙花数 </h4>
+<h4 id="245-循环fix">2.4.5 循环fix </h4>
+<h4 id="246-循环监听">2.4.6 循环监听 </h4>
+<h4 id="247-循环刷新序列帧">2.4.7 循环刷新序列帧 </h4>
+<h3 id="25-计算机科学的发展史就是一部抽象史-函数">2.5 计算机科学的发展史就是一部抽象史-函数 </h3>
+<h4 id="251-循环的好朋友-函数-为了复用而抽象">2.5.1 循环的好朋友 函数 为了复用而抽象 </h4>
+<h4 id="252-函数的参数-意义何在-更好的复用">2.5.2 函数的参数 意义何在？ 更好的复用 </h4>
+<h4 id="253-函数的刷新屏幕">2.5.3 函数的刷新屏幕 </h4>
+<h4 id="254-函数的嵌套">2.5.4 函数的嵌套 </h4>
+<h4 id="255-拒绝长脚本-提倡并列式">2.5.5 拒绝长脚本 提倡并列式 </h4>
+<h4 id="256-造好的轮子要不要重新造-scratch的角色复用">2.5.6 造好的轮子要不要重新造 Scratch的角色复用 </h4>
+<h3 id="3-抽象世界的深处">3 抽象世界的深处 </h3>
+<h3 id="31-问题还没开始处理就已经被解决-递归">3.1 问题还没开始处理就已经被解决-递归 </h3>
+<h4 id="311-递归三要素-递归方式-停止条件-逻辑不重叠-德罗斯特效应-谷歌递归">3.1.1 递归三要素 递归方式 停止条件 逻辑不重叠 德罗斯特效应 谷歌递归 </h4>
+<h4 id="312-递归和顺序的区别-阶乘-最大公约数-首先假设问题已经被解决">3.1.2 递归和顺序的区别 阶乘 最大公约数 首先假设问题已经被解决 </h4>
+<h4 id="313-分型和递归-科赫雪花-h树-随机树-蕨类植物-龙形曲线-c形曲线">3.1.3 分型和递归 科赫雪花 H树 随机树 蕨类植物 龙形曲线 C形曲线 </h4>
+<h4 id="314-汉诺塔和二进制三进制">3.1.4 汉诺塔和二进制三进制 </h4>
+<h4 id="315-斐波那契和兔子">3.1.5 斐波那契和兔子 </h4>
+<h4 id="316-树遍历">3.1.6 树遍历 </h4>
+<h3 id="32-排序和查找-有序和贪婪">3.2 排序和查找-有序和贪婪 </h3>
+<h4 id="321-排序的八种姿势">3.2.1 排序的八种姿势 </h4>
+<h4 id="322-排序算法的复杂度">3.2.2 排序算法的复杂度 </h4>
+<h4 id="323-排序算法的使用场景">3.2.3 排序算法的使用场景 </h4>
+<h4 id="324-查找的七种武器">3.2.4 查找的七种武器 </h4>
+<h4 id="325-查找长度和应用场景">3.2.5 查找长度和应用场景 </h4>
+<h3 id="33-避免耦合-队列">3.3 避免耦合-队列 </h3>
+<h4 id="331-良好秩序从排队抓起-队列的意义">3.3.1 良好秩序从排队抓起 队列的意义 </h4>
+<h4 id="332-如果有有限级更高的特权怎么办-优先队列和堆">3.3.2 如果有有限级更高的特权怎么办？ 优先队列和堆 </h4>
+<h4 id="333-网络资源分配和cpu资源分配">3.3.3 网络资源分配和CPU资源分配 </h4>
+<h3 id="34-堆栈和树的关系">3.4 堆栈和树的关系 </h3>
+<h4 id="341-为什么要后入先出从摊开的书本开始">3.4.1 为什么要后入先出？从摊开的书本开始 </h4>
+<h4 id="342-函数递归的堆栈表示">3.4.2 函数递归的堆栈表示 </h4>
+<h4 id="343-递归-树和堆栈">3.4.3 递归-树和堆栈 </h4>
+<h4 id="344-屏幕跳转">3.4.4 屏幕跳转 </h4>
+<h4 id="345-带优先级的计算器">3.4.5 带优先级的计算器 </h4>
+<h3 id="35-降维打击-二维数组的实现">3.5 降维打击 二维数组的实现 </h3>
+<h4 id="351-二维数组的本质是一维数组">3.5.1 二维数组的本质是一维数组 </h4>
+<h4 id="352-舞台空间也可以是一种存储存储只是一种思想">3.5.2 舞台空间也可以是一种存储？存储只是一种思想 </h4>
+<h4 id="353-多维数组怎么办">3.5.3 多维数组怎么办？ </h4>
+<h4 id="354-二维数组和平面的连续地形绘制">3.5.4 二维数组和平面的连续地形绘制 </h4>
+<h3 id="36-上知天文下知地理的预测-回归">3.6 上知天文下知地理的预测-回归 </h3>
+<h3 id="361-真实世界的偏差-线性回归">3.6.1 真实世界的偏差 线性回归 </h3>
+<h3 id="362-回归核心和预测">3.6.2 回归核心和预测 </h3>
+<h3 id="37-风险-加锁和竞争">3.7 风险-加锁和竞争 </h3>
+<h4 id="371-竞争的本质是时序规则">3.7.1 竞争的本质是时序规则 </h4>
+<h4 id="372-敌人的竞争-你更新我刷新">3.7.2 敌人的竞争 你更新我刷新 </h4>
+<h4 id="373-自己和自己的竞争-按键瞬间多次激发">3.7.3 自己和自己的竞争 按键瞬间多次激发 </h4>
+<h4 id="374-时序图-上升沿和下降沿控制-正锁反锁">3.7.4 时序图 上升沿和下降沿控制 正锁反锁 </h4>
+<h4 id="375-蓄力和打断">3.7.5 蓄力和打断 </h4>
+<h4 id="376-格斗游戏的硬直和解除">3.7.6 格斗游戏的硬直和解除 </h4>
+<h4 id="377-连招系统和时序控制">3.7.7 连招系统和时序控制 </h4>
+<h3 id="38-从开关到王者荣耀-计算机组成">3.8 从开关到王者荣耀-计算机组成 </h3>
+<h4 id="381-计算机的原子-二值电路和开关-为什么不搞三值电路">3.8.1 计算机的原子 二值电路和开关 为什么不搞三值电路 </h4>
+<h4 id="382-三极管推拉制造逻辑门电路">3.8.2 三极管推拉制造逻辑门电路 </h4>
+<h4 id="383-逻辑门电路到锁存器-如何存下01000101010">3.8.3 逻辑门电路到锁存器 如何存下01000101010 </h4>
+<h4 id="384-锁存器到加法器-实现基本计算">3.8.4 锁存器到加法器 实现基本计算 </h4>
+<h4 id="385-计算机结构和cpu指令集">3.8.5 计算机结构和CPU指令集 </h4>
+<h4 id="386-驱动和操作系统">3.8.6 驱动和操作系统 </h4>
+<h4 id="387-软件和通讯">3.8.7 软件和通讯 </h4>
+<h4 id="388-互联网-云计算和区块链">3.8.8 互联网、云计算和区块链 </h4>
+
+      </div>
+      <div class="md-sidebar-toc">
+<div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#程序逻辑及scratch高级技能" class="md-toc-link"><p>程序逻辑及Scratch高级技能</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#1-scratch的形象世界" class="md-toc-link"><p>1、Scratch的形象世界</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#11-简单运动控制" class="md-toc-link"><p>1.1 简单运动控制</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#111-运动的两种方式-坐标描述和面向描述" class="md-toc-link">
+            <p>1.1.1 运动的两种方式 坐标描述和面向描述</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#112-偏心旋转和步进旋转" class="md-toc-link">
+            <p>1.1.2 偏心旋转和步进旋转</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#113-高级的步进旋转讲解和三角函数计算公式" class="md-toc-link">
+            <p>1.1.3 高级的步进旋转讲解和三角函数计算公式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#114-随机运动的实现" class="md-toc-link">
+            <p>1.1.4 随机运动的实现</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#115-撞墙了怎么办回头和回头前冲" class="md-toc-link">
+            <p>1.1.5 撞墙了怎么办？回头和回头前冲</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#116-如何把随机运动物体限定在画面中间-幽灵追随" class="md-toc-link">
+            <p>1.1.6 如何把随机运动物体限定在画面中间 幽灵追随</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#117-永远撞不到的物体-图章轨迹刷新" class="md-toc-link">
+            <p>1.1.7 永远撞不到的物体 图章轨迹刷新</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#12-画笔和运动结合的威力" class="md-toc-link">
+            <p>1.2 画笔和运动结合的威力</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#13-外观控制和简单序列帧动画" class="md-toc-link">
+            <p>1.3 外观控制和简单序列帧动画</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#2-scratch的抽象世界" class="md-toc-link"><p>2、Scratch的抽象世界</p>
+</a>
+          </summary>
+        <div>
+          <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#21-变量可以实现那些事" class="md-toc-link"><p>2.1 变量可以实现那些事</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#211-方便记录" class="md-toc-link">
+            <p>2.1.1 方便记录</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#212-方便调整" class="md-toc-link">
+            <p>2.1.2 方便调整</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#213-方便控制" class="md-toc-link">
+            <p>2.1.3 方便控制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#214-方便逻辑" class="md-toc-link">
+            <p>2.1.4 方便逻辑</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#215-方便存储" class="md-toc-link">
+            <p>2.1.5 方便存储</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#22-布尔表达式和逻辑运算-另一种加减乘除" class="md-toc-link"><p>2.2 布尔表达式和逻辑运算 另一种加减乘除</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#221-布尔值和布尔" class="md-toc-link">
+            <p>2.2.1 布尔值和布尔</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#221-布尔表达式和布尔运算逻辑运算" class="md-toc-link">
+            <p>2.2.1 布尔表达式和布尔运算（逻辑运算）</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#222-真值表" class="md-toc-link">
+            <p>2.2.2 真值表</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#223-逻辑运算和条件分支嵌套的互相转换" class="md-toc-link">
+            <p>2.2.3 逻辑运算和条件分支嵌套的互相转换</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#23-列表-有序世界的基础" class="md-toc-link"><p>2.3 列表-有序世界的基础</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#231-列表和字典的区别" class="md-toc-link">
+            <p>2.3.1 列表和字典的区别</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#232-列表存语言-聊天机器" class="md-toc-link">
+            <p>2.3.2 列表存语言 聊天机器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#233-列表存随机-不重复随机列表" class="md-toc-link">
+            <p>2.3.3 列表存随机 不重复随机列表</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#234-列表存方向-贪食蛇-和重复蛇" class="md-toc-link">
+            <p>2.3.4 列表存方向 贪食蛇 和重复蛇</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#235-列表和字符串的异同" class="md-toc-link">
+            <p>2.3.5 列表和字符串的异同</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#24-循环-批量化的天使" class="md-toc-link"><p>2.4 循环-批量化的天使</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#241-循环100000次" class="md-toc-link">
+            <p>2.4.1 循环100000次</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#242-多重循环的意义-扫描屏幕" class="md-toc-link">
+            <p>2.4.2 多重循环的意义 扫描屏幕</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#243-数独游戏" class="md-toc-link">
+            <p>2.4.3 数独游戏</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#244-循环的展开-水仙花数" class="md-toc-link">
+            <p>2.4.4 循环的展开 水仙花数</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#245-循环fix" class="md-toc-link">
+            <p>2.4.5 循环fix</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#246-循环监听" class="md-toc-link">
+            <p>2.4.6 循环监听</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#247-循环刷新序列帧" class="md-toc-link">
+            <p>2.4.7 循环刷新序列帧</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#25-计算机科学的发展史就是一部抽象史-函数" class="md-toc-link"><p>2.5 计算机科学的发展史就是一部抽象史-函数</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#251-循环的好朋友-函数-为了复用而抽象" class="md-toc-link">
+            <p>2.5.1 循环的好朋友 函数 为了复用而抽象</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#252-函数的参数-意义何在-更好的复用" class="md-toc-link">
+            <p>2.5.2 函数的参数 意义何在？ 更好的复用</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#253-函数的刷新屏幕" class="md-toc-link">
+            <p>2.5.3 函数的刷新屏幕</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#254-函数的嵌套" class="md-toc-link">
+            <p>2.5.4 函数的嵌套</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#255-拒绝长脚本-提倡并列式" class="md-toc-link">
+            <p>2.5.5 拒绝长脚本 提倡并列式</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#256-造好的轮子要不要重新造-scratch的角色复用" class="md-toc-link">
+            <p>2.5.6 造好的轮子要不要重新造 Scratch的角色复用</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#3-抽象世界的深处" class="md-toc-link">
+            <p>3 抽象世界的深处</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#31-问题还没开始处理就已经被解决-递归" class="md-toc-link"><p>3.1 问题还没开始处理就已经被解决-递归</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#311-递归三要素-递归方式-停止条件-逻辑不重叠-德罗斯特效应-谷歌递归" class="md-toc-link">
+            <p>3.1.1 递归三要素 递归方式 停止条件 逻辑不重叠 德罗斯特效应 谷歌递归</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#312-递归和顺序的区别-阶乘-最大公约数-首先假设问题已经被解决" class="md-toc-link">
+            <p>3.1.2 递归和顺序的区别 阶乘 最大公约数 首先假设问题已经被解决</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#313-分型和递归-科赫雪花-h树-随机树-蕨类植物-龙形曲线-c形曲线" class="md-toc-link">
+            <p>3.1.3 分型和递归 科赫雪花 H树 随机树 蕨类植物 龙形曲线 C形曲线</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#314-汉诺塔和二进制三进制" class="md-toc-link">
+            <p>3.1.4 汉诺塔和二进制三进制</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#315-斐波那契和兔子" class="md-toc-link">
+            <p>3.1.5 斐波那契和兔子</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#316-树遍历" class="md-toc-link">
+            <p>3.1.6 树遍历</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#32-排序和查找-有序和贪婪" class="md-toc-link"><p>3.2 排序和查找-有序和贪婪</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#321-排序的八种姿势" class="md-toc-link">
+            <p>3.2.1 排序的八种姿势</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#322-排序算法的复杂度" class="md-toc-link">
+            <p>3.2.2 排序算法的复杂度</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#323-排序算法的使用场景" class="md-toc-link">
+            <p>3.2.3 排序算法的使用场景</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#324-查找的七种武器" class="md-toc-link">
+            <p>3.2.4 查找的七种武器</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#325-查找长度和应用场景" class="md-toc-link">
+            <p>3.2.5 查找长度和应用场景</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#33-避免耦合-队列" class="md-toc-link"><p>3.3 避免耦合-队列</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#331-良好秩序从排队抓起-队列的意义" class="md-toc-link">
+            <p>3.3.1 良好秩序从排队抓起 队列的意义</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#332-如果有有限级更高的特权怎么办-优先队列和堆" class="md-toc-link">
+            <p>3.3.2 如果有有限级更高的特权怎么办？ 优先队列和堆</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#333-网络资源分配和cpu资源分配" class="md-toc-link">
+            <p>3.3.3 网络资源分配和CPU资源分配</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#34-堆栈和树的关系" class="md-toc-link"><p>3.4 堆栈和树的关系</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#341-为什么要后入先出从摊开的书本开始" class="md-toc-link">
+            <p>3.4.1 为什么要后入先出？从摊开的书本开始</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#342-函数递归的堆栈表示" class="md-toc-link">
+            <p>3.4.2 函数递归的堆栈表示</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#343-递归-树和堆栈" class="md-toc-link">
+            <p>3.4.3 递归-树和堆栈</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#344-屏幕跳转" class="md-toc-link">
+            <p>3.4.4 屏幕跳转</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#345-带优先级的计算器" class="md-toc-link">
+            <p>3.4.5 带优先级的计算器</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#35-降维打击-二维数组的实现" class="md-toc-link"><p>3.5 降维打击 二维数组的实现</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#351-二维数组的本质是一维数组" class="md-toc-link">
+            <p>3.5.1 二维数组的本质是一维数组</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#352-舞台空间也可以是一种存储存储只是一种思想" class="md-toc-link">
+            <p>3.5.2 舞台空间也可以是一种存储？存储只是一种思想</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#353-多维数组怎么办" class="md-toc-link">
+            <p>3.5.3 多维数组怎么办？</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#354-二维数组和平面的连续地形绘制" class="md-toc-link">
+            <p>3.5.4 二维数组和平面的连续地形绘制</p>
+
+          </a></div>
+        </div>
+      </details>
+    <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#36-上知天文下知地理的预测-回归" class="md-toc-link">
+            <p>3.6 上知天文下知地理的预测-回归</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#361-真实世界的偏差-线性回归" class="md-toc-link">
+            <p>3.6.1 真实世界的偏差 线性回归</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#362-回归核心和预测" class="md-toc-link">
+            <p>3.6.2 回归核心和预测</p>
+
+          </a></div><details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#37-风险-加锁和竞争" class="md-toc-link"><p>3.7 风险-加锁和竞争</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#371-竞争的本质是时序规则" class="md-toc-link">
+            <p>3.7.1 竞争的本质是时序规则</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#372-敌人的竞争-你更新我刷新" class="md-toc-link">
+            <p>3.7.2 敌人的竞争 你更新我刷新</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#373-自己和自己的竞争-按键瞬间多次激发" class="md-toc-link">
+            <p>3.7.3 自己和自己的竞争 按键瞬间多次激发</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#374-时序图-上升沿和下降沿控制-正锁反锁" class="md-toc-link">
+            <p>3.7.4 时序图 上升沿和下降沿控制 正锁反锁</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#375-蓄力和打断" class="md-toc-link">
+            <p>3.7.5 蓄力和打断</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#376-格斗游戏的硬直和解除" class="md-toc-link">
+            <p>3.7.6 格斗游戏的硬直和解除</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#377-连招系统和时序控制" class="md-toc-link">
+            <p>3.7.7 连招系统和时序控制</p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:24px;" open="">
+        <summary class="md-toc-link-wrapper">
+          <a href="#38-从开关到王者荣耀-计算机组成" class="md-toc-link"><p>3.8 从开关到王者荣耀-计算机组成</p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#381-计算机的原子-二值电路和开关-为什么不搞三值电路" class="md-toc-link">
+            <p>3.8.1 计算机的原子 二值电路和开关 为什么不搞三值电路</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#382-三极管推拉制造逻辑门电路" class="md-toc-link">
+            <p>3.8.2 三极管推拉制造逻辑门电路</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#383-逻辑门电路到锁存器-如何存下01000101010" class="md-toc-link">
+            <p>3.8.3 逻辑门电路到锁存器 如何存下01000101010</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#384-锁存器到加法器-实现基本计算" class="md-toc-link">
+            <p>3.8.4 锁存器到加法器 实现基本计算</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#385-计算机结构和cpu指令集" class="md-toc-link">
+            <p>3.8.5 计算机结构和CPU指令集</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#386-驱动和操作系统" class="md-toc-link">
+            <p>3.8.6 驱动和操作系统</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#387-软件和通讯" class="md-toc-link">
+            <p>3.8.7 软件和通讯</p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#388-互联网-云计算和区块链" class="md-toc-link">
+            <p>3.8.8 互联网、云计算和区块链</p>
+
+          </a></div>
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+        </div>
+      </details>
+    
+</div>
+</div>
+      <a id="sidebar-toc-btn">≡</a>
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+      
+  
+    </body></html>
